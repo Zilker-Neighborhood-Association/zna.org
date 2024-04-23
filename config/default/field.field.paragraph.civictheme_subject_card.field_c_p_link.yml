@@ -1,0 +1,25 @@
+uuid: 34526a8b-b95c-438e-a713-e6cd97dc6c65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c_p_link
+    - paragraphs.paragraphs_type.civictheme_subject_card
+  module:
+    - link
+_core:
+  default_config_hash: 7YbP-6CylIU_FFGitX1FdLkVykBSH5AY7nul1Y3H7zo
+id: paragraph.civictheme_subject_card.field_c_p_link
+field_name: field_c_p_link
+entity_type: paragraph
+bundle: civictheme_subject_card
+label: Link
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

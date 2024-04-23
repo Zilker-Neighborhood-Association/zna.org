@@ -1,0 +1,10 @@
+uuid: 332fc04e-3312-422b-bc38-dfb215c72a8e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: '-W0aA1wbkTBW7rZjCIZPxTHU9GusQR8-mSX-oBDCuz0'
+id: civictheme_mobile_navigation
+label: 'Mobile Navigation'
+revision: 0
+description: ''

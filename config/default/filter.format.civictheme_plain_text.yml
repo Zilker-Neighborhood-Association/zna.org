@@ -1,0 +1,29 @@
+uuid: 1ae6e123-c01d-4570-972a-79b95a4d8e71
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Sez7_8NRlJFeHy6KS0vgREPs0qmF_UPfBybQ1B5ot_w
+name: 'Plain text'
+format: civictheme_plain_text
+weight: 10
+filters:
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: true
+    weight: -10
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72

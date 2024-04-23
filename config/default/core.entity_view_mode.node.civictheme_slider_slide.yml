@@ -1,0 +1,13 @@
+uuid: 212c767c-689e-4334-ba8e-998df4a25c8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: qOFFBXo-ilbLryoejJRE-QMttvMxHS0qHTD0ZyBssps
+id: node.civictheme_slider_slide
+label: 'Slider slide'
+description: ''
+targetEntityType: node
+cache: true

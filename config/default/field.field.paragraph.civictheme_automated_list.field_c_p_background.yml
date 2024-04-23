@@ -1,0 +1,25 @@
+uuid: a735ffca-6434-47b0-a0e7-af622dd6afe4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c_p_background
+    - paragraphs.paragraphs_type.civictheme_automated_list
+_core:
+  default_config_hash: B06VR_U_1Sv_oL-92I8_6EEF7tn2ij94fWWV0_x8T5A
+id: paragraph.civictheme_automated_list.field_c_p_background
+field_name: field_c_p_background
+entity_type: paragraph
+bundle: civictheme_automated_list
+label: Background
+description: 'Apply a themed background colour and provide horizontal spacing to the component.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

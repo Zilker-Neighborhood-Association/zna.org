@@ -1,0 +1,23 @@
+name: znaorg
+recipe: drupal10
+config:
+  php: '8.2'
+  composer_version: '2-latest'
+  via: apache:2.4
+  webroot: web
+  database: mariadb:10.5
+  xdebug: false
+services:
+  node:
+    type: node:20
+    build:
+      - npm install
+    globals:
+      gulp-cli: latest
+tooling:
+  gulp:
+    service: node
+  node:
+    service: node
+  npm:
+    service: node

@@ -1,0 +1,12 @@
+uuid: 3982bfdd-8906-4516-8d3c-64711914a567
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wi9UrDA1M8ub14DOLBPb0G-R3xkgiBt6p8AOhtqK4Js
+id: civictheme_callout
+label: Callout
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,17 @@
+uuid: 77554f5b-a3e4-43a3-808c-bbdc5a2ae6ca
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ZQwIUY6n-sI7-KuvER8OQUYf1j8xPAb-7W5dxLuF-PE
+name: civictheme_thumbnail
+label: Thumbnail
+effects:
+  1cfec298-8620-4749-b100-ccb6c4500779:
+    uuid: 1cfec298-8620-4749-b100-ccb6c4500779
+    id: image_scale
+    weight: 0
+    data:
+      width: 100
+      height: 100
+      upscale: false

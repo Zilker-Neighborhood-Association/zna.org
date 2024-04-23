@@ -1,0 +1,21 @@
+uuid: d267b88d-249e-43fc-9acc-7061dd693ab2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c_p_location
+    - paragraphs.paragraphs_type.civictheme_event_card
+_core:
+  default_config_hash: 1TE9eRUh2dKEcHEGyePKnVyt_4Rzb7KpDgXzLSkjwhk
+id: paragraph.civictheme_event_card.field_c_p_location
+field_name: field_c_p_location
+entity_type: paragraph
+bundle: civictheme_event_card
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

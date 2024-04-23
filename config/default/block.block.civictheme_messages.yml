@@ -1,0 +1,22 @@
+uuid: 73e1afe7-438f-4730-99a7-92fd46e36071
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - civictheme
+_core:
+  default_config_hash: Nb0T9TMxAvaS54rB8VnffuvnfBM_AlGnaGHgg6bHXTg
+id: civictheme_messages
+theme: civictheme
+region: highlighted
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

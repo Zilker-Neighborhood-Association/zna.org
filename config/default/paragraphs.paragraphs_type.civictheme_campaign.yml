@@ -1,0 +1,12 @@
+uuid: 68e6f305-a4cf-4d02-87fd-8ea0c80271f6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: srkH5baDCgRsVwu3X-3Uclu7JOvOX-0e_WZCXMEJRYk
+id: civictheme_campaign
+label: Campaign
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

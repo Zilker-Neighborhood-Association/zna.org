@@ -1,0 +1,27 @@
+uuid: e8f6b454-9e60-4eed-9656-b01d8b190db1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c_p_webform
+    - paragraphs.paragraphs_type.civictheme_webform
+  module:
+    - webform
+_core:
+  default_config_hash: 1BN26vf5MQkQMVy_Qwlw71midVVbPKUXGQHN-vg5qEw
+id: paragraph.civictheme_webform.field_c_p_webform
+field_name: field_c_p_webform
+entity_type: paragraph
+bundle: civictheme_webform
+label: Webform
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

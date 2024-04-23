@@ -1,0 +1,44 @@
+uuid: 3e212828-614e-4da7-bccb-b9ee7934bfc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.civictheme_image.field_c_m_caption
+    - field.field.media.civictheme_image.field_c_m_image
+    - field.field.media.civictheme_image.field_c_m_media_tags
+    - image.style.civictheme_thumbnail
+    - media.type.civictheme_image
+  module:
+    - image
+_core:
+  default_config_hash: Wxu_NzWzO4d90f1dVvSIDTThs8bAc64LBBeD0_WUy-o
+id: media.civictheme_image.media_library
+targetEntityType: media
+bundle: civictheme_image
+mode: media_library
+content:
+  field_c_m_image:
+    type: image_image
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: civictheme_thumbnail
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_c_m_caption: true
+  field_c_m_media_tags: true
+  moderation_state: true
+  path: true
+  status: true
+  uid: true

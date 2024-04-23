@@ -1,0 +1,12 @@
+uuid: 29946762-a1eb-400b-a0aa-79ba21f6b81d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: c0xAr3QwWyIY43EzCm-z_iefrE0uRZQsdjHrJutsdZc
+id: civictheme_attachment
+label: Attachment
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

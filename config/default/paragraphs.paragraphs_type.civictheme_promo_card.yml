@@ -1,0 +1,12 @@
+uuid: ff7d6940-9ff7-4c07-b3e8-b3ce829cb3ac
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: CSaArjquulq76QiGkcQap_zkGZBTiElKfITdqdBKCyw
+id: civictheme_promo_card
+label: 'Promo card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

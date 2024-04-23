@@ -1,0 +1,16 @@
+uuid: bf031de6-a52c-4e82-8736-6ac8cc7d55b8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 9MQ2E4XU8AOnk3AjWIsqfpSIknMxT9o1caZQCbTcb4Q
+id: civictheme_document
+label: Document
+description: 'An uploaded file or document, such as a PDF.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_c_m_document
+field_map:
+  name: name
