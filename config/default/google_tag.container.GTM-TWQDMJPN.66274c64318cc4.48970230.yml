@@ -1,0 +1,54 @@
+uuid: 585f19f1-e45d-46aa-a716-02cdb042bd2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: GTM-TWQDMJPN.66274c64318cc4.48970230
+label: GTM-TWQDMJPN
+weight: 0
+tag_container_ids:
+  - GTM-TWQDMJPN
+advanced_settings:
+  consent_mode: false
+  gtm:
+    GTM-TWQDMJPN:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: true
+      environment_id: env-3
+      environment_token: RgSDuc70dGzTOCkACJTEgg
+dimensions_metrics:
+  -
+    type: dimension
+    name: 'Drupal node ID'
+    value: '[node:nid]'
+  -
+    type: dimension
+    name: 'Drupal node content type'
+    value: '[node:content-type]'
+  -
+    type: dimension
+    name: 'Drupal user ID'
+    value: '[current-user:uid]'
+  -
+    type: dimension
+    name: 'Drupal user roles'
+    value: '[current-user:roles]'
+conditions:
+  user_role:
+    id: user_role
+    negate: true
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      civictheme_site_administrator: civictheme_site_administrator
+events:
+  search: {  }
+  custom: {  }
+  login:
+    method: CMS
+  sign_up:
+    method: CMS

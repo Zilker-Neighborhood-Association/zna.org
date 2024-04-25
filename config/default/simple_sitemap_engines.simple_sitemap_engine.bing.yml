@@ -1,0 +1,11 @@
+uuid: e8e67c5b-b7fc-451e-ab70-b9524926408f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: uOksGlB4ho0egmcvzWqkR0Gon2HxOILPRhHQYuvcQ_E
+id: bing
+label: Bing
+url: null
+index_now_url: 'https://www.bing.com/indexnow?url=[url]&key=[key]'
+sitemap_variants: {  }

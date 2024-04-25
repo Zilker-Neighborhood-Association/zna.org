@@ -1,6 +1,6 @@
 uuid: 5392f24f-1203-4ee0-b88d-484e987d6128
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.civictheme-primary-navigation

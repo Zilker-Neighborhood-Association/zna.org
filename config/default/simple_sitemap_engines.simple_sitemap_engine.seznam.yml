@@ -1,0 +1,11 @@
+uuid: d63a57bd-2bc3-4cc5-afe2-133fae454f8c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: VVUUpnJomJ_zAlrcmzQCTAVLNHiZWbw4-e4rdaLHic4
+id: seznam
+label: Seznam
+url: null
+index_now_url: 'https://search.seznam.cz/indexnow?url=[url]&key=[key]'
+sitemap_variants: {  }

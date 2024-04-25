@@ -12,5 +12,6 @@ description: ''
 backend: search_api_db
 backend_config:
   database: 'default:default'
-  min_chars: 1
+  min_chars: 2
   matching: words
+  phrase: bigram

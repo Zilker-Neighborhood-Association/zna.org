@@ -12,6 +12,18 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "enyo/dropzone",
+                "version": "6.0.0-beta.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/dropzone/dropzone/releases/download/v6.0.0-beta.2/dist.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
@@ -22,12 +34,24 @@
         "drupal/civictheme": "^1.7",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-recommended": "^10.2",
+        "drupal/datalayer": "^2.0",
+        "drupal/datetimehideseconds": "^1.4",
         "drupal/devel": "^5.2",
+        "drupal/dropzonejs": "^2.10",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_toolbar": "^1.0@RC",
+        "drupal/google_tag": "^2.0",
+        "drupal/hide_revision_field": "^2.4",
+        "drupal/metatag": "^2.0",
         "drupal/module_filter": "^5.0",
+        "drupal/rabbit_hole": "^1.0@beta",
+        "drupal/responsive_favicons": "^2.0",
         "drupal/search_api": "^1.34",
-        "drush/drush": "^12.5"
+        "drupal/simple_sitemap": "^4.1",
+        "drupal/ultimate_cron": "^2.0@alpha",
+        "drupal/webp": "^1.0@RC",
+        "drush/drush": "^12.5",
+        "enyo/dropzone": "^6.0@beta"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -89,7 +113,7 @@
         },
         "patches": {
             "drupal/core": {
-              "Patch require by civictheme": "https://www.drupal.org/files/issues/2023-07-16/3204271-20-missing-layout-exception.patch"
+              "Patch required by civictheme": "https://www.drupal.org/files/issues/2023-07-16/3204271-20-missing-layout-exception.patch"
             }
         }
     }
