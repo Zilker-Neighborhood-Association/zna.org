@@ -12,6 +12,13 @@
 /web/profiles/contrib
 /web/themes/contrib
 
+# Ignore dependencies that are managed with npm.
+/web/themes/custom/zna_theme/.components-civictheme
+/web/themes/custom/zna_theme/components_combined
+/web/themes/custom/zna_theme/dist
+/web/themes/custom/zna_theme/node_modules
+/web/themes/custom/zna_theme/storybook-static
+
 # Ignore configuration files that may contain sensitive information.
 /web/sites/*/settings*.php
 /web/sites/*/services*.yml
