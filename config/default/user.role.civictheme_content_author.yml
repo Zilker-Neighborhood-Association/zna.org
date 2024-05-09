@@ -11,23 +11,20 @@ dependencies:
     - media.type.civictheme_image
     - media.type.civictheme_remote_video
     - media.type.civictheme_video
+    - media.type.vector_image
     - node.type.civictheme_alert
-    - node.type.civictheme_event
     - node.type.civictheme_page
-    - taxonomy.vocabulary.civictheme_media_tags
     - workflows.workflow.civictheme_editorial
   module:
     - content_moderation
     - contextual
-    - file
+    - dropzonejs
     - filter
-    - linkit
     - media
     - node
+    - paragraphs
     - path
-    - shortcut
     - system
-    - taxonomy
     - toolbar
 _core:
   default_config_hash: jKyTaFQv0l2H-eg26nEdCGVYAz9gh29KxOkSF2iBPeQ
@@ -38,71 +35,62 @@ is_admin: null
 permissions:
   - 'access content overview'
   - 'access contextual links'
-  - 'access files overview'
   - 'access media overview'
-  - 'access shortcuts'
   - 'access toolbar'
-  - 'administer linkit profiles'
-  - 'administer url aliases'
   - 'create civictheme_alert content'
   - 'create civictheme_audio media'
   - 'create civictheme_document media'
-  - 'create civictheme_event content'
   - 'create civictheme_icon media'
   - 'create civictheme_image media'
   - 'create civictheme_page content'
   - 'create civictheme_remote_video media'
   - 'create civictheme_video media'
   - 'create media'
-  - 'create terms in civictheme_media_tags'
   - 'create url aliases'
-  - 'delete all revisions'
+  - 'create vector_image media'
   - 'delete any civictheme_alert content'
   - 'delete any civictheme_audio media'
   - 'delete any civictheme_document media'
-  - 'delete any civictheme_event content'
   - 'delete any civictheme_icon media'
   - 'delete any civictheme_image media'
   - 'delete any civictheme_page content'
   - 'delete any civictheme_remote_video media'
   - 'delete any civictheme_video media'
   - 'delete any media'
+  - 'delete any vector_image media'
   - 'delete civictheme_alert revisions'
-  - 'delete civictheme_event revisions'
   - 'delete civictheme_page revisions'
   - 'delete media'
   - 'delete own civictheme_alert content'
   - 'delete own civictheme_audio media'
   - 'delete own civictheme_document media'
-  - 'delete own civictheme_event content'
   - 'delete own civictheme_icon media'
   - 'delete own civictheme_image media'
   - 'delete own civictheme_page content'
   - 'delete own civictheme_remote_video media'
   - 'delete own civictheme_video media'
-  - 'delete terms in civictheme_media_tags'
+  - 'delete own vector_image media'
+  - 'dropzone upload files'
   - 'edit any civictheme_alert content'
   - 'edit any civictheme_audio media'
   - 'edit any civictheme_document media'
-  - 'edit any civictheme_event content'
   - 'edit any civictheme_icon media'
   - 'edit any civictheme_image media'
   - 'edit any civictheme_page content'
   - 'edit any civictheme_remote_video media'
   - 'edit any civictheme_video media'
+  - 'edit any vector_image media'
   - 'edit own civictheme_alert content'
   - 'edit own civictheme_audio media'
   - 'edit own civictheme_document media'
-  - 'edit own civictheme_event content'
   - 'edit own civictheme_icon media'
   - 'edit own civictheme_image media'
   - 'edit own civictheme_page content'
   - 'edit own civictheme_remote_video media'
   - 'edit own civictheme_video media'
-  - 'edit terms in civictheme_media_tags'
+  - 'edit own vector_image media'
   - 'revert all revisions'
   - 'revert civictheme_alert revisions'
-  - 'revert civictheme_event revisions'
   - 'revert civictheme_page revisions'
   - 'update any media'
   - 'update media'
@@ -115,9 +103,9 @@ permissions:
   - 'view all revisions'
   - 'view any unpublished content'
   - 'view civictheme_alert revisions'
-  - 'view civictheme_event revisions'
   - 'view civictheme_page revisions'
   - 'view latest version'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view the administration theme'
+  - 'view unpublished paragraphs'

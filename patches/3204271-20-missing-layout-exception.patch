@@ -1,0 +1,13 @@
+diff --git a/core/lib/Drupal/Core/Layout/LayoutPluginManager.php b/core/lib/Drupal/Core/Layout/LayoutPluginManager.php
+index 4d211aaefdb..9656d9b020d 100644
+--- a/core/lib/Drupal/Core/Layout/LayoutPluginManager.php
++++ b/core/lib/Drupal/Core/Layout/LayoutPluginManager.php
+@@ -47,7 +47,7 @@ public function __construct(\Traversable $namespaces, CacheBackendInterface $cac
+     $this->themeHandler = $theme_handler;
+
+     $type = $this->getType();
+-    $this->setCacheBackend($cache_backend, $type);
++    $this->setCacheBackend($cache_backend, $type, ['config:core.extension']);
+     $this->alterInfo($type);
+   }
+ 

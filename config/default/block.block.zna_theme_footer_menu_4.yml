@@ -1,0 +1,31 @@
+uuid: 600c6d83-7bd1-4b37-aec0-25afb3529e1a
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.civictheme-footer
+  module:
+    - menu_block
+  theme:
+    - zna_theme
+id: zna_theme_footer_menu_4
+theme: zna_theme
+region: footer_middle_4
+weight: 0
+provider: null
+plugin: 'menu_block:civictheme-footer'
+settings:
+  id: 'menu_block:civictheme-footer'
+  label: 'Footer menu 4'
+  label_display: ''
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 1
+  expand_all_items: false
+  parent: 'civictheme-footer:'
+  suggestion: civictheme_footer
+visibility: {  }

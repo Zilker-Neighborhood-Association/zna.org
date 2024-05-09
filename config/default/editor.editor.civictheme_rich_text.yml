@@ -15,7 +15,6 @@ settings:
     items:
       - bold
       - italic
-      - underline
       - strikethrough
       - style
       - heading
@@ -31,6 +30,7 @@ settings:
       - link
       - '|'
       - drupalMedia
+      - drupalInsertImage
       - blockQuote
       - insertTable
       - '|'
@@ -51,6 +51,8 @@ settings:
         - heading4
         - heading5
         - heading6
+    ckeditor5_imageResize:
+      allow_resize: true
     ckeditor5_list:
       properties:
         reversed: false
@@ -62,7 +64,7 @@ settings:
         - '<dl>'
         - '<dt>'
         - '<dd>'
-        - '<img src alt data-entity-type data-entity-uuid>'
+        - '<img data-entity-type data-entity-uuid>'
         - '<drupal-entity alt title data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button>'
         - '<span class="ct-visually-hidden">'
         - '<svg role viewBox aria-hidden width height class="ct-icon">'
@@ -114,5 +116,5 @@ image_upload:
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: null
-    height: null
+    width: 0
+    height: 0

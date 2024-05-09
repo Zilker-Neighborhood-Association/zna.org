@@ -1,0 +1,25 @@
+uuid: 1d39a3ed-ea2b-41b4-bf85-373b8408748d
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - zna_theme
+_core:
+  default_config_hash: dDiOslpCr2epethC565FuMRvAHoaO1pOsX0uMIMWT2w
+id: zna_theme_header_sitebranding
+theme: zna_theme
+region: header_middle_2
+weight: -12
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Header site branding - logo'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

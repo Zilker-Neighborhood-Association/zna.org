@@ -1,0 +1,25 @@
+uuid: 8cb769dd-d613-410f-86bf-27074a1e2843
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:civictheme_banner:50c52459-c100-4e4d-92a4-9c4c77d8f8d0'
+  module:
+    - block_content
+  theme:
+    - zna_theme
+id: zna_theme_banner
+theme: zna_theme
+region: banner
+weight: -10
+provider: null
+plugin: 'block_content:50c52459-c100-4e4d-92a4-9c4c77d8f8d0'
+settings:
+  id: 'block_content:50c52459-c100-4e4d-92a4-9c4c77d8f8d0'
+  label: Banner
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

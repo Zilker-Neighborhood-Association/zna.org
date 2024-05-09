@@ -14,3 +14,7 @@ source_configuration:
   source_field: field_c_m_image
 field_map:
   name: name
+  mimetype: field_c_m_image
+  filesize: field_c_m_image
+  width: field_c_m_image
+  height: field_c_m_image

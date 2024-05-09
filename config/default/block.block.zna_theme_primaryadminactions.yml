@@ -1,0 +1,20 @@
+uuid: 32f1e663-5a9a-419d-9ddc-ad480486749a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - zna_theme
+_core:
+  default_config_hash: 2DnUzd-_ZemIxQCOE4FPeQopqMwRBpr_4Yg53_kLLTk
+id: zna_theme_primaryadminactions
+theme: zna_theme
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,121 @@
+features:
+  favicon: 1
+favicon:
+  use_default: 1
+colors:
+  use_color_selector: 0
+  use_brand_colors: 1
+  brand:
+    light:
+      brand1: '#000000'
+      brand2: '#000000'
+      brand3: '#000000'
+    dark:
+      brand1: '#ffffff'
+      brand2: '#ffffff'
+      brand3: '#ffffff'
+  palette:
+    light:
+      background: '#cccccc'
+      border: '#cccccc'
+      highlight: '#cccccc'
+      heading: '#cccccc'
+      body: '#cccccc'
+      background_light: '#cccccc'
+      background_dark: '#cccccc'
+      border_light: '#cccccc'
+      border_dark: '#cccccc'
+      interaction_text: '#cccccc'
+      interaction_background: '#cccccc'
+      interaction_hover_text: '#cccccc'
+      interaction_hover_background: '#cccccc'
+      interaction_focus: '#cccccc'
+      information: '#cccccc'
+      warning: '#cccccc'
+      error: '#cccccc'
+      success: '#cccccc'
+    dark:
+      background: '#cccccc'
+      border: '#cccccc'
+      highlight: '#cccccc'
+      heading: '#cccccc'
+      body: '#cccccc'
+      background_light: '#cccccc'
+      background_dark: '#cccccc'
+      border_light: '#cccccc'
+      border_dark: '#cccccc'
+      interaction_text: '#cccccc'
+      interaction_background: '#cccccc'
+      interaction_hover_text: '#cccccc'
+      interaction_hover_background: '#cccccc'
+      interaction_focus: '#cccccc'
+      information: '#cccccc'
+      warning: '#cccccc'
+      error: '#cccccc'
+      success: '#cccccc'
+components:
+  logo:
+    primary:
+      light:
+        desktop:
+          path: files/zna_logo_min.svg
+        mobile:
+          path: files/zna_logo_min.svg
+      dark:
+        desktop:
+          path: files/zna_logo_min.svg
+        mobile:
+          path: files/zna_logo_min.svg
+    secondary:
+      light:
+        desktop:
+          path: ''
+        mobile:
+          path: ''
+      dark:
+        desktop:
+          path: ''
+        mobile:
+          path: ''
+    image_alt: ''
+  site_slogan:
+    content: ''
+  header:
+    theme: light
+    logo_type: default
+  footer:
+    theme: dark
+    logo_type: default
+    background_image:
+      path: ''
+  navigation:
+    primary_navigation:
+      dropdown: drawer
+      dropdown_columns: '4'
+      dropdown_columns_fill: 0
+      is_animated: 0
+    secondary_navigation:
+      dropdown: none
+      dropdown_columns: '4'
+      dropdown_columns_fill: 0
+      is_animated: 0
+  link:
+    new_window: 0
+    external_new_window: 0
+    external_override_domains: {  }
+  skip_link:
+    theme: light
+  event_card:
+    summary_length: '160'
+  navigation_card:
+    summary_length: '160'
+  promo_card:
+    summary_length: '160'
+  publication_card:
+    summary_length: '160'
+    use_media_name: 1
+  snippet:
+    summary_length: '160'
+  attachment:
+    use_media_name: 1
+optouts: {  }

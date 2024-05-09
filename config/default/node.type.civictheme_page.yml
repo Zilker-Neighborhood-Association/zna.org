@@ -13,7 +13,7 @@ _core:
   default_config_hash: IwZ8QoIFmMADmoayLHmWf-MmeApxzgrdAC95SMWyN24
 name: Page
 type: civictheme_page
-description: "<em>CivicTheme</em>. Use pages for your static content such as an 'About us' page or other informational pages that will always be accessible on the site. These can be simple content pages or pages with a complex layout."
+description: "Static content such as an 'About us' page or other informational pages that will always be accessible on the site. These can be simple content pages or pages with a complex layout."
 help: ''
 new_revision: true
 preview_mode: 1

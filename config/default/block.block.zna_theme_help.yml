@@ -1,0 +1,22 @@
+uuid: 5b41cf1e-fe35-4932-97dc-51c2db94c7e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - zna_theme
+_core:
+  default_config_hash: 89Wxx1ppRSmQWK59OKod2_21teb3lZplHdgXXDGhXFo
+id: zna_theme_help
+theme: zna_theme
+region: highlighted
+weight: -4
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

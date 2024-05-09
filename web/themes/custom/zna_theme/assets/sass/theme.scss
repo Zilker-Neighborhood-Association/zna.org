@@ -7,3 +7,34 @@
 // These overrides will not be visible in the Storybook.
 // @todo Refactor webpack config to use direct import from the CivicTheme theme.
 @import 'block/local-tasks';
+
+div#block-zna-theme-footerznalogo {
+  div {
+    float: left;
+    margin-right: 20px;
+  }
+
+  @media (min-width: 768px) {
+    p {
+      margin-top: 0;
+      font-size: 1rem;
+      line-height: 28px;
+    }
+  }
+
+  @media (min-width: 0) {
+    p {
+      font-size: .875rem;
+      line-height: 24px;
+    }
+  }
+
+  a {
+    color: var(--ct-color-light-interaction-background);
+    text-decoration: underline;
+    text-decoration-thickness: .125rem;
+    text-underline-offset: .1875rem;
+    padding: .1875rem 0 .125rem;
+    word-break: break-word;
+  }
+}

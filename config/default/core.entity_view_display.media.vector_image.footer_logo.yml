@@ -1,0 +1,45 @@
+uuid: 2502cd9a-ea6d-4056-93a5-453007977c5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.footer_logo
+    - field.field.media.vector_image.field_media_svg
+    - media.type.vector_image
+  module:
+    - layout_builder
+    - svg_image_field
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: azf-4JsCR_6x5XHzGMZOHv2Lko5YtmzttxsHVD4Aik8
+id: media.vector_image.footer_logo
+targetEntityType: media
+bundle: vector_image
+mode: footer_logo
+content:
+  field_media_svg:
+    type: svg_image_field_formatter
+    label: hidden
+    settings:
+      inline: false
+      apply_dimensions: true
+      width: 100
+      height: 100
+      enable_alt: true
+      enable_title: false
+      link: ''
+      force_fill: false
+      sanitize: true
+      sanitize_remote: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,22 @@
+uuid: 21eb34f0-d526-4d36-9811-e85e91ccc14d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - zna_theme
+_core:
+  default_config_hash: lm86vMUr_4OB6wyf0BvNz6j9SMB1b73J458jGqqcumE
+id: zna_theme_tabs
+theme: zna_theme
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

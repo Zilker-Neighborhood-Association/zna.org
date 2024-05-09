@@ -1,0 +1,25 @@
+uuid: 847eecf6-8a73-459f-a95d-7d3d49ea9eba
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:civictheme_mobile_navigation:b7f36176-620f-4178-aadd-9b448c610986'
+  module:
+    - block_content
+  theme:
+    - zna_theme
+id: zna_theme_mobile_navigation
+theme: zna_theme
+region: header_middle_3
+weight: -10
+provider: null
+plugin: 'block_content:b7f36176-620f-4178-aadd-9b448c610986'
+settings:
+  id: 'block_content:b7f36176-620f-4178-aadd-9b448c610986'
+  label: 'Mobile Navigation'
+  label_display: ''
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

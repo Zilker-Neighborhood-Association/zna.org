@@ -1,0 +1,20 @@
+uuid: 2783dea3-44ee-43ac-bf3c-e217cdc912c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - svg_image_field
+_core:
+  default_config_hash: 8RqoUwbXzLI6dwVVaD4-cQDAUxn5_EWnLFDXpHZzwLY
+id: vector_image
+label: 'Vector Image'
+description: 'A locally hosted Scalable Vector Graphics file.'
+source: svg
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_svg
+field_map:
+  name: name
+  mimetype: field_media_svg
+  filesize: field_media_svg

@@ -1,0 +1,22 @@
+uuid: e9ce88e7-0c18-49ac-a524-a05bbe3ea03e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - zna_theme
+_core:
+  default_config_hash: '-h1UytYahhm-a35qVO0m8LzrOJiPdZZW6twEEkeE-L8'
+id: zna_theme_content
+theme: zna_theme
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

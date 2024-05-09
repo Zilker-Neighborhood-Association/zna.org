@@ -24,11 +24,14 @@
 /web/sites/*/services*.yml
 
 # Ignore paths that contain user-generated content.
-/web/sites/*/files
+/web/files
 /web/sites/*/private
 
 # Ignore multi-site test environment.
 /web/sites/simpletest
+
+*.sql
+*.sql.gz
 
 # Files and directories for common development environments, loosely inherited from BLT Project
 # @see https://github.com/acquia/blt-project/blob/11.x/.gitignore
