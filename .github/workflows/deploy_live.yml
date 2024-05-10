@@ -1,0 +1,69 @@
+name: Deploy to Live Site
+
+on:
+  push:
+    branches:
+      - 'main'
+
+env:
+  php_version: '8.2'
+
+jobs:
+  deploy:
+    name: Deploy to Live Site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@c665c7a15b5295c2488ac8a87af9cb806cd72198 # 2.30.4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          php-version: ${{ env.php_version }}
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate --strict
+
+      - name: Get Composer cache directory
+        id: composer-cache-dir
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4.0.2
+        with:
+          path: ${{ steps.composer-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Avoid GitHub rate limit for Composer
+        run: composer config -g github-oauth.github.com ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Composer install
+        run: composer install --prefer-dist --no-dev --no-interaction --no-progress
+
+      - name: Place SSH key
+        uses: shimataro/ssh-key-action@d4fffb50872869abe2d9a9098a6d9c5aa7d16be4 # v2.7.0
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+
+      - name: Prepare code for deployment
+        run: |
+          git config --global user.email "github-actions@example.com"
+          git config --global user.name "GitHub Actions"
+          commit_message=$(git log -1 --pretty=%B)
+          rm -rf .git
+          rm -rf .github
+          rm -rf web/core/*.txt
+          git init
+          git config --local gc.auto 0
+          git add --force .
+          git commit -m "Automated deploy: $commit_message" >/dev/null
+
+      - name: Push code to Live Site
+        run: |
+          git remote add midphase ${{ secrets.MIDPHASE_REPO }}
+          git push --force midphase HEAD:master
