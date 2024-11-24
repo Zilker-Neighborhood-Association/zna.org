@@ -186,7 +186,6 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['trusted_host_patterns'] = [
   '^zna\.org',
   '^www\.zna\.org',
-  '^znaorg\.lndo\.site',
 ];
 
 /**
@@ -229,6 +228,8 @@ $settings['config_sync_directory'] = '../config/default';
 
 $settings['simple_sitemap_engines.index_now.key'] = '0caec080-19df-4a07-8bdf-5cf9bbde5d4b';
 
-if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-  include $app_root . '/' . $site_path . '/settings.local.php';
+// Automatically generated include for settings managed by ddev.
+$ddev_settings = __DIR__ . '/settings.ddev.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+  require $ddev_settings;
 }
