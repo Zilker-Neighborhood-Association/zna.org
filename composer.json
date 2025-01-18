@@ -27,37 +27,38 @@
         }
     ],
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.3",
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
-        "drupal/admin_toolbar": "^3.4",
-        "drupal/civictheme": "^1.7",
-        "drupal/ckeditor_media_resize": "^1.0@beta",
-        "drupal/core-composer-scaffold": "^10.2",
-        "drupal/core-recommended": "^10.2",
-        "drupal/datalayer": "^2.0",
-        "drupal/datetimehideseconds": "^1.4",
-        "drupal/devel": "^5.2",
-        "drupal/diff": "^1.3",
-        "drupal/dropzonejs": "^2.10",
+        "drupal/admin_toolbar": "^3.5",
+        "drupal/civictheme": "^1.9",
+        "drupal/ckeditor_media_resize": "^1.0",
+        "drupal/core-composer-scaffold": "^10.4",
+        "drupal/core-recommended": "^10.4",
+        "drupal/datalayer": "^2.1",
+        "drupal/datetimehideseconds": "^1.5",
+        "drupal/devel": "^5.3",
+        "drupal/diff": "^1.8",
+        "drupal/dropzonejs": "^2.11",
         "drupal/email_registration": "^2.0",
-        "drupal/gin": "^3.0@RC",
+        "drupal/gin": "^4.0",
         "drupal/google_tag": "^2.0",
-        "drupal/hide_revision_field": "^2.4",
-        "drupal/media_thumbnails_svg": "^2.0@beta",
-        "drupal/metatag": "^2.0",
+        "drupal/hide_revision_field": "^2.5",
+        "drupal/media_thumbnails_svg": "^2.0",
+        "drupal/metatag": "^2.1",
         "drupal/module_filter": "^5.0",
-        "drupal/rabbit_hole": "^1.0@beta",
-        "drupal/realname": "^2.0@beta",
+        "drupal/rabbit_hole": "^1.0",
+        "drupal/realname": "^2.0",
         "drupal/responsive_favicons": "^2.0",
-        "drupal/search_api": "^1.34",
-        "drupal/simple_sitemap": "^4.1",
+        "drupal/search_api": "^1.37",
+        "drupal/simple_sitemap": "^4.2",
         "drupal/svg_image_field": "^2.3",
-        "drupal/ultimate_cron": "^2.0@alpha",
-        "drupal/views_bulk_operations": "^4.2",
-        "drupal/webp": "^1.0@RC",
-        "drush/drush": "^12.5",
-        "enyo/dropzone": "^6.0@beta"
+        "drupal/ultimate_cron": "^2.0",
+        "drupal/upgrade_status": "^4.3",
+        "drupal/views_bulk_operations": "^4.3",
+        "drupal/webp": "^1.0",
+        "drush/drush": "^13.3",
+        "enyo/dropzone": "^6.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -68,10 +69,11 @@
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
-            "drupal/core-composer-scaffold": true,
-            "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "php-http/discovery": true
+            "drupal/core-composer-scaffold": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true,
+            "tbachert/spi": true
         },
         "sort-packages": true
     },
@@ -120,7 +122,13 @@
         "patches": {
             "drupal/core": {
               "Patch required by civictheme": "patches/3204271-20-missing-layout-exception.patch"
+            },
+            "drupal/responsive_favicons": {
+                "D11 compatibility": "patches/3434213-mr8-d11.patch"
             }
         }
+    },
+    "require-dev": {
+        "drupal/core-dev": "10.4.1"
     }
 }

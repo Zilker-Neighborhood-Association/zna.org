@@ -1,0 +1,189 @@
+From cd4977ff5e5b8480a4a2e7f0b65ff94610d99ece Mon Sep 17 00:00:00 2001
+From: Project-Update-bot <updatebot@assosiation.drupal.org>
+Date: Sun, 24 Mar 2024 22:42:44 +0000
+Subject: [PATCH 1/3] Automated Project Update Bot fixes from run 11-127659.
+
+---
+ responsive_favicons.info.yml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/responsive_favicons.info.yml b/responsive_favicons.info.yml
+index d9fa082..9adee55 100644
+--- a/responsive_favicons.info.yml
++++ b/responsive_favicons.info.yml
+@@ -1,7 +1,7 @@
+ name: 'Responsive Favicons'
+ type: module
+ description: 'Add responsive favicons to your site based on the code from https://realfavicongenerator.net/'
+-core_version_requirement: ^9.3 || ^10
++core_version_requirement: ^9.3 || ^10 || ^11
+ package: User interface
+ configure: responsive_favicons.admin
+ dependencies:
+-- 
+GitLab
+
+
+From 9f0e5d5175f2e74ae0db902a9aa2476cc93830a6 Mon Sep 17 00:00:00 2001
+From: Grevil <js@webks.de>
+Date: Tue, 27 Aug 2024 12:17:35 +0200
+Subject: [PATCH 2/3] Add further d11 compatibility changes
+
+---
+ src/Form/ResponsiveFaviconsAdmin.php | 54 +++++++++++++++++++++++-----
+ 1 file changed, 45 insertions(+), 9 deletions(-)
+
+diff --git a/src/Form/ResponsiveFaviconsAdmin.php b/src/Form/ResponsiveFaviconsAdmin.php
+index ef0636f..0787f58 100644
+--- a/src/Form/ResponsiveFaviconsAdmin.php
++++ b/src/Form/ResponsiveFaviconsAdmin.php
+@@ -2,13 +2,16 @@
+ 
+ namespace Drupal\responsive_favicons\Form;
+ 
++use Drupal\Core\Config\ConfigFactoryInterface;
++use Drupal\Core\Config\TypedConfigManagerInterface;
+ use Drupal\Core\File\Exception\FileException;
+ use Drupal\Core\File\Exception\FileWriteException;
++use Drupal\Core\File\FileExists;
++use Drupal\Core\File\FileSystemInterface;
+ use Drupal\Core\Form\ConfigFormBase;
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Messenger\MessengerTrait;
+ use Drupal\Core\Site\Settings;
+-use Drupal\Core\File\FileSystemInterface;
+ use Drupal\Core\StringTranslation\StringTranslationTrait;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ 
+@@ -29,13 +32,46 @@ class ResponsiveFaviconsAdmin extends ConfigFormBase {
+    */
+   protected $fileSystem;
+ 
++  /**
++   * The file replace behavior.
++   *
++   * @var mixed
++   */
++  protected $fileReplaceBehavior;
++
++  /**
++   * Constructs a ResponsiveFaviconsAdmin object.
++   *
++   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
++   *   The factory for configuration objects.
++   * @param \Drupal\Core\File\FileSystemInterface $fileSystem
++   *   The file system service.
++   * @param \Drupal\Core\Config\TypedConfigManagerInterface|null $typedConfigManager
++   *   The typed config manager.
++   */
++  public function __construct(ConfigFactoryInterface $config_factory, FileSystemInterface $fileSystem, ?TypedConfigManagerInterface $typedConfigManager = NULL) {
++    parent::__construct($config_factory, $typedConfigManager);
++    $this->fileSystem = $fileSystem;
++
++    // Set the file replace behavior based on the Drupal version:
++    if (version_compare(\Drupal::VERSION, '10.3.0', '<')) {
++      $this->fileReplaceBehavior = FileSystemInterface::EXISTS_RENAME;
++    }
++    else {
++      $this->fileReplaceBehavior = FileExists::Rename;
++    }
++
++  }
++
+   /**
+    * {@inheritdoc}
+    */
+   public static function create(ContainerInterface $container) {
+-    $instance = parent::create($container);
+-    $instance->fileSystem = $container->get('file_system');
+-    return $instance;
++    return new static(
++      $container->get('config.factory'),
++      $container->get('file_system'),
++      $container->get('config.typed') ?? NULL,
++    );
+   }
+ 
+   /**
+@@ -170,7 +206,7 @@ class ResponsiveFaviconsAdmin extends ConfigFormBase {
+       $local_cache = NULL;
+       if (!empty($_FILES['files']['name']['upload'])) {
+         $validators = ['file_validate_extensions' => ['zip']];
+-        if (!($finfo = file_save_upload('upload', $validators, NULL, 0, FileSystemInterface::EXISTS_REPLACE))) {
++        if (!($finfo = file_save_upload('upload', $validators, NULL, 0, $this->fileReplaceBehavior))) {
+           // Failed to upload the file. file_save_upload() calls
+           // \Drupal\Core\Messenger\MessengerInterface::addError() on failure.
+           return;
+@@ -203,7 +239,7 @@ class ResponsiveFaviconsAdmin extends ConfigFormBase {
+         foreach ($files as $file) {
+           // Handle exceptions when copy does not happen correctly.
+           try {
+-            $success = $this->fileSystem->copy($directory . '/' . $file, $destination, FileSystemInterface::EXISTS_REPLACE);
++            $success = $this->fileSystem->copy($directory . '/' . $file, $destination, $this->fileReplaceBehavior);
+           }
+           catch (FileException $e) {
+             $success = FALSE;
+@@ -220,7 +256,7 @@ class ResponsiveFaviconsAdmin extends ConfigFormBase {
+                 $find = preg_quote('"\/android-chrome', '/');
+                 $replace = '"' . str_replace('/', '\/', _responsive_favicons_normalise_path('/android-chrome'));
+                 $file_contents = preg_replace('/' . $find . '/', $replace, $file_contents);
+-                $this->fileSystem->saveData($file_contents, $uri, FileSystemInterface::EXISTS_REPLACE);
++                $this->fileSystem->saveData($file_contents, $uri, $this->fileReplaceBehavior);
+               }
+               // Rewrite the paths of the XML files.
+               elseif (preg_match('/\.xml$/', $file)) {
+@@ -228,7 +264,7 @@ class ResponsiveFaviconsAdmin extends ConfigFormBase {
+                 $find = preg_quote('"/mstile', '/');
+                 $replace = '"' . _responsive_favicons_normalise_path('/mstile');
+                 $file_contents = preg_replace('/' . $find . '/', $replace, $file_contents);
+-                $this->fileSystem->saveData($file_contents, $uri, FileSystemInterface::EXISTS_REPLACE);
++                $this->fileSystem->saveData($file_contents, $uri, $this->fileReplaceBehavior);
+               }
+               // Rewrite the paths of the WEBMANIFEST files.
+               elseif (preg_match('/\.webmanifest$/', $file)) {
+@@ -236,7 +272,7 @@ class ResponsiveFaviconsAdmin extends ConfigFormBase {
+                 $find = preg_quote('"/android-chrome', '/');
+                 $replace = '"' . _responsive_favicons_normalise_path('/android-chrome');
+                 $file_contents = preg_replace('/' . $find . '/', $replace, $file_contents);
+-                $this->fileSystem->saveData($file_contents, $uri, FileSystemInterface::EXISTS_REPLACE);
++                $this->fileSystem->saveData($file_contents, $uri, $this->fileReplaceBehavior);
+               }
+             }
+             catch (FileWriteException $e) {
+-- 
+GitLab
+
+
+From bd03ee1ccaedd210895a98e937f6bf80f2dc9d9a Mon Sep 17 00:00:00 2001
+From: Joshua Sedler <55201-Grevil@users.noreply.drupalcode.org>
+Date: Thu, 5 Sep 2024 14:37:25 +0000
+Subject: [PATCH 3/3] Removed TypedConfigManagerInterface typing
+
+---
+ src/Form/ResponsiveFaviconsAdmin.php | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/src/Form/ResponsiveFaviconsAdmin.php b/src/Form/ResponsiveFaviconsAdmin.php
+index 0787f58..b2864c5 100644
+--- a/src/Form/ResponsiveFaviconsAdmin.php
++++ b/src/Form/ResponsiveFaviconsAdmin.php
+@@ -3,7 +3,6 @@
+ namespace Drupal\responsive_favicons\Form;
+ 
+ use Drupal\Core\Config\ConfigFactoryInterface;
+-use Drupal\Core\Config\TypedConfigManagerInterface;
+ use Drupal\Core\File\Exception\FileException;
+ use Drupal\Core\File\Exception\FileWriteException;
+ use Drupal\Core\File\FileExists;
+@@ -49,7 +48,7 @@ class ResponsiveFaviconsAdmin extends ConfigFormBase {
+    * @param \Drupal\Core\Config\TypedConfigManagerInterface|null $typedConfigManager
+    *   The typed config manager.
+    */
+-  public function __construct(ConfigFactoryInterface $config_factory, FileSystemInterface $fileSystem, ?TypedConfigManagerInterface $typedConfigManager = NULL) {
++  public function __construct(ConfigFactoryInterface $config_factory, FileSystemInterface $fileSystem, $typedConfigManager = NULL) {
+     parent::__construct($config_factory, $typedConfigManager);
+     $this->fileSystem = $fileSystem;
+ 
+-- 
+GitLab
+

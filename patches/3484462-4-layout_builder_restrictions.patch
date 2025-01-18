@@ -1,0 +1,13 @@
+diff --git a/composer.json b/composer.json
+index 6c59d8c960dceefeaf1a2dddd127202ceda6eafd..6d1e0cb441812c3c5d5197d1e3a32450eef01a31 100644
+--- a/composer.json
++++ b/composer.json
+@@ -13,7 +13,7 @@
+         "drupal/components": "^3@beta",
+         "drupal/field_group": "^3.4",
+         "drupal/focal_point": "^2.0",
+-        "drupal/layout_builder_restrictions": "^2.19",
++        "drupal/layout_builder_restrictions": "^3.0",
+         "drupal/linkit": "^6.1",
+         "drupal/menu_block": "^1.10",
+         "drupal/paragraphs": "^1.16",
