@@ -1,4 +1,4 @@
-uuid: 76c98786-9a33-4335-b92e-5b0ad8527953
+uuid: f4fe6ce1-f7e2-467b-95cb-5533bf5bbad9
 langcode: en
 status: false
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - media
     - user
 _core:
-  default_config_hash: 27loqXfECE8tWznkMVYi7qOU8oCYFgn5MEysgZQQOV8
+  default_config_hash: kOTUk5XWeupgBOJuRRarCiDcFKVZcvaW-FT5MTzrML8
 id: media
 label: Media
 module: views
@@ -522,6 +522,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0

@@ -1,4 +1,4 @@
-uuid: a6ae5969-20a3-448c-aa16-71df831561e7
+uuid: 6ea86ea1-9a3f-4880-9ddb-de2c0382b419
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: I40lhcuU2N9gsiVgi87psgIHALDUTfoCf26IyWQLqHc
+  default_config_hash: 80NNT4E2Z5iJtBS6uzop15PyX5KbfXomK78Az9cYMC4
 id: node.civictheme_alert.default
 targetEntityType: node
 bundle: civictheme_alert
@@ -48,6 +48,7 @@ content:
       timezone_override: ''
       format_type: medium
       separator: '-'
+      from_to: both
     third_party_settings: {  }
     weight: 2
     region: content

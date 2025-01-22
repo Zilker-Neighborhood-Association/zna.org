@@ -1,4 +1,4 @@
-uuid: bf031de6-a52c-4e82-8736-6ac8cc7d55b8
+uuid: abc4fa63-7998-4ebf-a468-3db00c0d7a9a
 langcode: en
 status: true
 dependencies: {  }
@@ -14,5 +14,3 @@ source_configuration:
   source_field: field_c_m_document
 field_map:
   name: name
-  mimetype: field_c_m_document
-  filesize: field_c_m_document

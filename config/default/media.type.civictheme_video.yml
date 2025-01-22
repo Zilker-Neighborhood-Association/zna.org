@@ -1,4 +1,4 @@
-uuid: cb0383e3-96a6-4ed9-b674-2fc50493d532
+uuid: cdb0ae24-0a27-4346-bf4c-f07a935498ff
 langcode: en
 status: true
 dependencies: {  }
@@ -14,5 +14,3 @@ source_configuration:
   source_field: field_c_m_video_file
 field_map:
   name: name
-  mimetype: field_c_m_video_file
-  filesize: field_c_m_video_file

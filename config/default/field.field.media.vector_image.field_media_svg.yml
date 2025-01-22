@@ -6,7 +6,26 @@ dependencies:
     - field.storage.media.field_media_svg
     - media.type.vector_image
   module:
+    - filefield_paths
     - svg_image_field
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: 'images/[date:custom:Y]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: true
+    retroactive_update: false
+    active_updating: false
 _core:
   default_config_hash: 0rt0n09PdAQ3R0wLkPuQJByFC3w_z0prGIbOZIu809g
 id: media.vector_image.field_media_svg

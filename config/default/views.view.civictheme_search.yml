@@ -1,4 +1,4 @@
-uuid: bf0cae0e-7097-4401-ab63-8cabfdcb80f4
+uuid: 8ca9153e-b2ff-4a48-83cb-2b88b799a719
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
   module:
     - search_api
 _core:
-  default_config_hash: uJJk9ux1PK9BA8xqFZw7YgZxBk5_5EWaqDKgirZzFFo
+  default_config_hash: MD17B5Y4V8bboczUbDD37ehLUNJcKKqd30iKLAZzwOs
 id: civictheme_search
 label: Search
 module: views
@@ -96,6 +96,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

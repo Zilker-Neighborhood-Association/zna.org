@@ -1,4 +1,4 @@
-uuid: f13a3b6c-9395-4417-9295-9b0f79c21168
+uuid: 653a3ad1-c9bb-4c04-8370-4fb8175f23e4
 langcode: en
 status: true
 dependencies:
@@ -12,10 +12,10 @@ field_name: field_c_m_video_file
 entity_type: media
 type: file
 settings:
+  target_type: file
   display_field: false
   display_default: false
   uri_scheme: public
-  target_type: file
 module: file
 locked: false
 cardinality: 1

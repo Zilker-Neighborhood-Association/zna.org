@@ -1,6 +1,6 @@
-uuid: 847eecf6-8a73-459f-a95d-7d3d49ea9eba
+uuid: 84ecda82-822e-46d6-b9f2-e4e158ab3b79
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:civictheme_mobile_navigation:b7f36176-620f-4178-aadd-9b448c610986'

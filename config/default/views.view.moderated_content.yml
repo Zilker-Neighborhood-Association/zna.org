@@ -1,4 +1,4 @@
-uuid: 440eb2bc-9649-4579-9451-9a29862f76ad
+uuid: 4f8e5212-b55e-4168-acff-6000a93f173a
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     module:
       - content_moderation
 _core:
-  default_config_hash: 7olvKOaJNf15B-Bj4eD1wJyaz4BR7CNA9cEjWBssa2Y
+  default_config_hash: fnzhO9h_2CooJpv_VNqRfr517XXSDKz2yIJ-WBgpeXs
 id: moderated_content
 label: 'Moderated content'
 module: views
@@ -415,6 +415,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0

@@ -1,6 +1,6 @@
-uuid: 186a75b0-6d8f-4eb2-bcea-a3559ac5bc11
+uuid: 4120198d-470b-4e53-9dd1-4f511f8150b7
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.civictheme-footer
@@ -11,7 +11,7 @@ dependencies:
 id: zna_theme_footer_menu_1
 theme: zna_theme
 region: footer_middle_1
-weight: -10
+weight: 0
 provider: null
 plugin: 'menu_block:civictheme-footer'
 settings:
@@ -27,5 +27,7 @@ settings:
   depth: 1
   expand_all_items: false
   parent: 'civictheme-footer:'
+  render_parent: false
   suggestion: civictheme_footer
+  hide_on_nonactive: false
 visibility: {  }

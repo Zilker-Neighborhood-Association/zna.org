@@ -1,4 +1,4 @@
-uuid: 4f786296-5051-43d3-864e-1ebfb7008f34
+uuid: 7b1afb4f-8fe2-4c3c-b6cf-797e67d0f3d6
 langcode: en
 status: true
 dependencies: {  }
@@ -14,5 +14,3 @@ source_configuration:
   source_field: field_c_m_audio_file
 field_map:
   name: name
-  mimetype: field_c_m_audio_file
-  filesize: field_c_m_audio_file

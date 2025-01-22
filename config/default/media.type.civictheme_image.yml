@@ -1,7 +1,12 @@
-uuid: 2f83a107-ee96-4a2b-b943-67951415fe0f
+uuid: 3dd9db72-40cc-43b1-b7ab-3a481b81afcf
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: field_c_m_image
 _core:
   default_config_hash: lfTrIWlNFIoWCpHDvPtLLNxy-O5SsjWW_jmZtt2KhQs
 id: civictheme_image
@@ -14,7 +19,3 @@ source_configuration:
   source_field: field_c_m_image
 field_map:
   name: name
-  mimetype: field_c_m_image
-  filesize: field_c_m_image
-  width: field_c_m_image
-  height: field_c_m_image

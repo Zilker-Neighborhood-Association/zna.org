@@ -1,4 +1,4 @@
-uuid: 53abaf08-4675-41e4-966d-fc62fb0488c5
+uuid: 35afb4d9-7cf0-43a5-bd85-89bcc5aa8371
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,25 @@ dependencies:
     - media.type.civictheme_video
   module:
     - file
+    - filefield_paths
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: 'videos/[date:custom:Y]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: true
+    retroactive_update: false
+    active_updating: false
 _core:
   default_config_hash: cOPTcbVwsOgKDKadDqLoooa6YvhdvFWpt01nOmkO1PQ
 id: media.civictheme_video.field_c_m_video_file
@@ -20,10 +39,10 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:file'
+  handler_settings: {  }
   file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
   file_extensions: mp4
   max_filesize: ''
   description_field: false
-  handler: 'default:file'
-  handler_settings: {  }
 field_type: file

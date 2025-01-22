@@ -1,17 +1,19 @@
-uuid: ef12c1ae-52d1-4f51-83d6-d811560e65bd
+uuid: 6edc4865-1215-4bf9-b8a4-f84dec653eea
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - focal_point
 _core:
-  default_config_hash: xdHxvzIGvrVOVxUdyQ_hDl2w-01HRovt5opEYXrjfgM
+  default_config_hash: XW8hm6l7XjUifWuLfYw6YUXwX5-pjQgp46sqwAffATA
 name: civictheme_medium
 label: Medium
 effects:
-  bddf0d06-42f9-4c75-a700-a33cafa25ea0:
-    uuid: bddf0d06-42f9-4c75-a700-a33cafa25ea0
-    id: image_scale
-    weight: 0
+  057ded4a-e764-4232-91d2-79c07a5da33b:
+    uuid: 057ded4a-e764-4232-91d2-79c07a5da33b
+    id: focal_point_scale_and_crop
+    weight: 2
     data:
       width: 220
       height: 220
-      upscale: false
+      crop_type: focal_point

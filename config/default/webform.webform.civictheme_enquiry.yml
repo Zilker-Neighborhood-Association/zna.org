@@ -1,9 +1,9 @@
-uuid: 0ea134fa-c783-40a6-aa3e-fa832435cab7
+uuid: 45009e8b-2960-4b82-9c78-252130772c8e
 langcode: en
 status: open
 dependencies: {  }
 _core:
-  default_config_hash: uvewMaA-NjX2P5EUrZa4yBeaOWnBIt47Rzz_d_fjzV0
+  default_config_hash: 6u0m5teNtv_6WRpIVMrYw9u3YoJeBIfZdSYmLqvXgWc
 open: null
 close: null
 weight: 0
@@ -37,6 +37,7 @@ elements: |-
   enquiry:
     '#type': textarea
     '#title': Enquiry
+    '#required': true
   reason_for_enquiry:
     '#type': select
     '#title': 'Reason for enquiry'

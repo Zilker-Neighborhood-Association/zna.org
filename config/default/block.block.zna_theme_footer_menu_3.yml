@@ -1,6 +1,6 @@
-uuid: a5097e03-0be8-4edc-9bad-5d49911bac93
+uuid: 709115d1-e75f-4d7b-9328-a37d1cbebc1f
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.civictheme-footer
@@ -27,5 +27,7 @@ settings:
   depth: 1
   expand_all_items: false
   parent: 'civictheme-footer:'
+  render_parent: false
   suggestion: civictheme_footer
+  hide_on_nonactive: false
 visibility: {  }

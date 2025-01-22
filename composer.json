@@ -41,6 +41,8 @@
         "drupal/diff": "^1.8",
         "drupal/dropzonejs": "^2.11",
         "drupal/email_registration": "^2.0",
+        "drupal/filefield_paths": "^1.0@beta",
+        "drupal/focal_point": "^2.1",
         "drupal/gin": "^4.0",
         "drupal/google_tag": "^2.0",
         "drupal/hide_revision_field": "^2.5",
@@ -120,15 +122,12 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/core": {
-              "Patch required by civictheme": "patches/3204271-20-missing-layout-exception.patch"
-            },
             "drupal/responsive_favicons": {
                 "D11 compatibility": "patches/3434213-mr8-d11.patch"
             }
         }
     },
     "require-dev": {
-        "drupal/core-dev": "10.4.1"
+        "drupal/core-dev": "^10.4"
     }
 }

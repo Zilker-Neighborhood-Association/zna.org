@@ -1,10 +1,10 @@
 _core:
-  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+  default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
 langcode: en
 uuid: 7a1acc69-e622-4975-8561-d9e2c630aa06
 name: 'ZNA - Zilker Neighborhood Association'
 mail: web@zilkerneighborhood.org
-slogan: ''
+slogan: 'Zilker Neighborhood Association'
 page:
   403: ''
   404: ''
@@ -12,3 +12,4 @@ page:
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
+mail_notification: ''

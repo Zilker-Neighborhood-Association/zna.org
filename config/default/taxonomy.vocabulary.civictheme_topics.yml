@@ -1,10 +1,11 @@
-uuid: b5c69b7f-d453-484e-88fb-4a80e07111dc
+uuid: 9125acc1-290a-41bf-8842-3f10eae4bd06
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 0cX3BLDf920Sp3LSAHAcPpo-kOR8npCjiUEEca9uEx8
+  default_config_hash: oe7rKkT-ABGzEIZ1gDuHd9FYf2nbBCew4Q5wOsX5zw8
 name: Topics
 vid: civictheme_topics
-description: ''
+description: null
 weight: 0
+new_revision: false

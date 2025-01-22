@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: PF0AdDnfZO5oXioy0XlGW0CJGDuxxspx3TX8txHv82E
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: 'public://favicon.ico'
@@ -9,26 +11,26 @@ components:
     primary:
       light:
         desktop:
-          path: sites/default/files/images/2024-04/zna_logo_150px.png
+          path: themes/contrib/civictheme/dist/assets/logos/logo_primary_light_desktop.svg
         mobile:
-          path: sites/default/files/images/2024-04/zna_logo_150px.png
+          path: themes/contrib/civictheme/dist/assets/logos/logo_primary_light_mobile.svg
       dark:
         desktop:
-          path: sites/default/files/images/2024-04/zna_logo_150px.png
+          path: themes/contrib/civictheme/dist/assets/logos/logo_primary_dark_desktop.svg
         mobile:
-          path: sites/default/files/images/2024-04/zna_logo_150px.png
+          path: themes/contrib/civictheme/dist/assets/logos/logo_primary_dark_mobile.svg
     secondary:
       light:
         desktop:
-          path: ''
+          path: themes/contrib/civictheme/dist/assets/logos/logo_secondary_light_desktop.png
         mobile:
-          path: ''
+          path: themes/contrib/civictheme/dist/assets/logos/logo_secondary_light_mobile.png
       dark:
         desktop:
-          path: ''
+          path: themes/contrib/civictheme/dist/assets/logos/logo_secondary_dark_desktop.png
         mobile:
-          path: ''
-    image_alt: 'ZNA logo'
+          path: themes/contrib/civictheme/dist/assets/logos/logo_secondary_dark_mobile.png
+    image_alt: 'Logo image'
   header:
     theme: light
     logo_type: inline
@@ -67,8 +69,6 @@ components:
     summary_length: 160
   attachment:
     use_media_name: true
-  site_slogan:
-    content: ''
 colors:
   use_color_selector: true
   use_brand_colors: true

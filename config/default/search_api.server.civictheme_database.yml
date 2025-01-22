@@ -1,4 +1,4 @@
-uuid: e0936e77-3ea3-4231-87df-519b46226bf9
+uuid: 94f440e7-da27-4294-a0f8-257b80cd58a2
 langcode: en
 status: true
 dependencies:
@@ -12,6 +12,5 @@ description: ''
 backend: search_api_db
 backend_config:
   database: 'default:default'
-  min_chars: 2
+  min_chars: 1
   matching: words
-  phrase: bigram

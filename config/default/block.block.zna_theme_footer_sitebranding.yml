@@ -1,4 +1,4 @@
-uuid: db0a313e-8496-4af3-adf6-5a99fe77a9c1
+uuid: 8dfc3906-9217-4cd5-8a36-7779e0040c26
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: JsxXX1yr2lrenxigULjJmgP88YKVxKnsaKSMSdhBqo8
 id: zna_theme_footer_sitebranding
 theme: zna_theme
-region: hidden
-weight: -10
+region: footer_top_1
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:

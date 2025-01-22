@@ -1,4 +1,4 @@
-uuid: 79de0db4-363d-4359-8284-c089eb8a52bf
+uuid: 46d5dd5e-164a-4b4d-98b2-ea91660a6e6d
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: zna_theme_footer_copyright
 theme: zna_theme
 region: footer_bottom_2
-weight: -11
+weight: 0
 provider: null
 plugin: 'block_content:d7098a8c-3ba3-48f7-bc0c-5787ebaa0427'
 settings:

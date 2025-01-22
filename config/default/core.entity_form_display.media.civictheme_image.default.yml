@@ -1,4 +1,4 @@
-uuid: 87a8f8dd-325d-42d9-9561-e9d91e0f65b6
+uuid: a628e724-fd01-4147-922e-37bca4c3be8c
 langcode: en
 status: true
 dependencies:
@@ -6,15 +6,15 @@ dependencies:
     - field.field.media.civictheme_image.field_c_m_caption
     - field.field.media.civictheme_image.field_c_m_image
     - field.field.media.civictheme_image.field_c_m_media_tags
-    - image.style.civictheme_thumbnail
+    - image.style.civictheme_medium
     - media.type.civictheme_image
     - workflows.workflow.civictheme_editorial
   module:
     - content_moderation
-    - image
+    - focal_point
     - path
 _core:
-  default_config_hash: x1hDKk79dUc4bPrYsibgWMvQ6zGe5eqd_JZD5ECI8aw
+  default_config_hash: 8_xvzTpm2411OuJEacSQhaXGJRYy4zzkURi_RoFdAw4
 id: media.civictheme_image.default
 targetEntityType: media
 bundle: civictheme_image
@@ -35,12 +35,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_c_m_image:
-    type: image_image
+    type: image_focal_point
     weight: 1
     region: content
     settings:
       progress_indicator: throbber
-      preview_image_style: civictheme_thumbnail
+      preview_image_style: civictheme_medium
+      preview_link: true
+      offsets: '50,50'
     third_party_settings: {  }
   field_c_m_media_tags:
     type: entity_reference_autocomplete

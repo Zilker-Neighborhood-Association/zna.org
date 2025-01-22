@@ -1,4 +1,4 @@
-uuid: 3e212828-614e-4da7-bccb-b9ee7934bfc8
+uuid: 9214eb55-1f60-4d4e-a15e-fcabadb6689e
 langcode: en
 status: true
 dependencies:
@@ -7,24 +7,26 @@ dependencies:
     - field.field.media.civictheme_image.field_c_m_caption
     - field.field.media.civictheme_image.field_c_m_image
     - field.field.media.civictheme_image.field_c_m_media_tags
-    - image.style.civictheme_thumbnail
+    - image.style.civictheme_medium
     - media.type.civictheme_image
   module:
-    - image
+    - focal_point
 _core:
-  default_config_hash: Wxu_NzWzO4d90f1dVvSIDTThs8bAc64LBBeD0_WUy-o
+  default_config_hash: i3ne294WoGBcYXwW1l6_w5gOEFbsRSg6Guz07YzBjNo
 id: media.civictheme_image.media_library
 targetEntityType: media
 bundle: civictheme_image
 mode: media_library
 content:
   field_c_m_image:
-    type: image_image
+    type: image_focal_point
     weight: 5
     region: content
     settings:
       progress_indicator: throbber
-      preview_image_style: civictheme_thumbnail
+      preview_image_style: civictheme_medium
+      preview_link: true
+      offsets: '50,50'
     third_party_settings: {  }
   name:
     type: string_textfield

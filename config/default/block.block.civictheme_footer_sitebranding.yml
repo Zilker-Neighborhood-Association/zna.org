@@ -1,4 +1,4 @@
-uuid: ec64cb1c-1bb9-4cdf-bbd5-b97dab65869f
+uuid: a448e6cc-189d-46dd-8868-8e6c47a67964
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: civictheme_footer_sitebranding
 theme: civictheme
 region: footer_top_1
-weight: -10
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:

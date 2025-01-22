@@ -1,7 +1,7 @@
 name: ZNA Theme
 type: theme
 base theme: civictheme
-description: 'ZNA Theme'
+description: 'Theme for ZNA'
 core_version_requirement: ^9 || ^10
 
 regions:
@@ -17,7 +17,10 @@ regions:
   content_top: 'Content Top'
   content: 'Content'
   content_bottom: 'Content Bottom'
-  sidebar: 'Sidebar'
+  sidebar_top_left: 'Sidebar Top Left'
+  sidebar_bottom_left: 'Sidebar Bottom Left'
+  sidebar_top_right: 'Sidebar Top Right'
+  sidebar_bottom_right: 'Sidebar Bottom Right'
   footer_top_1: 'Footer top 1'
   footer_top_2: 'Footer top 2'
   footer_middle_1: 'Footer middle 1'
@@ -68,7 +71,7 @@ components:
     templates:
       - components/04-templates
 
-# Information added by Drupal.org packaging script on 2024-04-14
-version: '1.7.1'
+# Information added by Drupal.org packaging script on 2024-12-04
+version: '1.9.0'
 project: 'civictheme'
-datestamp: 1713127762
+datestamp: 1733271266

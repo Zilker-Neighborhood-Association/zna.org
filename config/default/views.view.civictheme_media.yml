@@ -1,4 +1,4 @@
-uuid: afd62463-c4f7-4fc0-a6f9-24772bfc8aa5
+uuid: a0e498a4-0abe-4260-9941-aa5c5dba735b
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
     - taxonomy
     - user
 _core:
-  default_config_hash: gBarATPUP6kp1Ny9LTYR-Yw9HgN8Di79kDk9tLGnfSA
+  default_config_hash: Nu3Rq0UlkcX_p4RtgTNlFp6WzhAPE_ayEyFOCDhUgl0
 id: civictheme_media
 label: Media
 module: views
@@ -524,6 +524,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0

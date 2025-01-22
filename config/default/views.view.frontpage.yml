@@ -1,4 +1,4 @@
-uuid: e4fa1327-8c5e-4e9a-b875-8066e2240e10
+uuid: 1dae4b86-e6f1-4f12-adf4-9bc29b552f74
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: 6eeliKIydPjqyv5V__QqTfahvJMWkHjOVUUuUIdB1ik
+  default_config_hash: OEEnRQIjfIaCFRsz8U3VqDrE82ltQKlo8wNbQJRZXu0
 id: frontpage
 label: Frontpage
 module: node
@@ -30,6 +30,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: 0
           id: 0
@@ -109,7 +110,7 @@ display:
           admin_label: ''
           entity_type: node
           entity_field: sticky
-          plugin_id: boolean
+          plugin_id: standard
           order: DESC
           expose:
             label: ''

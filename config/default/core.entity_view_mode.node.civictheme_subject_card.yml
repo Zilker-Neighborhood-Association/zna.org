@@ -1,0 +1,13 @@
+uuid: 3102cba9-3ca4-4326-bbff-7f9a140e73ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Dr-l0Wlh2-cZSZiHQyCyL-kfHmpte0gwPwNXQoJhQSY
+id: node.civictheme_subject_card
+label: 'Subject Card'
+description: ''
+targetEntityType: node
+cache: true

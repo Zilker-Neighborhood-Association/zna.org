@@ -1,4 +1,4 @@
-uuid: a3eb47e8-fe7f-4d37-94e0-fa2af36c8608
+uuid: 15a34462-59c3-4512-9eb1-acb4746e9c5c
 langcode: en
 status: true
 dependencies:
@@ -17,7 +17,7 @@ dependencies:
     - link
     - options
 _core:
-  default_config_hash: mxJLDo2l0JFHkRc7Vg94bxF_4LZnQ9Ljw85aV1o1rEk
+  default_config_hash: bHV8abJyWur09aJt1nyPWR_grQ52ScqAFGRArRKSd8o
 id: paragraph.civictheme_event_card.default
 targetEntityType: paragraph
 bundle: civictheme_event_card
@@ -30,6 +30,7 @@ content:
       timezone_override: ''
       format_type: medium
       separator: '-'
+      from_to: both
     third_party_settings: {  }
     weight: 9
     region: content

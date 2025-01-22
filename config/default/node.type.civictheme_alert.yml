@@ -1,4 +1,4 @@
-uuid: 2f95f717-0ae5-42d9-9360-04dd4fa7903f
+uuid: 7281e2c3-2868-4603-bf34-f06e87cddf5b
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ third_party_settings:
     available_menus: {  }
     parent: ''
 _core:
-  default_config_hash: jNwW_QSuxE0bJr7cGzubQ-LhPCnXT88LKYv6xfaS-jk
+  default_config_hash: ka9-gvk1IpL-y59MhQVOnWV1J0egDzNpBtDfUS6XDxE
 name: Alert
 type: civictheme_alert
 description: 'Provide information for site users using a status bar.'

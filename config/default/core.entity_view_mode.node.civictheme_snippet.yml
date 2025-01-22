@@ -1,11 +1,11 @@
-uuid: 2f9631f0-0561-4bfc-9194-31a4b20a2085
+uuid: 6739c883-3259-4f79-bd05-c20f9cb0ccc1
 langcode: en
 status: true
 dependencies:
   module:
     - node
 _core:
-  default_config_hash: 0hmUTNmjqXLeknoCycypBIaXc-5H13FbWNoEMQ9HVuQ
+  default_config_hash: FNeEhfhyOEV7H2yN91gDfqm0vrrnUyvrimhNEbhiAc0
 id: node.civictheme_snippet
 label: Snippet
 description: ''

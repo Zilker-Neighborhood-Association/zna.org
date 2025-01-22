@@ -1,4 +1,4 @@
-uuid: 8cb769dd-d613-410f-86bf-27074a1e2843
+uuid: 22f2c873-fba8-4f90-bc4d-3a67cce6f846
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: zna_theme_banner
 theme: zna_theme
 region: banner
-weight: -10
+weight: 0
 provider: null
 plugin: 'block_content:50c52459-c100-4e4d-92a4-9c4c77d8f8d0'
 settings:

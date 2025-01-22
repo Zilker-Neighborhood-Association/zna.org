@@ -2,10 +2,6 @@ uuid: 7d9dead5-72f3-432d-8549-c7450b653b7a
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:footer_logo:81066674-8ef4-43b3-8855-8da2dc4fbb72'
-  module:
-    - block_content
   theme:
     - zna_theme
 id: zna_theme_footerznalogo

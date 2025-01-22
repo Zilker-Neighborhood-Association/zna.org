@@ -1,4 +1,4 @@
-uuid: 79dac037-d556-45ad-a17a-cec0deee55f4
+uuid: 1cbddba5-9ee7-4026-be61-2e8d2965e774
 langcode: en
 status: true
 dependencies: {  }
@@ -14,5 +14,3 @@ source_configuration:
   source_field: field_c_m_icon
 field_map:
   name: name
-  mimetype: field_c_m_icon
-  filesize: field_c_m_icon

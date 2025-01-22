@@ -1,6 +1,6 @@
-uuid: af01db58-2530-4b75-bbd1-22719a583adb
+uuid: 787b3f37-1eef-4002-b90d-90c218c3fdcd
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: civictheme_header_sitebranding
 theme: civictheme
 region: header_middle_2
-weight: -12
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:

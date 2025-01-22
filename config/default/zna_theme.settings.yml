@@ -58,14 +58,14 @@ components:
     primary:
       light:
         desktop:
-          path: files/zna_logo_min.svg
+          path: files/zna_logo_170px.png
         mobile:
-          path: files/zna_logo_min.svg
+          path: files/zna_logo_170px.png
       dark:
         desktop:
-          path: files/zna_logo_min.svg
+          path: files/zna_logo_170px.png
         mobile:
-          path: files/zna_logo_min.svg
+          path: files/zna_logo_170px.png
     secondary:
       light:
         desktop:
@@ -77,9 +77,9 @@ components:
           path: ''
         mobile:
           path: ''
-    image_alt: ''
+    image_alt: 'ZNA logo'
   site_slogan:
-    content: ''
+    content: 'Zilker Neighborhood Association'
   header:
     theme: light
     logo_type: default
@@ -91,9 +91,9 @@ components:
   navigation:
     primary_navigation:
       dropdown: drawer
-      dropdown_columns: '4'
+      dropdown_columns: '3'
       dropdown_columns_fill: 0
-      is_animated: 0
+      is_animated: 1
     secondary_navigation:
       dropdown: none
       dropdown_columns: '4'
@@ -102,7 +102,9 @@ components:
   link:
     new_window: 0
     external_new_window: 0
-    external_override_domains: {  }
+    external_override_domains:
+      - zna.org
+      - zilkerneighborhood.org
   skip_link:
     theme: light
   event_card:

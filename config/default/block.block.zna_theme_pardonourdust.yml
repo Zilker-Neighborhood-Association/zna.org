@@ -1,4 +1,4 @@
-uuid: 9e9170e3-75e0-43ba-b3cf-91d55cd8721e
+uuid: f8d17c48-ac0c-467c-ad99-579bc56bf999
 langcode: en
 status: true
 dependencies:
@@ -8,16 +8,16 @@ dependencies:
     - block_content
   theme:
     - zna_theme
-id: zna_theme_signup
+id: zna_theme_pardonourdust
 theme: zna_theme
-region: hidden
-weight: -11
+region: content_bottom
+weight: 0
 provider: null
 plugin: 'block_content:5508dc51-1cf8-4577-9038-b572fbd698ae'
 settings:
   id: 'block_content:5508dc51-1cf8-4577-9038-b572fbd698ae'
-  label: Signup
-  label_display: ''
+  label: 'Pardon our dust'
+  label_display: '0'
   provider: block_content
   status: true
   info: ''

@@ -1,4 +1,4 @@
-uuid: 766e6ea2-7601-4bfc-8aa0-bad354c898d9
+uuid: 3e9426dd-a739-4e8e-9731-98d8db283fbc
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
     - taxonomy
     - user
 _core:
-  default_config_hash: fI3kmVgGJJ2wQ9BsswX7hrY-8ouW3_l6neO9CFUpBp0
+  default_config_hash: iVyXRTkZrhO91Tl_CX6KZA0Xuyy7Yfftfy1PBc6mR3o
 id: civictheme_automated_list
 label: 'Automated list'
 module: views
@@ -95,6 +95,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 5
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

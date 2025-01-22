@@ -1,9 +1,9 @@
-uuid: 1ae6e123-c01d-4570-972a-79b95a4d8e71
+uuid: 6d0aa10d-449c-438f-99c9-128e48cb69ac
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: Sez7_8NRlJFeHy6KS0vgREPs0qmF_UPfBybQ1B5ot_w
+  default_config_hash: I1E1naPAQkb9WWWZBd2SaKbCSk1m-DFBQiH2CXAE0lE
 name: 'Plain text'
 format: civictheme_plain_text
 weight: 10

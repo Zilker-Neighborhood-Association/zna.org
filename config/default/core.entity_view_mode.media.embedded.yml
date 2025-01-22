@@ -1,11 +1,11 @@
-uuid: da2548f2-5228-448b-8cb8-ab993a1f5dc7
+uuid: d7b56ab2-863b-4b34-8bf2-366c18d2a29f
 langcode: en
 status: true
 dependencies:
   module:
     - media
 _core:
-  default_config_hash: IvohHEiv_tHXtdBNMu7elD10mqN5cVonX-h3Z4vCpZs
+  default_config_hash: AdWhLfOivZXGbIg94YP5OOMXILYCgit8RYBOdeXD1rk
 id: media.embedded
 label: Embedded
 description: ''

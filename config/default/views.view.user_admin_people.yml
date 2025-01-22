@@ -1,11 +1,11 @@
-uuid: 373b11d4-d98c-4065-8a5c-c0c333465584
+uuid: 19f81f12-2fec-496f-81f7-668a1e0c3870
 langcode: en
 status: true
 dependencies:
   module:
     - user
 _core:
-  default_config_hash: njaZigMvB4ap21Fg_tQcJhWgYJCGNi49Z5rRL_N6RI0
+  default_config_hash: FFLg74mnzRE10lgg5fspPCZWLnIEcvCnJMlNzj8OEtw
 id: user_admin_people
 label: People
 module: user
@@ -462,6 +462,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: 0
           id: 0

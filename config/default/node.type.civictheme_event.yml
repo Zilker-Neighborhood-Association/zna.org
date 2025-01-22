@@ -1,4 +1,4 @@
-uuid: 32e7a02c-e05f-451e-b421-e66744080f81
+uuid: fa5f75c9-9d41-42fa-9f54-04536945ce6e
 langcode: en
 status: true
 dependencies:
@@ -10,11 +10,11 @@ third_party_settings:
       - main
     parent: 'main:'
 _core:
-  default_config_hash: QsPKs9Q6rlaHSkS8dDYeddDoJoLwd72GcnRMjptUKCQ
+  default_config_hash: k1wQQhvBS8SbxUAMc5yf5O1mrblP3jPrGsxHFquazIA
 name: Event
 type: civictheme_event
 description: '<em>CivicTheme</em>. Use Event pages to describe event information.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

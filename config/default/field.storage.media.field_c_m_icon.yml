@@ -1,4 +1,4 @@
-uuid: c5da95d4-169b-4943-9020-5b783d5defac
+uuid: bd065225-7e82-4440-9e75-ab3d8b17119e
 langcode: en
 status: true
 dependencies:
@@ -12,10 +12,10 @@ field_name: field_c_m_icon
 entity_type: media
 type: file
 settings:
+  target_type: file
   display_field: false
   display_default: false
   uri_scheme: public
-  target_type: file
 module: file
 locked: false
 cardinality: 1

@@ -1,4 +1,4 @@
-uuid: a9bd3aa8-bfe0-4763-b5be-6d8317188ddd
+uuid: e1fe26c4-8c42-42f9-bc73-c7e71ef77e2f
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     module:
       - webform
 _core:
-  default_config_hash: YPgxGC8TmLtfCOLGCCHJcdH2llA7QksUkdi1abhB7Ro
+  default_config_hash: ndr5pjyhumlySBPBZtyaztiGbMUclmN32B3nTQ-FRqE
 id: webform_submissions
 label: 'Webform submissions'
 module: views
@@ -69,6 +69,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       style:
         type: table
         options:

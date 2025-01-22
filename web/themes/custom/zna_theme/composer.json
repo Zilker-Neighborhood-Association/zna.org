@@ -1,11 +1,10 @@
 {
     "name": "civictheme/zna_theme",
-    "description": "ZNA Theme",
+    "description": "Theme for ZNA",
     "type": "drupal-theme",
     "license": "proprietary",
     "require": {
-        "php": ">=8.1",
-        "drupal/civictheme": "^1"
+        "php": ">=8.3"
     },
     "extra": {
         "civictheme": {

@@ -1,4 +1,4 @@
-uuid: b7807a5e-ae97-4b50-8e93-cc71e2ea2cd3
+uuid: 20cbad25-8438-476f-84f4-764ccccccac4
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,26 @@ dependencies:
     - field.storage.media.field_c_m_image
     - media.type.civictheme_image
   module:
+    - filefield_paths
     - image
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: 'images/[date:custom:Y]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: true
+    retroactive_update: true
+    active_updating: false
 _core:
   default_config_hash: kKyPVkzp9Ec6eBoC-hk2r6q_-wD2hTxvg0mx0cM4pXc
 id: media.civictheme_image.field_c_m_image
@@ -23,7 +42,7 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: 'images/[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png gif jpg jpeg'
+  file_extensions: 'png gif jpg jpeg svg'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''

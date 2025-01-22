@@ -1,4 +1,4 @@
-uuid: e994703d-d0f3-4109-bd35-d4ff067e7fc7
+uuid: 9e91aca1-3c65-4a25-8a70-d57484206734
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ dependencies:
     module:
       - content_moderation
 _core:
-  default_config_hash: pDx3G1oVu9dnzeothv53ZY9XeWkDWk00qslH1tTMKnQ
+  default_config_hash: 0pby8V_1r5hlNy3BAvFK_yM5vpB0qBlfAwplIgMLOGw
 id: civictheme_moderated_content
 label: 'Moderated content'
 module: views
@@ -435,6 +435,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

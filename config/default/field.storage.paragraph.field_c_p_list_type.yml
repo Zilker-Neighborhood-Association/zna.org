@@ -1,4 +1,4 @@
-uuid: 5e129313-4135-4ce5-8c4c-3f02dd0b5e1b
+uuid: bb33e198-2c49-4bf3-a995-8b5bb627f554
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - options
     - paragraphs
 _core:
-  default_config_hash: VbdlUoK1GuO3D8-H1GtmJ7ndSjb6avtGCXSKUE2OzDE
+  default_config_hash: dGWMjM_Pz93-AQIs-mQBnXHLi1OjmImixQ8D_EPZ3mE
 id: paragraph.field_c_p_list_type
 field_name: field_c_p_list_type
 entity_type: paragraph
@@ -16,9 +16,6 @@ settings:
     -
       value: civictheme_automated_list__block1
       label: Default
-    -
-      value: civictheme_automated_list_test__block_test_1
-      label: Test
   allowed_values_function: ''
 module: options
 locked: false

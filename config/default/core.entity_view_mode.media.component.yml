@@ -1,11 +1,11 @@
-uuid: a1980f80-f392-46ff-a568-052fc05ad65d
+uuid: e644dc3d-4cb7-4a8e-945a-7f3c11f506ae
 langcode: en
 status: true
 dependencies:
   module:
     - media
 _core:
-  default_config_hash: s4yZmrYOb0GghGBDRLeMy9SmU2e_F31zdkhlsVWTdag
+  default_config_hash: k_mdM8vqHl4H2FPevNRIHoGmvM0-iRpe_aLFKSSQoDA
 id: media.component
 label: Component
 description: ''

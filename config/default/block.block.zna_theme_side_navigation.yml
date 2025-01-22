@@ -1,6 +1,6 @@
-uuid: f13320c5-29f0-4de8-a687-f8928ac92ce1
+uuid: cac203b2-b896-4a46-bc1b-0a027f0906f8
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.civictheme-primary-navigation
@@ -11,7 +11,7 @@ dependencies:
     - zna_theme
 id: zna_theme_side_navigation
 theme: zna_theme
-region: sidebar
+region: sidebar_top_left
 weight: 0
 provider: null
 plugin: 'menu_block:civictheme-primary-navigation'
@@ -28,7 +28,9 @@ settings:
   depth: 3
   expand_all_items: false
   parent: 'civictheme-primary-navigation:'
+  render_parent: false
   suggestion: civictheme_primary_navigation
+  hide_on_nonactive: false
 visibility:
   request_path:
     id: request_path

@@ -1,4 +1,4 @@
-uuid: a58a2cb7-6309-486c-b4c1-acf325f2b66d
+uuid: 220765cb-c8b7-49fa-a14d-6d75b32cd924
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,25 @@ dependencies:
     - media.type.civictheme_audio
   module:
     - file
+    - filefield_paths
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: 'audios/[date:custom:Y]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: true
+    retroactive_update: false
+    active_updating: false
 _core:
   default_config_hash: ejG3e1u-R8YYv0eXGGBbs8uHM785iIxb95Tjan842G8
 id: media.civictheme_audio.field_c_m_audio_file
@@ -20,10 +39,10 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:file'
+  handler_settings: {  }
   file_directory: 'audios/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'mp3 wav aac'
   max_filesize: ''
   description_field: false
-  handler: 'default:file'
-  handler_settings: {  }
 field_type: file

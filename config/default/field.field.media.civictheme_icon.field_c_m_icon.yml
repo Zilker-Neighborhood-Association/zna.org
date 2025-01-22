@@ -1,4 +1,4 @@
-uuid: c960ca9b-76aa-4494-965c-785f345c25e2
+uuid: 45f6770d-83db-44eb-abc5-4a9bf19a6013
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,25 @@ dependencies:
     - media.type.civictheme_icon
   module:
     - file
+    - filefield_paths
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: icons
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: true
+    retroactive_update: false
+    active_updating: false
 _core:
   default_config_hash: jQbLSMuZqHr1-ws-lOT9OEMtkNUSqbCo__E-rehrKeA
 id: media.civictheme_icon.field_c_m_icon
@@ -20,10 +39,10 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:file'
+  handler_settings: {  }
   file_directory: icons
   file_extensions: svg
   max_filesize: ''
   description_field: false
-  handler: 'default:file'
-  handler_settings: {  }
 field_type: file

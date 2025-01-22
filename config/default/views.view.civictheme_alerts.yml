@@ -1,4 +1,4 @@
-uuid: e1f95619-a908-4698-9b5c-b3c7650a5f46
+uuid: 761ec4d6-8ee4-40a9-9f0c-ec0a2f472d6a
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ dependencies:
     - serialization
     - user
 _core:
-  default_config_hash: 3Il9ZfNVPLruwIUokROS932mJ8Ol9GAexKA32C-JJyE
+  default_config_hash: kH4CF3UhjcZU1l3quMavFL6_uy796MOUwLciYgnHTeM
 id: civictheme_alerts
 label: Alerts
 module: views
@@ -176,7 +176,7 @@ display:
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: false
+            strip_tags: true
             trim: false
             preserve_tags: ''
             html: false
@@ -223,6 +223,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

@@ -1,6 +1,6 @@
-uuid: 1d39a3ed-ea2b-41b4-bf85-373b8408748d
+uuid: b7cef3c3-9eb4-4dde-bc12-88a1a537336c
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: zna_theme_header_sitebranding
 theme: zna_theme
 region: header_middle_2
-weight: -12
+weight: -10
 provider: null
 plugin: system_branding_block
 settings:

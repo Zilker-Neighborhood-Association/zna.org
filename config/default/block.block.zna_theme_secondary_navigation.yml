@@ -1,4 +1,4 @@
-uuid: 58a40167-6903-450d-8b73-342efe2c63f9
+uuid: 0fdbf726-9e11-485b-817a-f1e17a19df99
 langcode: en
 status: false
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: zna_theme_secondary_navigation
 theme: zna_theme
 region: header_top_3
-weight: 0
+weight: -11
 provider: null
 plugin: 'menu_block:civictheme-secondary-navigation'
 settings:
@@ -27,5 +27,7 @@ settings:
   depth: 0
   expand_all_items: false
   parent: 'civictheme-secondary-navigation:'
+  render_parent: false
   suggestion: civictheme_secondary_navigation
+  hide_on_nonactive: false
 visibility: {  }

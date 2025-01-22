@@ -1,4 +1,4 @@
-uuid: e61b336f-d86b-4e10-ab31-1bf878809dd8
+uuid: 70b5f407-a838-45ab-bd5f-e32399ee2495
 langcode: en
 status: true
 dependencies:
@@ -12,10 +12,10 @@ field_name: field_c_m_audio_file
 entity_type: media
 type: file
 settings:
+  target_type: file
   display_field: false
   display_default: false
   uri_scheme: public
-  target_type: file
 module: file
 locked: false
 cardinality: 1

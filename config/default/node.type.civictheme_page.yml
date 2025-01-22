@@ -1,4 +1,4 @@
-uuid: 7fd76183-179e-4a9f-9ad1-fc0cceaa97c3
+uuid: 55550796-dc70-4305-b2f5-c7d51e597c98
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ third_party_settings:
       - civictheme-primary-navigation
     parent: 'civictheme-primary-navigation:'
 _core:
-  default_config_hash: IwZ8QoIFmMADmoayLHmWf-MmeApxzgrdAC95SMWyN24
+  default_config_hash: WU3W-Yxvtz9D_LN7kEGoDkb893HUrtFsd9khTabrf0s
 name: Page
 type: civictheme_page
 description: "Static content such as an 'About us' page or other informational pages that will always be accessible on the site. These can be simple content pages or pages with a complex layout."
