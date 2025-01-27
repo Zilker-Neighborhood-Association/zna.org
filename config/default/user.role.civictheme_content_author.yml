@@ -13,12 +13,14 @@ dependencies:
     - media.type.civictheme_video
     - media.type.vector_image
     - node.type.civictheme_alert
+    - node.type.civictheme_event
     - node.type.civictheme_page
     - workflows.workflow.civictheme_editorial
   module:
     - content_moderation
     - contextual
     - dropzonejs
+    - file
     - filter
     - media
     - node
@@ -33,13 +35,17 @@ label: 'Content Author'
 weight: -8
 is_admin: null
 permissions:
+  - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
+  - 'access files overview'
   - 'access media overview'
+  - 'access site in maintenance mode'
   - 'access toolbar'
   - 'create civictheme_alert content'
   - 'create civictheme_audio media'
   - 'create civictheme_document media'
+  - 'create civictheme_event content'
   - 'create civictheme_icon media'
   - 'create civictheme_image media'
   - 'create civictheme_page content'
@@ -51,6 +57,7 @@ permissions:
   - 'delete any civictheme_alert content'
   - 'delete any civictheme_audio media'
   - 'delete any civictheme_document media'
+  - 'delete any civictheme_event content'
   - 'delete any civictheme_icon media'
   - 'delete any civictheme_image media'
   - 'delete any civictheme_page content'
@@ -59,11 +66,13 @@ permissions:
   - 'delete any media'
   - 'delete any vector_image media'
   - 'delete civictheme_alert revisions'
+  - 'delete civictheme_event revisions'
   - 'delete civictheme_page revisions'
   - 'delete media'
   - 'delete own civictheme_alert content'
   - 'delete own civictheme_audio media'
   - 'delete own civictheme_document media'
+  - 'delete own civictheme_event content'
   - 'delete own civictheme_icon media'
   - 'delete own civictheme_image media'
   - 'delete own civictheme_page content'
@@ -74,6 +83,7 @@ permissions:
   - 'edit any civictheme_alert content'
   - 'edit any civictheme_audio media'
   - 'edit any civictheme_document media'
+  - 'edit any civictheme_event content'
   - 'edit any civictheme_icon media'
   - 'edit any civictheme_image media'
   - 'edit any civictheme_page content'
@@ -83,6 +93,7 @@ permissions:
   - 'edit own civictheme_alert content'
   - 'edit own civictheme_audio media'
   - 'edit own civictheme_document media'
+  - 'edit own civictheme_event content'
   - 'edit own civictheme_icon media'
   - 'edit own civictheme_image media'
   - 'edit own civictheme_page content'
