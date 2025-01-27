@@ -13,7 +13,7 @@ _core:
 name: Alert
 type: civictheme_alert
 description: 'Provide information for site users using a status bar.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

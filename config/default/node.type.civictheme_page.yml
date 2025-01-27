@@ -14,7 +14,7 @@ _core:
 name: Page
 type: civictheme_page
 description: "Static content such as an 'About us' page or other informational pages that will always be accessible on the site. These can be simple content pages or pages with a complex layout."
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false
