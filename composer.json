@@ -52,7 +52,7 @@
         "drupal/rabbit_hole": "^1.0",
         "drupal/realname": "^2.0",
         "drupal/responsive_favicons": "^2.0",
-        "drupal/search_api": "^1.37",
+        "drupal/search_api": "^1.38",
         "drupal/simple_sitemap": "^4.2",
         "drupal/svg_image_field": "^2.3",
         "drupal/ultimate_cron": "^2.0",
