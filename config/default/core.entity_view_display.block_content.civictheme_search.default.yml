@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.civictheme_search
     - field.field.block_content.civictheme_search.field_c_b_link
+    - field.field.block_content.civictheme_search.field_c_b_link_in_mobile_menu
   module:
     - link
 _core:
@@ -32,4 +33,5 @@ content:
     weight: 0
     region: content
 hidden:
+  field_c_b_link_in_mobile_menu: true
   search_api_excerpt: true
