@@ -31,7 +31,7 @@
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.5",
-        "drupal/civictheme": "^1.9",
+        "drupal/civictheme": "^1.10",
         "drupal/ckeditor_media_resize": "^1.0",
         "drupal/core-composer-scaffold": "^10.4",
         "drupal/core-recommended": "^10.4",
