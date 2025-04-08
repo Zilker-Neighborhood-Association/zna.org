@@ -84,8 +84,7 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
       - name: ls
-        run: |
-          cd {{ secrets.REPO_PATH }}
-          ssh live 'ls -al'
+        run: ssh live 'cd {{ secrets.REPO_PATH }} && ls -al'
+
       - name: drush st
         run: ssh live 'php vendor/drush/drush.php st'
