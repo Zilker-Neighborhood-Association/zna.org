@@ -49,10 +49,12 @@ jobs:
         uses: shimataro/ssh-key-action@d4fffb50872869abe2d9a9098a6d9c5aa7d16be4 # v2.7.0
         with:
           key: ${{ secrets.SSH_KEY }}
-          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          known_hosts: ${{ env.KNOWN_HOSTS }}
 
       - name: Prepare code for deployment
         run: |
+          git config --global core.autocrlf input
+          git config --global init.defaultBranch main
           git config --global user.email "github-actions@example.com"
           git config --global user.name "GitHub Actions"
           commit_message=$(git log -1 --pretty=%B)
@@ -66,8 +68,8 @@ jobs:
 
       - name: Push code to Live Site
         run: |
-          git remote add midphase ${{ secrets.MIDPHASE_REPO }}
-          git push --force midphase HEAD:master
+          git remote add midphase ${{ secrets.SSH_HOST }}${{ secrets.REPO_PATH }}
+          git push --force midphase HEAD:main
 
       - name: Configure SSH
         run: |
@@ -80,5 +82,5 @@ jobs:
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
-      - name: Whoami
-        run: ssh live 'whoami'
+      - name: ls
+        run: ssh live 'la -al'
