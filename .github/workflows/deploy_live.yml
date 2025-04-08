@@ -12,6 +12,8 @@ jobs:
   deploy:
     name: Deploy to Live Site
     runs-on: ubuntu-latest
+    env:
+      DRUSH: /usr/php83/usr/bin/php ${{ secrets.REPO_PATH }}/vendor/drush/drush/drush.php
     steps:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -85,4 +87,4 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
 
       - name: drush st
-        run: ssh live 'php ${{ secrets.REPO_PATH }}/vendor/drush/drush/drush.php st'
+        run: ssh live '${{ env.DRUSH }} st'
