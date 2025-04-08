@@ -58,6 +58,7 @@ jobs:
           git config --global user.email "github-actions@example.com"
           git config --global user.name "GitHub Actions"
           commit_message=$(git log -1 --pretty=%B)
+          rm -rf .ddev
           rm -rf .git
           rm -rf .github
           rm -rf web/core/*.txt
