@@ -83,4 +83,4 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
       - name: ls
-        run: ssh live 'la -al'
+        run: ssh live 'ls -al'
