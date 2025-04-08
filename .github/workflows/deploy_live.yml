@@ -84,4 +84,8 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
       - name: ls
-        run: ssh live 'ls -al'
+        run: |
+          cd ~/znaorg/
+          ssh live 'ls -al'
+      - name: drush st
+        run: ssh live 'drush st'
