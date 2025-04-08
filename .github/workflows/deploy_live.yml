@@ -71,8 +71,8 @@ jobs:
 
       - name: Push code to Live Site
         run: |
-          git remote add midphase ssh://${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}${{ secrets.REPO_PATH }}
-          git push --force midphase HEAD:main
+          git remote add live ssh://${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}${{ secrets.REPO_PATH }}
+          git push --force live HEAD:main
 
       - name: Configure SSH
         run: |

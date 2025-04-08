@@ -101,7 +101,7 @@ $settings['reverse_proxy_trusted_headers'] = \Symfony\Component\HttpFoundation\R
  * must exist and be writable by Drupal. This directory must be relative to
  * the Drupal installation directory and be accessible over the web.
  */
-$settings['file_assets_path'] = 'files';
+$settings['file_assets_path'] = 'assets';
 
 /**
  * Public file path:
@@ -232,4 +232,10 @@ $settings['simple_sitemap_engines.index_now.key'] = '0caec080-19df-4a07-8bdf-5cf
 $ddev_settings = __DIR__ . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   require $ddev_settings;
+}
+
+// Include for local settings.
+$local_settings = __DIR__ . '/settings.local.php';
+if (is_readable($local_settings)) {
+  require $local_settings;
 }
