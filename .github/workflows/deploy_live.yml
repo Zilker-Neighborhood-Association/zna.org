@@ -69,5 +69,16 @@ jobs:
           git remote add midphase ${{ secrets.MIDPHASE_REPO }}
           git push --force midphase HEAD:master
 
+      - name: Configure SSH
+        run: |
+          cat >>~/.ssh/config <<END
+          Host live
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/id_rsa
+          END
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
       - name: Whoami
-        run: ssh ${{ secrets.SSH_HOST }} 'whoami'
+        run: ssh live 'whoami'
