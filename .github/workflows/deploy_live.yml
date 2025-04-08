@@ -85,7 +85,7 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
       - name: ls
         run: |
-          cd ~/znaorg/
+          cd {{ secrets.REPO_PATH }}
           ssh live 'ls -al'
       - name: drush st
-        run: ssh live 'drush st'
+        run: ssh live 'php vendor/drush/drush.php st'
