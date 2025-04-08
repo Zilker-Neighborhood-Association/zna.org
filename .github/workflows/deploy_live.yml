@@ -85,4 +85,4 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
 
       - name: drush st
-        run: ssh live 'php ${{ secrets.REPO_PATH }}/vendor/drush/drush.php st'
+        run: ssh live 'php ${{ secrets.REPO_PATH }}/vendor/drush/drush/drush.php st'
