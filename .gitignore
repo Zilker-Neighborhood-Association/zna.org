@@ -25,6 +25,7 @@
 
 # Ignore paths that contain user-generated content.
 /web/files
+/web/assets
 /web/sites/*/private
 
 # Ignore multi-site test environment.
