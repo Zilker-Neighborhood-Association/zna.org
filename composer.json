@@ -34,15 +34,15 @@
         "drupal/civictheme": "^1.10",
         "drupal/ckeditor_media_resize": "^1.0",
         "drupal/composer_deploy": "^1.10",
-        "drupal/core-composer-scaffold": "^10.4",
-        "drupal/core-recommended": "^10.4",
+        "drupal/core-composer-scaffold": "^11.1",
+        "drupal/core-recommended": "^11.1",
         "drupal/datalayer": "^2.1",
         "drupal/datetimehideseconds": "^1.5",
         "drupal/devel": "^5.3",
         "drupal/diff": "^1.8",
         "drupal/dropzonejs": "^2.11",
         "drupal/email_registration": "^2.0",
-        "drupal/filefield_paths": "^1.0@beta",
+        "drupal/filefield_paths": "^1.0",
         "drupal/focal_point": "^2.1",
         "drupal/gin": "^4.0",
         "drupal/google_tag": "^2.0",
@@ -52,7 +52,7 @@
         "drupal/module_filter": "^5.0",
         "drupal/rabbit_hole": "^1.0",
         "drupal/realname": "^2.0",
-        "drupal/responsive_favicons": "^2.0",
+        "drupal/responsive_favicons": "^3.0",
         "drupal/search_api": "^1.38",
         "drupal/simple_sitemap": "^4.2",
         "drupal/svg_image_field": "^2.3",
@@ -60,7 +60,7 @@
         "drupal/views_bulk_operations": "^4.3",
         "drupal/webform": "^6.3",
         "drupal/webp": "^1.0",
-        "drush/drush": "^13.3",
+        "drush/drush": "^13.5",
         "enyo/dropzone": "^6.0"
     },
     "conflict": {
@@ -123,12 +123,12 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/responsive_favicons": {
-                "D11 compatibility": "patches/3434213-mr8-d11.patch"
+            "drupal/styleguide": {
+                "Create Drupal 11 test release: https://www.drupal.org/project/styleguide/issues/3505640": "https://git.drupalcode.org/project/styleguide/-/merge_requests/23.patch"
             }
         }
     },
     "require-dev": {
-        "drupal/core-dev": "^10.4"
+        "drupal/core-dev": "^11.1"
     }
 }
