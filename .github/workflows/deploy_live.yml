@@ -11,7 +11,7 @@ env:
 jobs:
   deploy:
     name: Deploy to Live Site
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       DRUSH: /usr/php83/usr/bin/php ${{ secrets.REPO_PATH }}/vendor/drush/drush/drush.php
     steps:
@@ -50,7 +50,7 @@ jobs:
       - name: Set up NPM
         uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
         with:
-          node-version: '23'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install NPM dependencies
@@ -71,7 +71,6 @@ jobs:
 
       - name: Prepare code for deployment
         run: |
-          git config --global core.autocrlf input
           git config --global init.defaultBranch main
           git config --global user.email "github-actions@example.com"
           git config --global user.name "GitHub Actions"
