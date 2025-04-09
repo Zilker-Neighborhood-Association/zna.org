@@ -47,6 +47,9 @@ jobs:
       - name: Composer install
         run: composer install --prefer-dist --no-dev --no-interaction --no-progress
 
+      - name: Build theme
+        run: cd web/themes/custom/zna_theme && npm run build
+
       - name: Place SSH key
         uses: shimataro/ssh-key-action@d4fffb50872869abe2d9a9098a6d9c5aa7d16be4 # v2.7.0
         with:
