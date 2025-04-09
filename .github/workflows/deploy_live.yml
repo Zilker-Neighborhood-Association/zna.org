@@ -47,8 +47,21 @@ jobs:
       - name: Composer install
         run: composer install --prefer-dist --no-dev --no-interaction --no-progress
 
+      - name: Set up NPM
+        uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
+        with:
+          node-version: '23'
+          cache: 'npm'
+
+      - name: Install NPM dependencies
+        run: |
+          cd web/themes/custom/zna_theme
+          npm ci
+
       - name: Build theme
-        run: cd web/themes/custom/zna_theme && npm run build
+        run: |
+          cd web/themes/custom/zna_theme
+          npm run build
 
       - name: Place SSH key
         uses: shimataro/ssh-key-action@d4fffb50872869abe2d9a9098a6d9c5aa7d16be4 # v2.7.0
