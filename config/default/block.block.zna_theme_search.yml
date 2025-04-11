@@ -1,6 +1,6 @@
 uuid: 213c707a-6afd-48be-be09-cebf7f2cb4ba
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:civictheme_search:286ff750-a9a9-423a-8a4e-515f79fc0a8f'

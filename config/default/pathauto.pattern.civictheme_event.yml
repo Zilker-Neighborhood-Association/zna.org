@@ -9,12 +9,12 @@ _core:
 id: civictheme_event
 label: Event
 type: 'canonical_entities:node'
-pattern: 'events/[node:title]'
+pattern: 'events/[node:field_c_n_date_range:start_date:html_date]/[node:title]'
 selection_criteria:
-  7c00cfca-667b-46d2-b889-cc27fc0467d0:
+  b0f6fa41-b316-469f-a13a-2963cd6f43a5:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 7c00cfca-667b-46d2-b889-cc27fc0467d0
+    uuid: b0f6fa41-b316-469f-a13a-2963cd6f43a5
     context_mapping:
       node: node
     bundles:

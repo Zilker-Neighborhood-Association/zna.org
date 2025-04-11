@@ -1,6 +1,6 @@
 uuid: 8dfc3906-9217-4cd5-8a36-7779e0040c26
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: zna_theme_footer_sitebranding
 theme: zna_theme
 region: footer_top_1
-weight: -7
+weight: -10
 provider: null
 plugin: system_branding_block
 settings:

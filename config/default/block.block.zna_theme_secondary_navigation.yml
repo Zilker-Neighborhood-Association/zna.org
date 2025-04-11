@@ -1,6 +1,6 @@
 uuid: 0fdbf726-9e11-485b-817a-f1e17a19df99
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.civictheme-secondary-navigation
@@ -21,6 +21,7 @@ settings:
   provider: menu_block
   follow: false
   follow_parent: child
+  display_empty: false
   label_link: false
   label_type: block
   level: 1

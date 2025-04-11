@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in ZNA Theme.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_civictheme_automated_list_view_info_alter().
+ */
+function zna_theme_civictheme_automated_list_view_info_alter(array &$info, array $settings) {
+  if ($settings['content_type'] == 'civictheme_event') {
+    $info['view_name'] = 'civictheme_automated_list';
+
+    if ($settings['type'] == 'upcoming_events') {
+      $info['display_name'] = 'upcoming_events_block';
+    } elseif ($settings['type'] == 'past_events') {
+      $info['display_name'] = 'past_events_block';
+    }
+  }
+}

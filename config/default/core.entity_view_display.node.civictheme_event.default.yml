@@ -23,113 +23,10 @@ dependencies:
     - layout_builder_restrictions
     - text
     - user
-  theme:
-    - civictheme
 third_party_settings:
   layout_builder:
-    enabled: true
+    enabled: false
     allow_custom: false
-    sections:
-      -
-        layout_id: civictheme_three_columns
-        layout_settings:
-          label: Main
-          is_contained: false
-          context_mapping: {  }
-        components:
-          93c254ec-abeb-461a-b464-5247fd0083da:
-            uuid: 93c254ec-abeb-461a-b464-5247fd0083da
-            region: main
-            configuration:
-              id: 'extra_field_block:node:civictheme_event:content_moderation_control'
-              label: 'Moderation control'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                settings: {  }
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          693c2dc9-0290-4122-842b-3f1b9cd69380:
-            uuid: 693c2dc9-0290-4122-842b-3f1b9cd69380
-            region: main
-            configuration:
-              id: 'field_block:node:civictheme_event:field_c_n_date_range'
-              label: Date
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: daterange_default
-                label: hidden
-                settings:
-                  timezone_override: ''
-                  format_type: medium
-                  separator: '-'
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
-          2c1b19b3-bdd8-4b90-b5ef-ddcc0026bee4:
-            uuid: 2c1b19b3-bdd8-4b90-b5ef-ddcc0026bee4
-            region: main
-            configuration:
-              id: 'field_block:node:civictheme_event:field_c_n_body'
-              label: Body
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-          06e90499-3555-4df7-b29e-89198edfd431:
-            uuid: 06e90499-3555-4df7-b29e-89198edfd431
-            region: main
-            configuration:
-              id: 'field_block:node:civictheme_event:field_c_n_location'
-              label: Locations
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_revisions_entity_view
-                label: hidden
-                settings:
-                  view_mode: default
-                third_party_settings: {  }
-            weight: 3
-            additional: {  }
-          634c10b6-05e3-46e7-98af-534e416fa822:
-            uuid: 634c10b6-05e3-46e7-98af-534e416fa822
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:civictheme_event:field_c_n_date_range'
-              formatter:
-                type: daterange_default
-                label: above
-                settings:
-                  timezone_override: ''
-                  format_type: medium
-                  separator: '-'
-                  from_to: both
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-        third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
@@ -151,25 +48,25 @@ content:
     region: content
   field_c_n_body:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
   field_c_n_date_range:
     type: daterange_default
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
       format_type: medium
-      separator: '-'
       from_to: both
+      separator: '-'
     third_party_settings: {  }
     weight: 0
     region: content
   field_c_n_location:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -178,7 +75,7 @@ content:
     region: content
   field_c_n_site_section:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }

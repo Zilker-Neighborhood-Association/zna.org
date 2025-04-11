@@ -79,6 +79,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 25
           total_pages: null
           id: 0
@@ -96,7 +97,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -111,7 +111,7 @@ display:
         type: none
         options: {  }
       cache:
-        type: search_api_none
+        type: search_api_tag
         options: {  }
       empty:
         result:
@@ -133,7 +133,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: search_api
-          order: ASC
+          order: DESC
           expose:
             label: ''
             field_identifier: ''
@@ -210,7 +210,8 @@ display:
         options:
           view_modes:
             'entity:node':
-              civictheme_event: civictheme_snippet
+              ':default': default
+              civictheme_event: civictheme_promo_card
               civictheme_page: civictheme_snippet
       query:
         type: search_api_query
@@ -231,7 +232,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<h3 class="ct-heading ct-list__title">Search results...</h3>'
+            value: "<h3 class=\"ct-heading ct-list__title\">Search results...</h3>\r\n<p>Note: Search results do not include content on our <a href=\"https://zilkerneighborhood.org/index.shtml\">old website</a>.</p>"
             format: civictheme_rich_text
           tokenize: false
       footer: {  }

@@ -18,17 +18,18 @@ plugin: 'menu_block:civictheme-primary-navigation'
 settings:
   id: 'menu_block:civictheme-primary-navigation'
   label: 'Side Navigation'
-  label_display: ''
+  label_display: '0'
   provider: menu_block
   follow: false
   follow_parent: child
+  display_empty: false
   label_link: false
   label_type: block
-  level: 1
+  level: 2
   depth: 3
   expand_all_items: false
   parent: 'civictheme-primary-navigation:'
-  render_parent: false
+  render_parent: true
   suggestion: civictheme_primary_navigation
   hide_on_nonactive: false
 visibility:

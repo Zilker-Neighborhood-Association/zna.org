@@ -1,13 +1,13 @@
 uuid: 7d9dead5-72f3-432d-8549-c7450b653b7a
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - zna_theme
 id: zna_theme_footerznalogo
 theme: zna_theme
-region: footer_bottom_1
-weight: -11
+region: footer_top_1
+weight: -9
 provider: null
 plugin: 'block_content:81066674-8ef4-43b3-8855-8da2dc4fbb72'
 settings:

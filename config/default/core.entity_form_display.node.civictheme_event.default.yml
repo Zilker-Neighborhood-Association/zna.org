@@ -21,7 +21,9 @@ dependencies:
     - content_moderation
     - datetime
     - datetime_range
+    - datetimehideseconds
     - field_group
+    - hide_revision_field
     - media_library
     - paragraphs
     - path
@@ -174,13 +176,17 @@ content:
     weight: 12
     region: content
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      datetimehideseconds:
+        hide: true
   field_c_n_date_range:
     type: daterange_default
     weight: 13
     region: content
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      datetimehideseconds:
+        hide: true
   field_c_n_location:
     type: paragraphs
     weight: 14
@@ -270,8 +276,26 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  revision_log:
+    type: hide_revision_field_log_widget
+    weight: 80
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+      show: true
+      default: ''
+      permission_based: false
+      allow_user_settings: true
+      hide_revision: false
+    third_party_settings: {  }
   simple_sitemap:
     weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 130
     region: content
     settings: {  }
     third_party_settings: {  }

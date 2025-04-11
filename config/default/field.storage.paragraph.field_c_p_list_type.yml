@@ -16,6 +16,12 @@ settings:
     -
       value: civictheme_automated_list__block1
       label: Default
+    -
+      value: upcoming_events
+      label: 'Upcoming events'
+    -
+      value: past_events
+      label: 'Past events'
   allowed_values_function: ''
 module: options
 locked: false

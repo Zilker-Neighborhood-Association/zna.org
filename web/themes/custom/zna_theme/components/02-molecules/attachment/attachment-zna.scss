@@ -1,0 +1,15 @@
+//
+// Attachment component.
+//
+
+.ct-attachment {
+  $root: &;
+
+  #{$root}__links__link__extension {
+    font-size: ct-particle(1.75);
+  }
+
+  #{$root}__links .ct-item-list__item {
+    align-items: center;
+  }
+}
