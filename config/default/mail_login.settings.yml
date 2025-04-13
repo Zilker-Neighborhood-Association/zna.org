@@ -1,9 +1,9 @@
 _core:
   default_config_hash: aJtnRJ7YIWqXHiSfJ9aKSwJQL8e_r1HaI3YQzYDvpxk
 mail_login_enabled: 1
-mail_login_case_sensitive: 1
-mail_login_email_only: 1
-mail_login_override_login_labels: 1
+mail_login_case_sensitive: 0
+mail_login_email_only: 0
+mail_login_override_login_labels: 0
 mail_login_username_title: 'Log in by username/email address'
 mail_login_username_description: 'You can use your username or email address to log in.'
 mail_login_email_only_title: 'Log in by email address'

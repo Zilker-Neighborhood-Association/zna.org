@@ -1,6 +1,6 @@
 uuid: 761ec4d6-8ee4-40a9-9f0c-ec0a2f472d6a
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - field.storage.node.field_c_n_alert_page_visibility

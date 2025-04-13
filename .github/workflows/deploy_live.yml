@@ -101,5 +101,14 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
 
-      - name: drush st
-        run: ssh live '${{ env.DRUSH }} st'
+#      - name: drush updatedb
+#        run: ssh live '${{ env.DRUSH }} updatedb'
+
+      - name: drush config:import
+        run: ssh live '${{ env.DRUSH }} config:import'
+
+      - name: drush cache:rebuild
+        run: ssh live '${{ env.DRUSH }} cache:rebuild'
+
+      - name: drush deploy:hook
+        run: ssh live '${{ env.DRUSH }} deploy:hook'
