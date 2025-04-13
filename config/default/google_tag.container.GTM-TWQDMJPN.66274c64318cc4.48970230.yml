@@ -46,9 +46,9 @@ conditions:
     roles:
       civictheme_site_administrator: civictheme_site_administrator
 events:
-  search: {  }
   custom: {  }
   login:
     method: CMS
+  search: {  }
   sign_up:
     method: CMS

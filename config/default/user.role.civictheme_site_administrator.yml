@@ -37,7 +37,6 @@ dependencies:
     - redirect
     - system
     - taxonomy
-    - toolbar
     - webform
 _core:
   default_config_hash: 3RGvhVh7oqJvosWqYYZ0Fr0Ka_WUl_o2fZkK6xsjhzk
@@ -57,7 +56,6 @@ permissions:
   - 'access site in maintenance mode'
   - 'access site reports'
   - 'access taxonomy overview'
-  - 'access toolbar'
   - 'access user profiles'
   - 'access webform help'
   - 'access webform overview'

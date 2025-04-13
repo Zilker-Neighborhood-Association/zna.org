@@ -1,0 +1,18 @@
+uuid: ae7950f8-6338-466c-8d04-45829c4c98db
+langcode: en
+status: false
+dependencies: {  }
+id: live
+label: Live
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/live
+module:
+  syslog: 0
+theme: {  }
+complete_list: {  }
+partial_list:
+  - google_tag.container.GTM-TWQDMJPN.66274c64318cc4.48970230

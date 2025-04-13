@@ -1,6 +1,6 @@
 uuid: 761ec4d6-8ee4-40a9-9f0c-ec0a2f472d6a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.field_c_n_alert_page_visibility
@@ -209,6 +209,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -223,7 +224,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -441,20 +441,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.node.civictheme_alert.default'
-        - 'config:core.entity_view_display.node.civictheme_alert.teaser'
-        - 'config:core.entity_view_display.node.civictheme_event.civictheme_event_card'
-        - 'config:core.entity_view_display.node.civictheme_event.civictheme_navigation_card'
-        - 'config:core.entity_view_display.node.civictheme_event.civictheme_promo_card'
-        - 'config:core.entity_view_display.node.civictheme_event.civictheme_slider_slide'
-        - 'config:core.entity_view_display.node.civictheme_event.civictheme_subject_card'
-        - 'config:core.entity_view_display.node.civictheme_event.default'
-        - 'config:core.entity_view_display.node.civictheme_event.teaser'
-        - 'config:core.entity_view_display.node.civictheme_page.civictheme_navigation_card'
-        - 'config:core.entity_view_display.node.civictheme_page.civictheme_promo_card'
-        - 'config:core.entity_view_display.node.civictheme_page.civictheme_slider_slide'
-        - 'config:core.entity_view_display.node.civictheme_page.civictheme_subject_card'
-        - 'config:core.entity_view_display.node.civictheme_page.default'
         - 'config:field.storage.node.field_c_n_alert_page_visibility'
   rest_export_civictheme_alerts:
     id: rest_export_civictheme_alerts
@@ -493,18 +479,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.node.civictheme_alert.default'
-        - 'config:core.entity_view_display.node.civictheme_alert.teaser'
-        - 'config:core.entity_view_display.node.civictheme_event.civictheme_event_card'
-        - 'config:core.entity_view_display.node.civictheme_event.civictheme_navigation_card'
-        - 'config:core.entity_view_display.node.civictheme_event.civictheme_promo_card'
-        - 'config:core.entity_view_display.node.civictheme_event.civictheme_slider_slide'
-        - 'config:core.entity_view_display.node.civictheme_event.civictheme_subject_card'
-        - 'config:core.entity_view_display.node.civictheme_event.default'
-        - 'config:core.entity_view_display.node.civictheme_event.teaser'
-        - 'config:core.entity_view_display.node.civictheme_page.civictheme_navigation_card'
-        - 'config:core.entity_view_display.node.civictheme_page.civictheme_promo_card'
-        - 'config:core.entity_view_display.node.civictheme_page.civictheme_slider_slide'
-        - 'config:core.entity_view_display.node.civictheme_page.civictheme_subject_card'
-        - 'config:core.entity_view_display.node.civictheme_page.default'
         - 'config:field.storage.node.field_c_n_alert_page_visibility'

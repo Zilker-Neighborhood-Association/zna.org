@@ -39,6 +39,11 @@ targetEntityType: node
 bundle: civictheme_page
 mode: civictheme_promo_card
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_c_n_summary:
     type: basic_string
     label: above

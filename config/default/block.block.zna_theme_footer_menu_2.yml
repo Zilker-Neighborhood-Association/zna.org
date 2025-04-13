@@ -1,6 +1,6 @@
 uuid: e78d6b37-f690-408c-829c-009b24e92479
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.civictheme-footer
@@ -17,7 +17,7 @@ plugin: 'menu_block:civictheme-footer'
 settings:
   id: 'menu_block:civictheme-footer'
   label: 'Footer menu 2'
-  label_display: ''
+  label_display: '0'
   provider: menu_block
   follow: false
   follow_parent: child
@@ -27,8 +27,8 @@ settings:
   level: 1
   depth: 1
   expand_all_items: false
-  parent: 'civictheme-footer:'
-  render_parent: false
+  parent: 'civictheme-footer:menu_link_content:897d97c4-4eb2-4519-9ece-cf0c0ebf8739'
+  render_parent: true
   suggestion: civictheme_footer
   hide_on_nonactive: false
 visibility: {  }

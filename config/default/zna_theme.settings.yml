@@ -102,9 +102,7 @@ components:
   link:
     new_window: 0
     external_new_window: 0
-    external_override_domains:
-      - zna.org
-      - zilkerneighborhood.org
+    external_override_domains: {  }
   skip_link:
     theme: light
   event_card:

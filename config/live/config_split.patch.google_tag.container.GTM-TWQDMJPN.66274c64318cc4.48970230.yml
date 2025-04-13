@@ -1,0 +1,12 @@
+adding:
+  advanced_settings:
+    gtm:
+      GTM-TWQDMJPN:
+        environment_id: env-1
+        environment_token: nYymKucUh-9PH_MgSNPS1g
+removing:
+  advanced_settings:
+    gtm:
+      GTM-TWQDMJPN:
+        environment_id: env-3
+        environment_token: RgSDuc70dGzTOCkACJTEgg

@@ -22,12 +22,13 @@ dependencies:
     - dropzonejs
     - file
     - filter
+    - help
     - media
+    - navigation
     - node
     - paragraphs
     - path
     - system
-    - toolbar
 _core:
   default_config_hash: jKyTaFQv0l2H-eg26nEdCGVYAz9gh29KxOkSF2iBPeQ
 id: civictheme_content_author
@@ -39,9 +40,10 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access help pages'
   - 'access media overview'
+  - 'access navigation'
   - 'access site in maintenance mode'
-  - 'access toolbar'
   - 'create civictheme_alert content'
   - 'create civictheme_audio media'
   - 'create civictheme_document media'
@@ -102,6 +104,7 @@ permissions:
   - 'edit own vector_image media'
   - 'revert all revisions'
   - 'revert civictheme_alert revisions'
+  - 'revert civictheme_event revisions'
   - 'revert civictheme_page revisions'
   - 'update any media'
   - 'update media'
@@ -114,6 +117,7 @@ permissions:
   - 'view all revisions'
   - 'view any unpublished content'
   - 'view civictheme_alert revisions'
+  - 'view civictheme_event revisions'
   - 'view civictheme_page revisions'
   - 'view latest version'
   - 'view own unpublished content'

@@ -1,0 +1,13 @@
+uuid: ee41c41a-ef1f-4000-b7b4-5d3f0b104e9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.civictheme_site_sections
+id: taxonomy_term.civictheme_site_sections
+targetEntityType: taxonomy_term
+bundle: civictheme_site_sections
+action: page_not_found
+no_bypass: true
+bypass_message: false
+configuration: {  }

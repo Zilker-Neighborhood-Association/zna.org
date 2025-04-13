@@ -1,0 +1,13 @@
+uuid: d30e6231-19c9-4d15-9d0e-d0567f241b11
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.civictheme_media_tags
+id: taxonomy_term.civictheme_media_tags
+targetEntityType: taxonomy_term
+bundle: civictheme_media_tags
+action: page_not_found
+no_bypass: true
+bypass_message: false
+configuration: {  }

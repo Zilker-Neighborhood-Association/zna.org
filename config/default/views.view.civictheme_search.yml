@@ -98,7 +98,7 @@ display:
             offset_label: Offset
           quantity: 9
       exposed_form:
-        type: basic
+        type: input_required
         options:
           submit_button: Search
           reset_button: false
@@ -107,6 +107,8 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          text_input_required: ''
+          text_input_required_format: civictheme_rich_text
       access:
         type: none
         options: {  }
