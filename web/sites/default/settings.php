@@ -2,6 +2,8 @@
 
 // phpcs:ignoreFile
 
+ini_set('memory_limit', '256M');
+
 /**
  * @file
  * Drupal site-specific configuration file.
