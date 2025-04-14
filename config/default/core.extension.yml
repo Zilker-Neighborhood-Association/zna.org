@@ -90,6 +90,7 @@ module:
   webform: 0
   webp: 0
   workflows: 0
+  zna_custom: 0
   hide_revision_field: 1
   pathauto: 1
   views: 10

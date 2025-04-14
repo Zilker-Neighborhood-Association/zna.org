@@ -1,0 +1,5 @@
+name: 'ZNA Custom'
+type: module
+description: 'Custom Logic for ZNA.org'
+package: Custom
+core_version_requirement: ^10 || ^11
