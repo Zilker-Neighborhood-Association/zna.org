@@ -101,8 +101,8 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
 
-#      - name: drush updatedb
-#        run: ssh live '${{ env.DRUSH }} updatedb'
+      - name: drush zupdatedb
+        run: ssh live '${{ env.DRUSH }} zupdatedb'
 
       - name: drush config:import
         run: ssh live '${{ env.DRUSH }} config:import'
