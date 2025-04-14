@@ -7,6 +7,19 @@ _core:
 id: node
 label: Content
 tags:
-  title: '[node:title] | [site:name]'
-  description: '[node:summary]'
+  article_modified_time: '[node:changed:html_datetime]'
+  article_published_time: '[node:created:html_datetime]'
   canonical_url: '[node:url]'
+  description: '[node:field_c_n_summary]'
+  image_src: '[site:base-url]/files/images/2025/zna_logo_600px.png'
+  og_description: '[node:field_c_n_summary]'
+  og_image: '[site:base-url]/files/images/2025/zna_logo_600px.png'
+  og_image_alt: 'ZNA logo featuring a live oak tree with birds flying from it and the words "Zilker Neighborhood Association" and "Established 1981"'
+  og_image_height: '600'
+  og_image_width: '600'
+  og_site_name: '[site:name]'
+  og_title: '[node:title]'
+  og_updated_time: '[node:changed:html_datetime]'
+  og_url: '[node:url]'
+  shortlink: '[site:base-url]/node/[node:nid]'
+  title: '[node:title] | [site:name]'
