@@ -234,7 +234,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: "<h3 class=\"ct-heading ct-list__title\">Search results...</h3>\r\n<p>Note: Search results do not include content on our <a href=\"https://zilkerneighborhood.org/index.shtml\">old website</a>.</p>"
+            value: "<h3 class=\"ct-heading ct-list__title\">Search results...</h3>\r\n<p>Note: Search results do not include content on our <a href=\"https://zilkerneighborhood.org/index_old.shtml\">old website</a>.</p>"
             format: civictheme_rich_text
           tokenize: false
       footer: {  }
