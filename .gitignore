@@ -27,6 +27,7 @@
 /web/files
 /web/assets
 /web/sites/*/private
+/files-private
 
 # Ignore multi-site test environment.
 /web/sites/simpletest

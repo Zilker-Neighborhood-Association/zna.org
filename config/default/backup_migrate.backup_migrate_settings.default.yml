@@ -1,0 +1,53 @@
+uuid: 4c895b8b-1811-4881-aca3-c7f65cfa0005
+langcode: en
+status: true
+dependencies: {  }
+id: default
+label: Default
+config:
+  namer:
+    filename: znaorg
+    timestamp: true
+    timestamp_format: Y-m-d\TH-i-s
+  compressor:
+    compression: gzip
+  utils:
+    site_offline: false
+  metadata:
+    description: ''
+  db_exclude:
+    exclude_tables: {  }
+    nodata_tables:
+      cache_access_policy: cache_access_policy
+      cache_bootstrap: cache_bootstrap
+      cache_config: cache_config
+      cache_container: cache_container
+      cache_data: cache_data
+      cache_default: cache_default
+      cache_discovery: cache_discovery
+      cache_dynamic_page_cache: cache_dynamic_page_cache
+      cache_entity: cache_entity
+      cache_menu: cache_menu
+      cache_page: cache_page
+      cache_render: cache_render
+      cache_rest: cache_rest
+      cache_signal: cache_signal
+      cache_ultimate_cron_logger: cache_ultimate_cron_logger
+      sessions: sessions
+      watchdog: watchdog
+  private_files_exclude:
+    exclude_filepaths:
+      - backup_migrate
+  public_files_exclude:
+    exclude_filepaths:
+      - js
+      - css
+      - php
+      - styles
+      - 'config_*'
+      - .htaccess
+  notify:
+    notify_success_enable: 1
+    notify_success_email: web@zilkerneighborhood.org
+    notify_failure_enable: 1
+    notify_failure_email: web@zilkerneighborhood.org

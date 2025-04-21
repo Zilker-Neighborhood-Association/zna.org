@@ -1,0 +1,13 @@
+uuid: a92ac2fe-c840-4219-8703-d11b03e195e4
+langcode: en
+status: true
+dependencies: {  }
+id: daily_db
+label: 'Daily DB'
+enabled: true
+keep: 7
+period: 86400
+cron: null
+source_id: default_db
+destination_id: private_files
+settings_profile_id: default

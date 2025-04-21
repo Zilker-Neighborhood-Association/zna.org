@@ -13,6 +13,7 @@ folder: ../config/live
 module:
   syslog: 0
 theme: {  }
-complete_list: {  }
+complete_list:
+  - 'backup_migrate.backup_migrate_schedule.*'
 partial_list:
   - google_tag.container.GTM-TWQDMJPN.66274c64318cc4.48970230

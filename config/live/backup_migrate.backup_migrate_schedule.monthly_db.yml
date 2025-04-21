@@ -1,0 +1,13 @@
+uuid: ba1819d0-dce4-4c8a-af9c-d84d37af18de
+langcode: en
+status: true
+dependencies: {  }
+id: monthly_db
+label: 'Monthly DB'
+enabled: true
+keep: 13
+period: 2419200
+cron: null
+source_id: default_db
+destination_id: private_files
+settings_profile_id: default

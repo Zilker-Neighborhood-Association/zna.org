@@ -1,0 +1,13 @@
+uuid: ebf80742-2c8b-4300-b573-7fc66c69db9d
+langcode: en
+status: true
+dependencies: {  }
+id: daily_files
+label: 'Daily files'
+enabled: true
+keep: 7
+period: 86400
+cron: null
+source_id: public_files
+destination_id: private_files
+settings_profile_id: default
