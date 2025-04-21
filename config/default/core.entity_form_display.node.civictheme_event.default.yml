@@ -19,7 +19,6 @@ dependencies:
     - workflows.workflow.civictheme_editorial
   module:
     - content_moderation
-    - datetime
     - datetime_range
     - datetimehideseconds
     - field_group
@@ -171,14 +170,6 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_c_n_custom_last_updated:
-    type: datetime_default
-    weight: 12
-    region: content
-    settings: {  }
-    third_party_settings:
-      datetimehideseconds:
-        hide: true
   field_c_n_date_range:
     type: daterange_default
     weight: 13
@@ -205,20 +196,6 @@ content:
         add_above: '0'
         collapse_edit_all: '0'
         duplicate: '0'
-    third_party_settings: {  }
-  field_c_n_show_last_updated:
-    type: boolean_checkbox
-    weight: 10
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  field_c_n_show_toc:
-    type: boolean_checkbox
-    weight: 4
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_c_n_site_section:
     type: options_select
@@ -336,4 +313,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_c_n_custom_last_updated: true
+  field_c_n_show_last_updated: true
+  field_c_n_show_toc: true

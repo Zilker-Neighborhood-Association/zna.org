@@ -7,7 +7,10 @@ dependencies:
 id: user.user
 targetEntityType: user
 bundle: user
-action: page_not_found
+action: page_redirect
 no_bypass: false
 bypass_message: false
-configuration: {  }
+configuration:
+  redirect: '[user:edit-url]'
+  redirect_code: 301
+  redirect_fallback_action: access_denied
