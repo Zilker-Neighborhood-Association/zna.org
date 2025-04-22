@@ -44,14 +44,23 @@ content:
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: -20
+    weight: 0
+    region: content
+  field_c_n_attachments:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_c_n_body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_c_n_date_range:
     type: daterange_default
@@ -62,7 +71,7 @@ content:
       from_to: both
       separator: '-'
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_c_n_location:
     type: entity_reference_revisions_entity_view
@@ -71,7 +80,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_c_n_site_section:
     type: entity_reference_label
@@ -79,10 +88,9 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 5
     region: content
 hidden:
-  field_c_n_attachments: true
   field_c_n_custom_last_updated: true
   field_c_n_show_last_updated: true
   field_c_n_show_toc: true
