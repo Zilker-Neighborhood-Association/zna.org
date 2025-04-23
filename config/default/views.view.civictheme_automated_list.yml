@@ -448,7 +448,7 @@ display:
           expose:
             operator_id: title_op
             label: Title
-            description: 'Enter a keyword within the title'
+            description: ''
             use_operator: false
             operator: title_op
             operator_limit_selection: false
@@ -459,11 +459,10 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
               civictheme_content_author: '0'
               civictheme_content_approver: '0'
               civictheme_site_administrator: '0'
-              anonymous: '0'
-              administrator: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -691,8 +690,8 @@ display:
           exposed: true
           expose:
             operator_id: tid_op
-            label: Topics
-            description: 'Select a topic to filter by.'
+            label: 'Event type'
+            description: 'Select the type of events to show'
             use_operator: false
             operator: tid_op
             operator_limit_selection: false
@@ -703,11 +702,10 @@ display:
             multiple: true
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
               civictheme_content_author: '0'
               civictheme_content_approver: '0'
               civictheme_site_administrator: '0'
-              anonymous: '0'
-              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -744,7 +742,7 @@ display:
           expose:
             operator_id: title_op
             label: Title
-            description: 'Enter a keyword within the title'
+            description: ''
             use_operator: false
             operator: title_op
             operator_limit_selection: false
@@ -755,11 +753,10 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
               civictheme_content_author: '0'
               civictheme_content_approver: '0'
               civictheme_site_administrator: '0'
-              anonymous: '0'
-              administrator: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -1068,8 +1065,8 @@ display:
           exposed: true
           expose:
             operator_id: tid_op
-            label: Topics
-            description: 'Select a topic to filter by.'
+            label: 'Event type'
+            description: 'Select the type of events to show'
             use_operator: false
             operator: tid_op
             operator_limit_selection: false
@@ -1080,11 +1077,10 @@ display:
             multiple: true
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
               civictheme_content_author: '0'
               civictheme_content_approver: '0'
               civictheme_site_administrator: '0'
-              anonymous: '0'
-              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -1121,7 +1117,7 @@ display:
           expose:
             operator_id: title_op
             label: Title
-            description: 'Enter a keyword within the title'
+            description: ''
             use_operator: false
             operator: title_op
             operator_limit_selection: false
@@ -1132,11 +1128,10 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
               civictheme_content_author: '0'
               civictheme_content_approver: '0'
               civictheme_site_administrator: '0'
-              anonymous: '0'
-              administrator: '0'
             placeholder: ''
           is_grouped: false
           group_info:
