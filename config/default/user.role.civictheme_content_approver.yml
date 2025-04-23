@@ -29,6 +29,7 @@ dependencies:
     - node
     - paragraphs
     - path
+    - quick_node_clone
     - system
 _core:
   default_config_hash: z5yWuJJkqJroQmQ21H22z3l-pGKs85Issiy6lqU2-Y8
@@ -48,6 +49,9 @@ permissions:
   - 'administer civictheme-footer menu items'
   - 'administer civictheme-primary-navigation menu items'
   - 'administer civictheme-secondary-navigation menu items'
+  - 'clone civictheme_alert content'
+  - 'clone civictheme_event content'
+  - 'clone civictheme_page content'
   - 'create civictheme_alert content'
   - 'create civictheme_audio media'
   - 'create civictheme_document media'
