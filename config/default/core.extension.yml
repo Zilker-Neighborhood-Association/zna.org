@@ -81,6 +81,7 @@ module:
   simple_sitemap_engines: 0
   svg_image_field: 0
   svg_image_field_media_bundle: 0
+  syslog: 0
   system: 0
   taxonomy: 0
   telephone: 0
