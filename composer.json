@@ -52,6 +52,7 @@
         "drupal/mail_login": "^4.0",
         "drupal/media_thumbnails_svg": "^2.0",
         "drupal/menu_admin_per_menu": "^1.6",
+        "drupal/menu_breadcrumb": "^2.0",
         "drupal/metatag": "^2.1",
         "drupal/module_filter": "^5.0",
         "drupal/navigation_extra_tools": "^1.1",
