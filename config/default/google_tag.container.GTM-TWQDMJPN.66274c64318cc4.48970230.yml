@@ -18,8 +18,8 @@ advanced_settings:
       allowlist_classes: ''
       blocklist_classes: ''
       include_environment: true
-      environment_id: env-3
-      environment_token: RgSDuc70dGzTOCkACJTEgg
+      environment_id: env-1
+      environment_token: nYymKucUh-9PH_MgSNPS1g
 dimensions_metrics:
   -
     type: dimension
