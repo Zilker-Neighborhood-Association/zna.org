@@ -1,0 +1,11 @@
+parameters:
+	level: 2
+	paths:
+		- web/modules/custom
+		- web/themes/custom
+	excludePaths:
+	  - web/modules/custom/zna_custom/src/Drush/Commands/ZnaCustomCommands.php
+	reportUnmatchedIgnoredErrors: false
+	ignoreErrors:
+		# new static() is a best practice in Drupal, so we cannot fix that.
+		# — "#^Unsafe usage of new static#"

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="drupal11">
+  <description>PHP CodeSniffer configuration for Drupal 11 development.</description>
+  <!-- Check custom modules and themes. -->
+  <file>web/modules/custom</file>
+  <file>web/themes/custom</file>
+  <!-- Ignore any files in these paths. -->
+  <exclude-pattern>*/.git/*</exclude-pattern>
+  <exclude-pattern>*/config/*</exclude-pattern>
+  <exclude-pattern>*/icons/*</exclude-pattern>
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <exclude-pattern>*/dist/*</exclude-pattern>
+  <exclude-pattern>*/docs/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>*rules_export.txt</exclude-pattern>
+  <exclude-pattern>web/themes/custom/zna_theme/storybook-static/*</exclude-pattern>
+
+  <arg name="extensions" value="php,module,inc,install,test,profile,theme,css,info,txt,md,yml"/>
+  <!-- For colored cli output -->
+  <arg name="colors"/>
+  <!-- To show rule names. Equivalent to "phpcs -s" -->
+  <arg value="sp"/>
+
+  <config name="drupal_core_version" value="11"/>
+
+  <rule ref="vendor/drupal/coder/coder_sniffer/Drupal">
+    <exclude name="Drupal.InfoFiles.AutoAddedKeys.Project"/>
+    <exclude name="Drupal.InfoFiles.AutoAddedKeys.Timestamp"/>
+    <exclude name="Drupal.InfoFiles.AutoAddedKeys.Version"/>
+  </rule>
+  <rule ref="vendor/drupal/coder/coder_sniffer/DrupalPractice"/>
+  <rule ref="vendor/chi-teck/drupal-coder-extension/DrupalExtended74"/>
+
+  <!-- Example how you would disable an external rule you do not like:
+  <rule ref="PEAR.Functions.ValidDefaultValue.NotAtEnd">
+    <severity>0</severity>
+  </rule>
+  -->
+</ruleset>

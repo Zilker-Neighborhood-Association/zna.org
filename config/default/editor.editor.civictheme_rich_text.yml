@@ -76,7 +76,7 @@ settings:
         - '<h5 id>'
         - '<h6 id>'
         - '<drupal-media title>'
-        - '<a hreflang target title>'
+        - '<a hreflang target title zeffy-form-link>'
     ckeditor5_style:
       styles:
         -
