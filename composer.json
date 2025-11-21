@@ -32,7 +32,7 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.5",
         "drupal/backup_migrate": "^5.1",
-        "drupal/civictheme": "^1.10",
+        "drupal/civictheme": "1.10",
         "drupal/ckeditor_media_resize": "^1.0",
         "drupal/composer_deploy": "^1.10",
         "drupal/config_split": "^2.0",
@@ -134,12 +134,6 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/ckeditor_media_resize": {
-                "Plugin not found error in CKEditor5 45.x prevents loading of CKEditor5 altogether when enabled": "https://www.drupal.org/files/issues/2025-07-25/3531299-MR16-22.patch"
-            },
-            "drupal/styleguide": {
-                "Create Drupal 11 test release: https://www.drupal.org/project/styleguide/issues/3505640": "https://git.drupalcode.org/project/styleguide/-/merge_requests/23.patch"
-            }
         }
     },
     "require-dev": {
