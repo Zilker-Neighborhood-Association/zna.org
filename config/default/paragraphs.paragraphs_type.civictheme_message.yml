@@ -1,0 +1,10 @@
+uuid: 611b4673-132e-454b-b6b5-6da7b35b79bf
+langcode: en
+status: true
+dependencies: {  }
+id: civictheme_message
+label: Message
+icon_uuid: null
+icon_default: null
+description: 'A message paragraph component.'
+behavior_plugins: {  }
