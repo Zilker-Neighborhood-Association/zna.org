@@ -8,3 +8,9 @@ toolbar_items:
   - devel.reinstall
   - devel.route_info
   - devel.run_cron
+  - devel.configs_list
+  - devel.state_system_page
+  - devel.theme_registry
+  - devel.entity_info_page
+  - devel.session
+  - devel.elements_page
