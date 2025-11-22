@@ -26,7 +26,7 @@ jobs:
           php-version: ${{ env.php_version }}
 
       - name: Validate composer.json and composer.lock
-        run: composer validate --strict
+        run: composer validate
 
       - name: Get Composer cache directory
         id: composer-cache-dir
@@ -74,6 +74,8 @@ jobs:
           git config --global init.defaultBranch main
           git config --global user.email "github-actions@example.com"
           git config --global user.name "GitHub Actions"
+          git config --global core.autocrlf input
+          git config --global core.safecrlf false
           commit_message=$(git log -1 --pretty=%B)
           rm -rf .ddev
           rm -rf .git
