@@ -1,0 +1,23 @@
+uuid: f5192a61-8b91-4042-8a8d-c720fe58ea7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_c_p_theme
+    - paragraphs.paragraphs_type.civictheme_message
+  module:
+    - options
+id: paragraph.civictheme_message.field_c_p_theme
+field_name: field_c_p_theme
+entity_type: paragraph
+bundle: civictheme_message
+label: Theme
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: light
+default_value_callback: ''
+settings: {  }
+field_type: list_string
