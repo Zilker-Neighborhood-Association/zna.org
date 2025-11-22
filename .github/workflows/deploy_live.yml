@@ -74,6 +74,7 @@ jobs:
           git config --global init.defaultBranch main
           git config --global user.email "github-actions@example.com"
           git config --global user.name "GitHub Actions"
+          git config --global core.autocrlf input
           commit_message=$(git log -1 --pretty=%B)
           rm -rf .ddev
           rm -rf .git
