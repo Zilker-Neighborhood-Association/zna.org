@@ -26,11 +26,11 @@
 
 {% extends '@ct-molecules/attachment/attachment.twig' %}
 
-{% block links %}
+{% block links_block %}
   {% set link_items = [] %}
   {% for file in files %}
     {%- set link %}
-      {% include '@base/icon/icon.twig' with {
+      {% include 'civictheme:icon' with {
         symbol: file.icon ? file.icon : 'download-file',
         size: 'large',
         modifier_class: 'ct-attachment__links__link__icon',
@@ -43,7 +43,7 @@
           {% set extension = ' <span class="ct-attachment__links__link__extension">(%s)</span>'|format(file.ext ?? file.size) %}
         {% endif %}
 
-        {% include '@atoms/link/link.twig' with {
+        {% include 'civictheme:link' with {
           theme: theme,
           text: file.name,
           title: 'Download %s'|format(file.name),
@@ -57,7 +57,7 @@
     {% set link_items = link_items|merge([link]) %}
   {% endfor %}
 
-  {% include '@base/item-list/item-list.twig' with {
+  {% include 'civictheme:item-list' with {
     items: link_items,
     direction: 'vertical',
     modifier_class: 'ct-attachment__links',

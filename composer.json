@@ -32,7 +32,7 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.5",
         "drupal/backup_migrate": "^5.1",
-        "drupal/civictheme": "1.10",
+        "drupal/civictheme": "^1.12",
         "drupal/ckeditor_media_resize": "^1.0",
         "drupal/composer_deploy": "^1.10",
         "drupal/config_split": "^2.0",
@@ -134,6 +134,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/core": {
+                "Layout builder cannot recover on missing layout - https://www.drupal.org/project/drupal/issues/3204271#comment-15151776": "https://www.drupal.org/files/issues/2023-07-16/3204271-20-missing-layout-exception.patch"
+            }
         }
     },
     "require-dev": {

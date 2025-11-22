@@ -1,0 +1,79 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.3.x/core/assets/schemas/v1/metadata.schema.json
+name: Navigation Card
+status: stable
+description: Extended Navigation Card component with tags support
+replaces: civictheme:navigation_card
+props:
+  type: object
+  properties:
+    theme:
+      type: string
+      title: Theme
+      description: Theme variation (light or dark).
+      enum:
+        - light
+        - dark
+    image_as_icon:
+      type: boolean
+      title: Image as icon
+      description: Whether to show the image as an icon.
+    modifier_class:
+      type: string
+      title: Modifier classes
+      description: Additional CSS classes.
+    size:
+      type: string
+      title: Size
+      description: Size variation (large or small).
+      enum:
+        - large
+        - small
+    image:
+      type: object
+      title: Image
+      description: Card image.
+      properties:
+        url:
+          type: string
+          title: URL
+          description: Image URL.
+        alt:
+          type: string
+          title: Alt text
+          description: Image alt text.
+    url:
+      type: string
+      title: URL
+      description: Link URL.
+    is_external:
+      type: boolean
+      title: External
+      description: Whether the link is external.
+    tags:
+      type: array
+      title: Tags
+      description: Array of tags to display in the card.
+      items:
+        type: object
+slots:
+  icon:
+    title: Icon
+    description: Icon name.
+  title:
+    title: Title
+    description: Card title text.
+  summary:
+    title: Summary
+    description: Card summary.
+  content_top:
+    title: Top content
+    description: Card top content.
+  image_over:
+    title: Image overlay
+    description: Image overlay content.
+  content_middle:
+    title: Middle content
+    description: Card middle content.
+  content_bottom:
+    title: Bottom content
+    description: Card bottom content.
