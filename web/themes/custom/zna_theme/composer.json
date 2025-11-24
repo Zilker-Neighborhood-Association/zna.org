@@ -1,6 +1,6 @@
 {
     "name": "civictheme/zna_theme",
-    "description": "ZNA Theme",
+    "description": "ZNA theme.",
     "type": "drupal-theme",
     "license": "proprietary",
     "require": {

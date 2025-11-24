@@ -10,9 +10,8 @@ global:
     - core/drupal
     - core/once
     - core/drupalSettings
+
 css-variables:
   css:
     theme:
-      dist/styles.variables.css:
-        preprocess: false
-        weight: 10
+      dist/styles.variables.css: { preprocess: false, weight: 10 }

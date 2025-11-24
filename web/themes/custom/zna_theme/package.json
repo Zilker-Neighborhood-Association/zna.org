@@ -1,60 +1,60 @@
 {
-  "name": "zna-theme-theme",
-  "private": true,
-  "description": "ZNA Theme consumer Drupal sub-theme of CivicTheme Drupal theme",
-  "license": "proprietary",
-  "type": "module",
-  "engines": {
-    "node": ">=22.6.0"
-  },
-  "os": [
-    "darwin",
-    "linux",
-    "win32"
-  ],
-  "cpu": [
-    "x64",
-    "arm",
-    "arm64",
-    "ia32"
-  ],
-  "scripts": {
-    "add-lint-exclusions": "node build.js lintex",
-    "build": "npm run dist && storybook build && npm run add-lint-exclusions",
-    "dist": "node build.js",
-    "dist:dev": "npm run dist",
-    "dist:watch": "node build.js build watch",
-    "lint": "eslint --no-error-on-unmatched-pattern ./components ./.storybook && stylelint 'components/**/*.scss'",
-    "lint-fix": "eslint ./components ./.storybook --fix && stylelint 'components/**/*.scss' --fix",
-    "storybook": "npm run dist && node build.js cli \"dist:watch\" \"storybook-dev\"",
-    "storybook-dev": "storybook dev -p 6006"
-  },
-  "devDependencies": {
-    "@alexskrypnyk/scss-variables-extractor": "^0.1.1",
-    "@storybook/addon-essentials": "8.6.7",
-    "@storybook/addon-links": "8.6.7",
-    "@storybook/html-vite": "8.6.7",
-    "@storybook/manager-api": "8.6.7",
-    "@storybook/theming": "8.6.7",
-    "@whitespace/storybook-addon-html": "^6.1.1",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import-newlines": "^1.4.0",
-    "glob": "^11.0.1",
-    "sass-embedded": "1.77.5",
-    "storybook": "8.6.7",
-    "stylelint": "^14.16.1",
-    "stylelint-config-standard": "^23.0.0",
-    "stylelint-config-standard-scss": "^2.0.1",
-    "vite": "^6.0.0",
-    "vite-plugin-twig-drupal": "^1.6.0"
-  },
-  "dependencies": {
-    "@popperjs/core": "^2.11.8"
-  },
-  "civictheme": {
-    "version": "1.10.0",
-    "homepage": "https://github.com/civictheme/civictheme",
-    "bugs": "https://github.com/civictheme/monorepo-drupal/issues",
-    "repository": "https://github.com/civictheme/monorepo-drupal.git"
-  }
+ "name": "zna-theme-theme",
+ "private": true,
+ "description": "ZNA Theme consumer Drupal sub-theme of CivicTheme Drupal theme",
+ "license": "proprietary",
+ "type": "module",
+ "engines": {
+ "node": ">=22.6.0"
+ },
+ "os": [
+ "darwin",
+ "linux",
+ "win32"
+ ],
+ "cpu": [
+ "x64",
+ "arm",
+ "arm64",
+ "ia32"
+ ],
+ "scripts": {
+ "add-lint-exclusions": "node build.js lintex",
+ "build": "npm run dist && storybook build && npm run add-lint-exclusions",
+ "dist": "node build.js",
+ "dist:dev": "npm run dist",
+ "dist:watch": "node build.js build watch",
+ "lint": "eslint --no-error-on-unmatched-pattern ./components ./.storybook && stylelint 'components/**/*.scss'",
+ "lint-fix": "eslint ./components ./.storybook --fix && stylelint 'components/**/*.scss' --fix",
+ "storybook": "npm run dist && node build.js cli \"dist:watch\" \"storybook-dev\"",
+ "storybook-dev": "storybook dev -p 6006"
+ },
+ "devDependencies": {
+ "@civictheme/scss-variables-extractor": "^0.2.1",
+ "@storybook/addon-essentials": "8.6.7",
+ "@storybook/addon-links": "8.6.7",
+ "@storybook/html-vite": "8.6.7",
+ "@storybook/manager-api": "8.6.7",
+ "@storybook/theming": "8.6.7",
+ "@whitespace/storybook-addon-html": "^7.0.0",
+ "eslint-config-airbnb": "^19.0.4",
+ "eslint-plugin-import-newlines": "^1.4.0",
+ "glob": "^11.0.1",
+ "sass-embedded": "1.77.5",
+ "storybook": "8.6.7",
+ "stylelint": "^14.16.1",
+ "stylelint-config-standard": "^23.0.0",
+ "stylelint-config-standard-scss": "^2.0.1",
+ "vite": "^6.3.6",
+ "vite-plugin-twig-drupal": "^1.6.0"
+ },
+ "dependencies": {
+ "@popperjs/core": "^2.11.8"
+ },
+ "civictheme": {
+ "version": "1.11.0",
+ "homepage": "https://github.com/civictheme/civictheme",
+ "bugs": "https://github.com/civictheme/monorepo-drupal/issues",
+ "repository": "https://github.com/civictheme/monorepo-drupal.git"
+ }
 }

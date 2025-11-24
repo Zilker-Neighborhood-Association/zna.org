@@ -29,7 +29,7 @@
     "require": {
         "php": ">=8.3",
         "composer/installers": "^2.3",
-        "cweagans/composer-patches": "^1.7",
+        "cweagans/composer-patches": "^2.0",
         "drupal/admin_toolbar": "^3.5",
         "drupal/backup_migrate": "^5.1",
         "drupal/civictheme": "^1.12",
