@@ -1,0 +1,113 @@
+name: Deploy to Live Site
+
+on:
+  push:
+    branches:
+      - 'develop'
+
+env:
+  php_version: '8.3'
+
+jobs:
+  deploy:
+    name: Deploy to Staging
+    runs-on: ubuntu-24.04
+    env:
+      DRUSH: ${{ secrets.STAGING_PATH }}/vendor/bin/drush
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@9e72090525849c5e82e596468b86eb55e9cc5401 # 2.32.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          php-version: ${{ env.php_version }}
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: Get Composer cache directory
+        id: composer-cache-dir
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+        with:
+          path: ${{ steps.composer-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Avoid GitHub rate limit for Composer
+        run: composer config -g github-oauth.github.com ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Composer install
+        run: composer install --prefer-dist --no-dev --no-interaction --no-progress
+
+      - name: Set up NPM
+        uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install NPM dependencies
+        run: |
+          cd web/themes/custom/zna_theme
+          npm ci
+
+      - name: Build theme
+        run: |
+          cd web/themes/custom/zna_theme
+          npm run build
+
+      - name: Place SSH key
+        uses: shimataro/ssh-key-action@d4fffb50872869abe2d9a9098a6d9c5aa7d16be4 # v2.7.0
+        with:
+          key: ${{ secrets.STAGING_SSH_KEY }}
+#          known_hosts: ${{ vars.KNOWN_HOSTS }}
+
+      - name: Prepare code for deployment
+        run: |
+          mkdir -p dist
+          rsync -ar --exclude '.ddev' --exclude 'dist' --exclude '.git' --exclude '.github' . dist
+
+      - name: Push code to Staging
+        env:
+          remote_host: ${{ secrets.STAGING_SSH_HOST }}
+          remote_port: "22"
+          remote_user: ${{ secrets.STAGING_SSH_USER }}
+          remote_key: ${{ secrets.STAGING_SSH_KEY }}
+          local_dir: "dist/"
+          remote_dir: ${{ secrets.STAGING_PATH }}
+        run: |
+          mkdir ~/.ssh
+          echo "$remote_key" > ~/.ssh/gh_actions_key
+          chmod 600 ~/.ssh/gh_actions_key
+          rsync -avzr -e "ssh -p ${remote_port} -i ~/.ssh/gh_actions_key -o StrictHostKeyChecking=no" ${local_dir} ${remote_user}@${remote_host}:${remote_dir}
+
+      - name: Configure SSH
+        env:
+          SSH_USER: ${{ secrets.STAGING_SSH_USER }}
+          SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
+        run: |
+          cat >>~/.ssh/config <<END
+          Host staging
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/id_rsa
+          END
+
+      - name: drush updatedb
+        run: ssh staging '${{ env.DRUSH }} updatedb'
+
+      - name: drush config:import
+        run: ssh staging '${{ env.DRUSH }} config:import'
+
+      - name: drush cache:rebuild
+        run: ssh staging '${{ env.DRUSH }} cache:rebuild'
+
+      - name: drush deploy:hook
+        run: ssh staging '${{ env.DRUSH }} deploy:hook'
