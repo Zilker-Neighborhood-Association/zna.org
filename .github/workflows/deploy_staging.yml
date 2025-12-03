@@ -88,13 +88,9 @@ jobs:
 
       - name: Push code to Staging
         env:
-          remote_host: staging
-          remote_port: "22"
-          remote_user: ${{ secrets.STAGING_SSH_USER }}
-          local_dir: "dist/"
           remote_dir: ${{ secrets.STAGING_PATH }}
         run: |
-          rsync -avzr -e "ssh -p ${remote_port} -o StrictHostKeyChecking=no" ${local_dir} ${remote_user}@${remote_host}:${remote_dir}
+          rsync -avzr -e "ssh -o StrictHostKeyChecking=no" dist/ staging:${remote_dir}
 
       - name: drush updatedb
         run: ssh staging '${{ env.DRUSH }} updatedb'
