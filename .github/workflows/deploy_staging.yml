@@ -67,7 +67,7 @@ jobs:
         uses: shimataro/ssh-key-action@d4fffb50872869abe2d9a9098a6d9c5aa7d16be4 # v2.7.0
         with:
           key: ${{ secrets.STAGING_SSH_KEY }}
-#          known_hosts: ${{ vars.KNOWN_HOSTS }}
+          known_hosts: ${{ vars.KNOWN_HOSTS }}
 
       - name: Prepare code for deployment
         run: |
