@@ -63,12 +63,6 @@ jobs:
           cd web/themes/custom/zna_theme
           npm run build
 
-      - name: Place SSH key
-        uses: shimataro/ssh-key-action@d4fffb50872869abe2d9a9098a6d9c5aa7d16be4 # v2.7.0
-        with:
-          key: ${{ secrets.STAGING_SSH_KEY }}
-          known_hosts: ${{ vars.KNOWN_HOSTS }}
-
       - name: Prepare code for deployment
         run: |
           mkdir -p dist
@@ -79,10 +73,14 @@ jobs:
           remote_host: ${{ secrets.STAGING_SSH_HOST }}
           remote_port: "22"
           remote_user: ${{ secrets.STAGING_SSH_USER }}
+          remote_key: ${{ secrets.STAGING_SSH_KEY }}
           local_dir: "dist/"
           remote_dir: ${{ secrets.STAGING_PATH }}
         run: |
-          rsync -avzr -e "ssh -p ${remote_port} -o StrictHostKeyChecking=no" ${local_dir} ${remote_user}@${remote_host}:${remote_dir}
+          mkdir ~/.ssh
+          echo "$remote_key" > ~/.ssh/gh_actions_key
+          chmod 600 ~/.ssh/gh_actions_key
+          rsync -avzr -e "ssh -p ${remote_port} -i ~/.ssh/gh_actions_key -o StrictHostKeyChecking=no" ${local_dir} ${remote_user}@${remote_host}:${remote_dir}
 
       - name: Configure SSH
         env:
@@ -93,7 +91,7 @@ jobs:
           Host staging
             HostName $SSH_HOST
             User $SSH_USER
-            IdentityFile ~/.ssh/id_rsa
+            IdentityFile ~/.ssh/gh_actions_key
           END
 
       - name: drush updatedb
