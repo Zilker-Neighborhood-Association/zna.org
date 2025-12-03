@@ -79,14 +79,10 @@ jobs:
           remote_host: ${{ secrets.STAGING_SSH_HOST }}
           remote_port: "22"
           remote_user: ${{ secrets.STAGING_SSH_USER }}
-          remote_key: ${{ secrets.STAGING_SSH_KEY }}
           local_dir: "dist/"
           remote_dir: ${{ secrets.STAGING_PATH }}
         run: |
-          mkdir ~/.ssh
-          echo "$remote_key" > ~/.ssh/gh_actions_key
-          chmod 600 ~/.ssh/gh_actions_key
-          rsync -avzr -e "ssh -p ${remote_port} -i ~/.ssh/gh_actions_key -o StrictHostKeyChecking=no" ${local_dir} ${remote_user}@${remote_host}:${remote_dir}
+          rsync -avzr -e "ssh -p ${remote_port} -o StrictHostKeyChecking=no" ${local_dir} ${remote_user}@${remote_host}:${remote_dir}
 
       - name: Configure SSH
         env:
