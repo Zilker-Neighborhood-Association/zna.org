@@ -255,7 +255,7 @@ if (is_readable($local_settings)) {
 }
 
 // Include for local settings.
-$local_settings = '~/private_html/settings.local.php';
+$local_settings = '../../private_html/settings.local.php';
 if (is_readable($local_settings)) {
   require $local_settings;
 }
