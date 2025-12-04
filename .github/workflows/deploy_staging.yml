@@ -7,6 +7,7 @@ on:
 
 env:
   php_version: '8.3'
+  dist_dir: 'to_deploy_egf234t'
 
 jobs:
   deploy:
@@ -83,14 +84,14 @@ jobs:
 
       - name: Prepare code for deployment
         run: |
-          mkdir -p dist
-          rsync -ar --exclude '.ddev' --exclude 'dist' --exclude '.git' --exclude '.github' . dist
+          mkdir -p ${{ env.php_version }}
+          rsync -ar --exclude '.ddev' --exclude '${{ env.php_version }}' --exclude '.git' --exclude '.github' . ${{ env.php_version }}
 
       - name: Push code to Staging
         env:
           remote_dir: ${{ secrets.STAGING_PATH }}
         run: |
-          rsync -avzr -e "ssh -o StrictHostKeyChecking=no" dist/ staging:${remote_dir}
+          rsync -avzr -e "ssh -o StrictHostKeyChecking=no" ${{ env.php_version }}/ staging:${remote_dir}
 
       - name: drush updatedb
         run: ssh staging '${{ env.DRUSH }} updatedb'
