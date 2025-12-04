@@ -85,7 +85,7 @@ jobs:
       - name: Prepare code for deployment
         run: |
           mkdir -p ${{ env.dist_dir }}
-          rsync -ar --exclude={'${{ env.dist_dir }}', '.ddev', '.git', '.github', 'private-files/', 'web/files/', 'web/assets/'} . ${{ env.dist_dir }}
+          rsync -ar --exclude '${{ env.dist_dir }}' --exclude '.ddev' --exclude '.git' --exclude '.github' --exclude 'private-files/' --exclude 'web/files/' --exclude 'web/assets/' . ${{ env.dist_dir }}
 
       - name: Push code to Staging
         env:
