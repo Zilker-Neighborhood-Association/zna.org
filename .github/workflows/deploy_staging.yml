@@ -91,7 +91,7 @@ jobs:
         env:
           remote_dir: ${{ secrets.STAGING_PATH }}
         run: |
-          rsync -avzri --delay-updates --delete-after --exclude 'files-private/' --exclude 'web/files/' --exclude 'web/assets/ -e "ssh -o StrictHostKeyChecking=no" ${{ env.dist_dir }}/ staging:${remote_dir}
+          rsync -avzri --delay-updates --delete-after --exclude 'files-private/' --exclude 'web/files/' --exclude 'web/assets/' -e "ssh -o StrictHostKeyChecking=no" ${{ env.dist_dir }}/ staging:${remote_dir}
 
       - name: drush updatedb
         run: ssh staging '${{ env.DRUSH }} updatedb'
