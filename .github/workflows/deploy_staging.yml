@@ -85,13 +85,13 @@ jobs:
       - name: Prepare code for deployment
         run: |
           mkdir -p ${{ env.dist_dir }}
-          rsync -ar --exclude '${{ env.dist_dir }}' --exclude '.ddev' --exclude '.git' --exclude '.github' --exclude 'private-files/' --exclude 'web/files/' --exclude 'web/assets/' . ${{ env.dist_dir }}
+          rsync -ar --exclude '${{ env.dist_dir }}' --exclude '.ddev' --exclude '.git' --exclude '.github' --exclude '.idea' --exclude 'files-private/' --exclude 'web/files/' --exclude 'web/assets/' . ${{ env.dist_dir }}
 
       - name: Push code to Staging
         env:
           remote_dir: ${{ secrets.STAGING_PATH }}
         run: |
-          rsync -avzri --delay-updates --delete-after -e "ssh -o StrictHostKeyChecking=no" ${{ env.dist_dir }}/ staging:${remote_dir}
+          rsync -avzri --delay-updates --delete-after --exclude 'files-private/' --exclude 'web/files/' --exclude 'web/assets/ -e "ssh -o StrictHostKeyChecking=no" ${{ env.dist_dir }}/ staging:${remote_dir}
 
       - name: drush updatedb
         run: ssh staging '${{ env.DRUSH }} updatedb'
@@ -104,3 +104,6 @@ jobs:
 
       - name: drush deploy:hook
         run: ssh staging '${{ env.DRUSH }} deploy:hook'
+
+      - name: drush cache:warm
+        run: ssh staging '${{ env.DRUSH }} cache:warm'
