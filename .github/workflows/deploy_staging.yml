@@ -84,14 +84,14 @@ jobs:
 
       - name: Prepare code for deployment
         run: |
-          mkdir -p ${{ env.php_version }}
-          rsync -ar --exclude '.ddev' --exclude '${{ env.php_version }}' --exclude '.git' --exclude '.github' . ${{ env.php_version }}
+          mkdir -p ${{ env.dist_dir }}
+          rsync -ar --exclude={'${{ env.dist_dir }}', '.ddev', '.git', '.github', 'private-files/', 'web/files/', 'web/assets/'} . ${{ env.dist_dir }}
 
       - name: Push code to Staging
         env:
           remote_dir: ${{ secrets.STAGING_PATH }}
         run: |
-          rsync -avzr -e "ssh -o StrictHostKeyChecking=no" ${{ env.php_version }}/ staging:${remote_dir}
+          rsync -avzri --delay-updates --delete-after -e "ssh -o StrictHostKeyChecking=no" ${{ env.dist_dir }}/ staging:${remote_dir}
 
       - name: drush updatedb
         run: ssh staging '${{ env.DRUSH }} updatedb'
