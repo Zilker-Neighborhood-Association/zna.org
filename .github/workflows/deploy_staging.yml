@@ -1,20 +1,20 @@
-name: Deploy to Live
+name: Deploy to Staging
 
 on:
   push:
     branches:
-      - 'main'
+      - 'develop'
 
 env:
   php_version: '8.3'
-  dist_dir: 'to_deploy_agf1234w'
+  dist_dir: 'to_deploy_egf234t'
 
 jobs:
   deploy:
-    name: Deploy to Live
+    name: Deploy to Staging
     runs-on: ubuntu-24.04
     env:
-      DRUSH: ${{ secrets.LIVE_PATH }}/vendor/bin/drush
+      DRUSH: ${{ secrets.STAGING_PATH }}/vendor/bin/drush
     steps:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -67,13 +67,13 @@ jobs:
       - name: Place SSH key
         uses: shimataro/ssh-key-action@d4fffb50872869abe2d9a9098a6d9c5aa7d16be4 # v2.7.0
         with:
-          key: ${{ secrets.LIVE_SSH_KEY }}
+          key: ${{ secrets.STAGING_SSH_KEY }}
           known_hosts: ${{ vars.KNOWN_HOSTS }}
 
       - name: Configure SSH
         env:
-          SSH_USER: ${{ secrets.LIVE_SSH_USER }}
-          SSH_HOST: ${{ secrets.LIVE_SSH_HOST }}
+          SSH_USER: ${{ secrets.STAGING_SSH_USER }}
+          SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
         run: |
           cat >>~/.ssh/config <<END
           Host staging
@@ -89,7 +89,7 @@ jobs:
 
       - name: Push code to Staging
         env:
-          remote_dir: ${{ secrets.LIVE_PATH }}
+          remote_dir: ${{ secrets.STAGING_PATH }}
         run: |
           rsync -azri --progress --delay-updates --delete-after --exclude 'files-private/' --exclude 'web/files/' --exclude 'web/assets/' -e "ssh -o StrictHostKeyChecking=no" ${{ env.dist_dir }}/ staging:${remote_dir}
 

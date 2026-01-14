@@ -70,6 +70,7 @@ module:
   realname: 0
   redirect: 0
   redirect_404: 0
+  redis: 0
   responsive_favicons: 0
   responsive_image: 0
   rest: 0
