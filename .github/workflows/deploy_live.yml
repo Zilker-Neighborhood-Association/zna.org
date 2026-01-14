@@ -1,4 +1,4 @@
-name: Deploy to Live Site
+name: Deploy to Live
 
 on:
   push:
