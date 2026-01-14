@@ -7,13 +7,14 @@ on:
 
 env:
   php_version: '8.3'
+  dist_dir: 'to_deploy_agf1234w'
 
 jobs:
   deploy:
-    name: Deploy to Live Site
+    name: Deploy to Live
     runs-on: ubuntu-24.04
     env:
-      DRUSH: /usr/php83/usr/bin/php ${{ secrets.REPO_PATH }}/vendor/drush/drush/drush.php
+      DRUSH: ${{ secrets.LIVE_PATH }}/vendor/bin/drush
     steps:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -66,51 +67,31 @@ jobs:
       - name: Place SSH key
         uses: shimataro/ssh-key-action@d4fffb50872869abe2d9a9098a6d9c5aa7d16be4 # v2.7.0
         with:
-          key: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.LIVE_SSH_KEY }}
           known_hosts: ${{ vars.KNOWN_HOSTS }}
 
-      - name: Prepare code for deployment
-        run: |
-          git config --global init.defaultBranch main
-          git config --global user.email "github-actions@example.com"
-          git config --global user.name "GitHub Actions"
-          git config --global core.autocrlf input
-          git config --global core.safecrlf false
-          commit_message=$(git log -1 --pretty=%B)
-          rm -rf .ddev
-          rm -rf .git
-          rm -rf .github
-          rm -rf web/core/*.txt
-          git init
-          git config --local gc.auto 0
-          git add --force .
-          git commit -m "Automated deploy: $commit_message" >/dev/null
-
-      - name: Push code to Live Site
-        run: |
-          git remote add live ssh://${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}${{ secrets.REPO_PATH }}
-          git push --force live HEAD:main
-
       - name: Configure SSH
+        env:
+          SSH_USER: ${{ secrets.LIVE_SSH_USER }}
+          SSH_HOST: ${{ secrets.LIVE_SSH_HOST }}
         run: |
           cat >>~/.ssh/config <<END
-          Host live
+          Host staging
             HostName $SSH_HOST
             User $SSH_USER
             IdentityFile ~/.ssh/id_rsa
           END
+
+      - name: Prepare code for deployment
+        run: |
+          mkdir -p ${{ env.dist_dir }}
+          rsync -ar --exclude '${{ env.dist_dir }}' --exclude '.ddev' --exclude '.git' --exclude '.github' --exclude '.idea' --exclude 'files-private/' --exclude 'node_modules' --exclude 'web/files/' --exclude 'web/assets/' . ${{ env.dist_dir }}
+
+      - name: Push code to Staging
         env:
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_HOST: ${{ secrets.SSH_HOST }}
+          remote_dir: ${{ secrets.LIVE_PATH }}
+        run: |
+          rsync -azri --progress --delay-updates --delete-after --exclude 'files-private/' --exclude 'web/files/' --exclude 'web/assets/' -e "ssh -o StrictHostKeyChecking=no" ${{ env.dist_dir }}/ staging:${remote_dir}
 
-      - name: drush zupdatedb
-        run: ssh live '${{ env.DRUSH }} zupdatedb'
-
-      - name: drush config:import
-        run: ssh live '${{ env.DRUSH }} config:import'
-
-      - name: drush cache:rebuild
-        run: ssh live '${{ env.DRUSH }} cache:rebuild'
-
-      - name: drush deploy:hook
-        run: ssh live '${{ env.DRUSH }} deploy:hook'
+      - name: drush deploy
+        run: ssh staging '${{ env.DRUSH }} deploy'
