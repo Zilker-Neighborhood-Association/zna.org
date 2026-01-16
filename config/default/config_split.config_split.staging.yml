@@ -11,8 +11,19 @@ no_patching: false
 storage: folder
 folder: ../config/staging
 module:
+  purge: 0
+  purge_drush: 0
+  purge_processor_cron: 0
+  purge_tokens: 0
+  purge_ui: 0
   robotstxt: 0
+  varnish_purge_tags: 0
+  varnish_purger: 0
+  cloudflare: 0
+  cloudflarepurger: 0
   syslog: 0
+  varnish_focal_point_purge: 0
+  varnish_image_purge: 0
 theme: {  }
 complete_list:
   - 'backup_migrate.backup_migrate_schedule.*'

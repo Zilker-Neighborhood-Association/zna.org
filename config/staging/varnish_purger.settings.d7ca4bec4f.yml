@@ -1,0 +1,25 @@
+uuid: a798db43-e1d5-4165-8fe0-6e77b79dc281
+langcode: en
+status: true
+dependencies: {  }
+id: d7ca4bec4f
+name: 'Cloudways Varnish Tag Purger'
+invalidationtype: tag
+hostname: localhost
+port: 8080
+path: /
+request_method: BAN
+scheme: http
+verify: '1'
+headers:
+  -
+    field: Cache-Tags
+    value: '[invalidations:separated_comma]'
+body: null
+body_content_type: null
+runtime_measurement: true
+timeout: 1.0
+connect_timeout: 1.0
+cooldown_time: 0.0
+max_requests: 100
+http_errors: true
