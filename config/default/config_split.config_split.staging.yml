@@ -1,0 +1,18 @@
+uuid: 313b7016-6e51-402f-a525-25a05ad8d457
+langcode: en
+status: false
+dependencies: {  }
+id: staging
+label: Staging
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/staging
+module:
+  backup_migrate: 0
+theme: {  }
+complete_list:
+  - 'backup_migrate.backup_migrate_schedule.*'
+partial_list: {  }

@@ -2,14 +2,14 @@ uuid: 436edf9b-274f-4f35-bdb9-d410abcd9aa6
 langcode: en
 status: false
 dependencies: {  }
-id: prelive
-label: Pre-Live
+id: prestaging
+label: Pre-Staging
 description: ''
 weight: 0
 stackable: false
 no_patching: false
 storage: folder
-folder: ../config/prelive
+folder: ../config/prestaging
 module:
   devel: 0
   devel_generate: 0
