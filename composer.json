@@ -44,6 +44,7 @@
         "drupal/diff": "^2.0",
         "drupal/dropzonejs": "^2.11",
         "drupal/email_registration": "^2.0",
+        "drupal/fast_404": "^3.7",
         "drupal/filefield_paths": "^1.0",
         "drupal/focal_point": "^2.1",
         "drupal/gin": "^5.0",

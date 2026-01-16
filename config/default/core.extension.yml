@@ -26,6 +26,7 @@ module:
   editor: 0
   email_registration: 0
   entity_reference_revisions: 0
+  fast404: 0
   field: 0
   field_group: 0
   file: 0
