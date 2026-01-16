@@ -1,0 +1,29 @@
+uuid: c57a6b45-f429-41ac-ac51-87ba66cd7ae2
+langcode: en
+status: true
+dependencies:
+  module:
+    - purge_processor_cron
+title: 'Invalidate cache items'
+id: purge_processor_cron_cron
+weight: 0
+module: purge_processor_cron
+callback: 'purge_processor_cron#cron'
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '* * * * *'
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000
