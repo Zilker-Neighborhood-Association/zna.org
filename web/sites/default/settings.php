@@ -2,7 +2,12 @@
 
 // phpcs:ignoreFile
 
-ini_set('memory_limit', '96M');
+ini_set('memory_limit', '64M');
+
+if (PHP_SAPI === 'cli') {
+  ini_set('memory_limit', '256M');
+}
+
 
 /**
  * @file
