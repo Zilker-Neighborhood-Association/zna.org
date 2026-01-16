@@ -11,6 +11,7 @@ no_patching: false
 storage: folder
 folder: ../config/staging
 module:
+  robotstxt: 0
   syslog: 0
 theme: {  }
 complete_list:
