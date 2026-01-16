@@ -5,7 +5,7 @@
 ini_set('memory_limit', '64M');
 
 if (PHP_SAPI === 'cli') {
-  ini_set('memory_limit', '256M');
+  ini_set('memory_limit', '512M');
 }
 
 
