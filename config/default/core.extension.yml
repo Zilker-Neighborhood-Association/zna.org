@@ -92,8 +92,6 @@ module:
   ultimate_cron: 0
   update: 0
   user: 0
-  varnish_purge_tags: 0
-  varnish_purger: 0
   views_bulk_operations: 0
   webform: 0
   webp: 0
