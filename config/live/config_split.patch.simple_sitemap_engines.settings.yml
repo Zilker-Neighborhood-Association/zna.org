@@ -1,0 +1,6 @@
+adding:
+  enabled: true
+  index_now_enabled: true
+removing:
+  enabled: false
+  index_now_enabled: false

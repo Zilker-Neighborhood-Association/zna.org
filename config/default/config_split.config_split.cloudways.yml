@@ -1,0 +1,24 @@
+uuid: 5b180f87-58dd-4638-9287-93b334b9f321
+langcode: en
+status: false
+dependencies: {  }
+id: cloudways
+label: Cloudways
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/cloudways
+module:
+  purge: 0
+  purge_processor_cron: 0
+  purge_queuer_coretags: 0
+  purge_tokens: 0
+  purge_ui: 0
+  syslog: 0
+  varnish_purge_tags: 0
+  varnish_purger: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }
