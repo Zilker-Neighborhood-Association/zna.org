@@ -11,7 +11,7 @@ no_patching: false
 storage: folder
 folder: ../config/staging
 module:
-  backup_migrate: 0
+  syslog: 0
 theme: {  }
 complete_list:
   - 'backup_migrate.backup_migrate_schedule.*'
