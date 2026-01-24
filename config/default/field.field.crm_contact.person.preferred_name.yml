@@ -1,0 +1,21 @@
+uuid: 7e544948-2a75-4e82-800d-8c8fa88fe055
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.person
+    - field.storage.crm_contact.preferred_name
+_core:
+  default_config_hash: snNIOOyKbIZRk4rT0p43VwKw7R0RgT9dwdKyDeAvsIg
+id: crm_contact.person.preferred_name
+field_name: preferred_name
+entity_type: crm_contact
+bundle: person
+label: 'Preferred name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

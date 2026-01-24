@@ -1,0 +1,110 @@
+uuid: 66b66569-bbb5-404b-8b46-034fd533d9ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.household
+  module:
+    - crm
+    - datetime
+_core:
+  default_config_hash: wqCwnKeHqMgomy1jBsN_jS-PO_StFVHHTrwNo0NDL8k
+id: crm_contact.household.default
+targetEntityType: crm_contact
+bundle: household
+mode: default
+content:
+  addresses:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  age:
+    type: crm_age
+    label: above
+    settings:
+      granularity: years
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  created:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  emails:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  end_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  relationship_statistics:
+    label: above
+    type: crm_relationship_statistics_default
+    weight: 15
+    region: content
+    settings:
+      format: label_count
+      label_position: opposite
+      sort_by: none
+      sort_order: asc
+    third_party_settings: {  }
+  start_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  telephones:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  comment: true
+  search_api_excerpt: true

@@ -1,0 +1,18 @@
+uuid: 0bcf8afe-a7be-4a91-b69e-3dcd192b5062
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: HTaAfobacZxz9V21zdhVOdnqB8DQz6tAG4cD64quDaw
+id: person
+label: Person
+description: 'An individual person.'
+help: ''
+new_revision: true
+date:
+  start_date:
+    label: 'Date of birth'
+    description: ''
+  end_date:
+    label: 'Date of death'
+    description: ''

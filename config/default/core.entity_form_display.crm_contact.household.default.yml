@@ -1,0 +1,119 @@
+uuid: 53ff660e-66ac-41fc-b4d8-1024bddea61e
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.household
+  module:
+    - datetime
+    - hide_revision_field
+    - primary_entity_reference
+_core:
+  default_config_hash: _wIdEGGIULAXIb3GRihOX7THs60gWNMapWIZZhMmV7E
+id: crm_contact.household.default
+targetEntityType: crm_contact
+bundle: household
+mode: default
+content:
+  addresses:
+    type: primary_entity_reference_inline_form
+    weight: 3
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: address
+      label_plural: addresses
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: true
+      removed_reference: delete
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  emails:
+    type: primary_entity_reference_inline_form
+    weight: 1
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: email
+      label_plural: emails
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: true
+      removed_reference: delete
+    third_party_settings: {  }
+  end_date:
+    type: datetime_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  revision_log:
+    type: hide_revision_field_log_widget
+    weight: 80
+    region: content
+    settings:
+      show: true
+      default: ''
+      permission_based: false
+      allow_user_settings: true
+      hide_revision: false
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+  start_date:
+    type: datetime_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  telephones:
+    type: primary_entity_reference_inline_form
+    weight: 2
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: telephone
+      label_plural: telephones
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: true
+      removed_reference: delete
+    third_party_settings: {  }
+hidden:
+  comment: true

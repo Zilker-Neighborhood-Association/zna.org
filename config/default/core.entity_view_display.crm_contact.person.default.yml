@@ -1,0 +1,123 @@
+uuid: 55e2c5c4-9881-4df7-a861-8a91c4aae1fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.person
+    - field.field.crm_contact.person.aliases
+    - field.field.crm_contact.person.full_name
+    - field.field.crm_contact.person.preferred_name
+  module:
+    - crm
+    - datetime
+_core:
+  default_config_hash: FqNnQEsb1D9lvJ6G7lnJ772MIlVuBTUoGrDoS-lY8fU
+id: crm_contact.person.default
+targetEntityType: crm_contact
+bundle: person
+mode: default
+content:
+  addresses:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  age:
+    type: crm_age
+    label: above
+    settings:
+      granularity: years
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  aliases:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  created:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  emails:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  end_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  relationship_statistics:
+    label: above
+    type: crm_relationship_statistics_default
+    weight: 15
+    region: content
+    settings:
+      format: label_count
+      label_position: opposite
+      sort_by: none
+      sort_order: asc
+    third_party_settings: {  }
+  start_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  telephones:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  comment: true
+  full_name: true
+  preferred_name: true
+  search_api_excerpt: true

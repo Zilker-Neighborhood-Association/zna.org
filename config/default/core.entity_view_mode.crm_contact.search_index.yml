@@ -1,0 +1,13 @@
+uuid: 69fdf0de-14a9-4c96-a53f-196591065587
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+_core:
+  default_config_hash: qhsCtOKW0Ez422E55SBp-wAIq0GBlEbqtlJhRGPHuPE
+id: crm_contact.search_index
+label: 'Search index'
+description: null
+targetEntityType: crm_contact
+cache: true

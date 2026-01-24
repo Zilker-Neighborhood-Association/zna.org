@@ -1,0 +1,9 @@
+uuid: 20249548-518b-4d07-900f-01cfd0f59d2f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: VnQargRjukUXMLKcMO-2OyevAX8TMcMF43WhIz0ThdU
+id: address
+label: Address
+description: 'A postal or physical address for a contact.'

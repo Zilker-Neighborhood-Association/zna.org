@@ -1,6 +1,7 @@
 _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
+  address: 0
   backup_migrate: 0
   big_pipe: 0
   block: 0
@@ -14,6 +15,7 @@ module:
   config_split: 0
   content_moderation: 0
   contextual: 0
+  crm: 0
   crop: 0
   ctools: 0
   datalayer: 0
@@ -37,6 +39,7 @@ module:
   google_tag: 0
   help: 0
   image: 0
+  inline_entity_form: 0
   inline_form_errors: 0
   jquery_ui: 0
   jquery_ui_autocomplete: 0
@@ -60,12 +63,14 @@ module:
   metatag_open_graph: 0
   module_filter: 0
   mysql: 0
+  name: 0
   navigation: 0
   navigation_extra_tools: 0
   node: 0
   options: 0
   path: 0
   path_alias: 0
+  primary_entity_reference: 0
   purge: 0
   purge_queuer_coretags: 0
   purge_tokens: 0

@@ -1,0 +1,21 @@
+uuid: 3c787d07-ccae-4575-9d1a-6e5d6b77750b
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.organization
+    - field.storage.crm_contact.aliases
+_core:
+  default_config_hash: dhszkJGyqJMluUFZ8C9s5NlkSgEkl8oURlpeLKryTWI
+id: crm_contact.organization.aliases
+field_name: aliases
+entity_type: crm_contact
+bundle: organization
+label: Aliases
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

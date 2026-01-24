@@ -1,0 +1,35 @@
+uuid: 74caaa2f-6a98-4ff2-bff5-a50c92c81416
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_method_type.address
+    - field.storage.crm_contact_method.address
+  module:
+    - address
+_core:
+  default_config_hash: _dKIGci0NBYKogUGTNXcUVVG5JVycyUORTnQyV1pMUk
+id: crm_contact_method.address.address
+field_name: address
+entity_type: crm_contact_method
+bundle: address
+label: Address
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+  fields: {  }
+field_type: address

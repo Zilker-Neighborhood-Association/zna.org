@@ -1,0 +1,21 @@
+uuid: 39df736c-f20b-4eac-8575-88cebf2c399c
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+    - telephone
+_core:
+  default_config_hash: 83q3R1EO7RYBIVvv8dlhh1HgJileLYAIzw7N7tDfKi8
+id: crm_contact_method.telephone
+field_name: telephone
+entity_type: crm_contact_method
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 852b1b20-16db-43cb-b13c-718e4a360730
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.person
+    - field.storage.crm_contact.aliases
+_core:
+  default_config_hash: d9FLrYHfu35ftCTKfCIbNenHbFkKGsrTvlVNYiaQCz8
+id: crm_contact.person.aliases
+field_name: aliases
+entity_type: crm_contact
+bundle: person
+label: Aliases
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

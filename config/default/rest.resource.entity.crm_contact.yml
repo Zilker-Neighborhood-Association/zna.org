@@ -1,0 +1,38 @@
+uuid: 3e2a996d-f5d5-4969-a045-ae49b256c5f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+    - serialization
+    - user
+_core:
+  default_config_hash: wh7krTOkNyBWQWQUVXeyRhPvXXjT_cEQdYbVUo6nw_U
+id: entity.crm_contact
+plugin_id: 'entity:crm_contact'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie
+  POST:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie
+  PATCH:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie
+  DELETE:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie

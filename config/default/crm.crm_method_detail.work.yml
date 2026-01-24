@@ -1,0 +1,11 @@
+uuid: f27e8262-3d70-496a-901c-7d76c13d31ea
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aa5qpNanDKEnvHlJ0aZoDdHnkrv0HUD6vtkwOnkneJw
+id: work
+label: Work
+description: ''
+bundles: {  }
+negate: false

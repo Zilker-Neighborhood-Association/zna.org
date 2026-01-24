@@ -1,0 +1,47 @@
+uuid: 43d7020f-28b5-4971-8a8e-c509e1dc5764
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_method_type.email
+    - field.field.crm_contact_method.email.email
+  module:
+    - hide_revision_field
+_core:
+  default_config_hash: bzNc7jDeEkXGvXQM657sXLtm8lxK_irDA0mD4inf1mQ
+id: crm_contact_method.email.default
+targetEntityType: crm_contact_method
+bundle: email
+mode: default
+content:
+  detail:
+    type: options_select
+    weight: -10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  email:
+    type: email_default
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  revision_log:
+    type: hide_revision_field_log_widget
+    weight: 80
+    region: content
+    settings:
+      show: true
+      default: ''
+      permission_based: false
+      allow_user_settings: true
+      hide_revision: false
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

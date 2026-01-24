@@ -1,0 +1,21 @@
+uuid: 574f1275-b387-447f-b00e-668731b88434
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_method_type.email
+    - field.storage.crm_contact_method.email
+_core:
+  default_config_hash: DFN4XDwJEhR74dDQMdd3B56ulxJ7SSQL21vrCRIL4ic
+id: crm_contact_method.email.email
+field_name: email
+entity_type: crm_contact_method
+bundle: email
+label: Email
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

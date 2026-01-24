@@ -1,0 +1,23 @@
+uuid: 2dc81972-0f54-439c-84bd-86163e8eb9b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+_core:
+  default_config_hash: 6116W6NbDzeiG-bxpLw6LoGHGhpeXJ5oYDly9AWlPHI
+id: crm_contact.preferred_name
+field_name: preferred_name
+entity_type: crm_contact
+type: string
+settings:
+  max_length: 64
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false
