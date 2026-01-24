@@ -1,0 +1,22 @@
+uuid: f9d8551c-02f3-4b11-a363-ebafbfeacf16
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.zilker_street_names
+  module:
+    - text
+id: taxonomy_term.zilker_street_names.default
+targetEntityType: taxonomy_term
+bundle: zilker_street_names
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

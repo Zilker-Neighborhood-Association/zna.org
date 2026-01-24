@@ -1,0 +1,13 @@
+uuid: 5d6224ad-aef6-4384-9223-bdcbd5c7f975
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.contact_tags
+id: taxonomy_term.contact_tags
+targetEntityType: taxonomy_term
+bundle: contact_tags
+action: page_not_found
+no_bypass: true
+bypass_message: false
+configuration: {  }

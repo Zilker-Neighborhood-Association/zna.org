@@ -77,16 +77,16 @@ content:
     weight: 0
     region: content
   relationship_statistics:
-    label: above
     type: crm_relationship_statistics_default
-    weight: 15
-    region: content
+    label: above
     settings:
       format: label_count
       label_position: opposite
       sort_by: none
       sort_order: asc
     third_party_settings: {  }
+    weight: 15
+    region: content
   start_date:
     type: datetime_default
     label: above

@@ -5,7 +5,11 @@ dependencies:
   config:
     - crm.crm_contact_type.person
     - field.field.crm_contact.person.aliases
+    - field.field.crm_contact.person.contact_tags
     - field.field.crm_contact.person.full_name
+    - field.field.crm_contact.person.get_involved
+    - field.field.crm_contact.person.has_yard_sign
+    - field.field.crm_contact.person.list_publicly
     - field.field.crm_contact.person.preferred_name
   module:
     - crm
@@ -41,6 +45,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  contact_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 19
     region: content
   created:
     type: timestamp
@@ -79,6 +91,36 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
+  get_involved:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  has_yard_sign:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  list_publicly:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 16
+    region: content
   name:
     type: string
     label: hidden
@@ -88,16 +130,16 @@ content:
     weight: 0
     region: content
   relationship_statistics:
-    label: above
     type: crm_relationship_statistics_default
-    weight: 15
-    region: content
+    label: above
     settings:
       format: label_count
       label_position: opposite
       sort_by: none
       sort_order: asc
     third_party_settings: {  }
+    weight: 15
+    region: content
   start_date:
     type: datetime_default
     label: above

@@ -1,0 +1,23 @@
+uuid: 9009fe1d-83bf-4dfd-839b-f7b28450b9fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.person
+    - field.storage.crm_contact.list_publicly
+id: crm_contact.person.list_publicly
+field_name: list_publicly
+entity_type: crm_contact
+bundle: person
+label: 'List publicly'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

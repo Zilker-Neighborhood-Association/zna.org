@@ -1,0 +1,29 @@
+uuid: e0c9ea09-4d21-4936-8c0c-a543e62beaa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.person
+    - field.storage.crm_contact.contact_tags
+    - taxonomy.vocabulary.contact_tags
+id: crm_contact.person.contact_tags
+field_name: contact_tags
+entity_type: crm_contact
+bundle: person
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      contact_tags: contact_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

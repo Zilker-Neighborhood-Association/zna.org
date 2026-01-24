@@ -7,4 +7,4 @@ _core:
 id: default
 label: Default
 locked: true
-pattern: ((((t+ig)+im)+if)+is)+jc
+pattern: 'f, p'

@@ -1,0 +1,23 @@
+uuid: 1ff0354c-559d-4e88-b040-ccce4415b08e
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.person
+    - field.storage.crm_contact.has_yard_sign
+id: crm_contact.person.has_yard_sign
+field_name: has_yard_sign
+entity_type: crm_contact
+bundle: person
+label: 'Has yard sign'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

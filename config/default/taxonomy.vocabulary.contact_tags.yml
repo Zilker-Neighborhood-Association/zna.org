@@ -1,0 +1,9 @@
+uuid: 2c6a2467-f458-4d2e-84e7-f670ad3a2163
+langcode: en
+status: true
+dependencies: {  }
+name: 'Contact Tags'
+vid: contact_tags
+description: null
+weight: 0
+new_revision: false

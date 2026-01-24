@@ -5,6 +5,10 @@ dependencies:
   config:
     - crm.crm_contact_method_type.address
     - field.field.crm_contact_method.address.address
+    - field.field.crm_contact_method.address.is_in_zilker
+    - field.field.crm_contact_method.address.street_name
+    - field.field.crm_contact_method.address.street_number
+    - field.field.crm_contact_method.address.unit_number
   module:
     - address
 _core:
@@ -22,13 +26,47 @@ content:
     weight: 0
     region: content
   detail:
-    label: above
     type: entity_reference_label
-    weight: 10
-    region: content
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 10
+    region: content
+  is_in_zilker:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  street_name:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  street_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  unit_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
 hidden:
   created: true
   search_api_excerpt: true

@@ -1,0 +1,20 @@
+uuid: 46c592ae-c0c6-4789-a151-d48d84c02e4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+    - taxonomy
+id: crm_contact.contact_tags
+field_name: contact_tags
+entity_type: crm_contact
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

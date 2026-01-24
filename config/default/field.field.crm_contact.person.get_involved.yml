@@ -1,0 +1,23 @@
+uuid: f86ecb26-ecc1-4cf9-9325-655a2c834e9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.person
+    - field.storage.crm_contact.get_involved
+id: crm_contact.person.get_involved
+field_name: get_involved
+entity_type: crm_contact
+bundle: person
+label: 'Interested in getting involved'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: 3c74a883-d63c-437e-b3ad-47e30890bec1
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_method_type.address
+    - field.storage.crm_contact_method.is_in_zilker
+id: crm_contact_method.address.is_in_zilker
+field_name: is_in_zilker
+entity_type: crm_contact_method
+bundle: address
+label: 'Address is in Zilker'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

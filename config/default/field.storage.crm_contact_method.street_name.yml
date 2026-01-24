@@ -1,0 +1,20 @@
+uuid: a0c6e9dd-be51-4eb4-883d-41ae3a42115a
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+    - taxonomy
+id: crm_contact_method.street_name
+field_name: street_name
+entity_type: crm_contact_method
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

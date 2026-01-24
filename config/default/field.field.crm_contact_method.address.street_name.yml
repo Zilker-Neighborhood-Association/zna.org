@@ -1,0 +1,29 @@
+uuid: f6dc5e7d-b2ed-41bf-b3eb-d5f45c12c881
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_method_type.address
+    - field.storage.crm_contact_method.street_name
+    - taxonomy.vocabulary.zilker_street_names
+id: crm_contact_method.address.street_name
+field_name: street_name
+entity_type: crm_contact_method
+bundle: address
+label: 'Street name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      zilker_street_names: zilker_street_names
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -13,13 +13,13 @@ bundle: email
 mode: default
 content:
   detail:
-    label: above
     type: entity_reference_label
-    weight: 10
-    region: content
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 10
+    region: content
   email:
     type: email_mailto
     label: above

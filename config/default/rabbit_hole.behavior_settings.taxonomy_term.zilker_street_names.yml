@@ -1,0 +1,13 @@
+uuid: 18b912cf-184b-49d6-88ea-775c88c10cb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.zilker_street_names
+id: taxonomy_term.zilker_street_names
+targetEntityType: taxonomy_term
+bundle: zilker_street_names
+action: page_not_found
+no_bypass: false
+bypass_message: false
+configuration: {  }

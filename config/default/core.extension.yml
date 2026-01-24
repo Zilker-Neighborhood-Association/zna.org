@@ -11,6 +11,7 @@ module:
   ckeditor_media_resize: 0
   components: 0
   composer_deploy: 0
+  conditional_fields: 0
   config: 0
   config_split: 0
   content_moderation: 0
@@ -94,7 +95,9 @@ module:
   svg_image_field: 0
   svg_image_field_media_bundle: 0
   system: 0
+  tagify: 0
   taxonomy: 0
+  taxonomy_manager: 0
   telephone: 0
   text: 0
   token: 0
