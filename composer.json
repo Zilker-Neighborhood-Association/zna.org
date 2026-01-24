@@ -34,6 +34,7 @@
         "drupal/backup_migrate": "^5.1",
         "drupal/civictheme": "1.10",
         "drupal/ckeditor_media_resize": "^1.0",
+        "drupal/cloudflare": "^2.0@beta",
         "drupal/composer_deploy": "^1.10",
         "drupal/config_split": "^2.0",
         "drupal/core-composer-scaffold": "^11.2.4",
@@ -44,11 +45,13 @@
         "drupal/diff": "^2.0",
         "drupal/dropzonejs": "^2.11",
         "drupal/email_registration": "^2.0",
+        "drupal/fast_404": "^3.7",
         "drupal/filefield_paths": "^1.0",
         "drupal/focal_point": "^2.1",
         "drupal/gin": "^5.0",
         "drupal/google_tag": "^2.0",
         "drupal/hide_revision_field": "^2.5",
+        "drupal/http_cache_control": "^2.8",
         "drupal/mail_login": "^4.0",
         "drupal/media_thumbnails_svg": "^2.0",
         "drupal/menu_admin_per_menu": "^1.6",
@@ -56,16 +59,19 @@
         "drupal/metatag": "^2.1",
         "drupal/module_filter": "^5.0",
         "drupal/navigation_extra_tools": "^1.1",
+        "drupal/purge": "^3.6",
         "drupal/quick_node_clone": "^1.22",
         "drupal/rabbit_hole": "^2.0",
         "drupal/realname": "^2.0",
         "drupal/redis": "^1.11",
         "drupal/responsive_favicons": "^4.0",
+        "drupal/robotstxt": "^1.6",
         "drupal/search_api": "^1.38",
         "drupal/simple_sitemap": "^4.2",
         "drupal/svg_image_field": "^2.3",
         "drupal/token": "^1.15",
         "drupal/ultimate_cron": "^2.0",
+        "drupal/varnish_purge": "^2.3",
         "drupal/views_bulk_operations": "^4.3",
         "drupal/webform": "^6.3",
         "drupal/webp": "^1.0",
@@ -96,6 +102,9 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/robots.txt": false
             }
         },
         "installer-paths": {

@@ -87,7 +87,7 @@ jobs:
           mkdir -p ${{ env.dist_dir }}
           rsync -ar --exclude '${{ env.dist_dir }}' --exclude '.ddev' --exclude '.git' --exclude '.github' --exclude '.idea' --exclude 'files-private/' --exclude 'node_modules' --exclude 'web/files/' --exclude 'web/assets/' . ${{ env.dist_dir }}
 
-      - name: Push code to Staging
+      - name: Push code to Live
         env:
           remote_dir: ${{ secrets.LIVE_PATH }}
         run: |

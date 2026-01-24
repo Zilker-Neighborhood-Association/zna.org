@@ -1,21 +1,17 @@
-uuid: 436edf9b-274f-4f35-bdb9-d410abcd9aa6
+uuid: 5b180f87-58dd-4638-9287-93b334b9f321
 langcode: en
 status: false
 dependencies: {  }
-id: prelive
-label: Pre-Live
+id: cloudways
+label: Cloudways
 description: ''
 weight: 0
 stackable: false
 no_patching: false
 storage: folder
-folder: ../config/prelive
+folder: ../config/cloudways
 module:
-  devel: 0
-  devel_generate: 0
-  field_ui: 0
-  views_ui: 0
-  webform_ui: 0
+  syslog: 0
 theme: {  }
 complete_list: {  }
 partial_list: {  }

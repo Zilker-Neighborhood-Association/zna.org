@@ -1,20 +1,17 @@
-uuid: ae7950f8-6338-466c-8d04-45829c4c98db
+uuid: 313b7016-6e51-402f-a525-25a05ad8d457
 langcode: en
 status: false
 dependencies: {  }
-id: live
-label: Live
+id: staging
+label: Staging
 description: ''
 weight: 0
 stackable: false
 no_patching: false
 storage: folder
-folder: ../config/live
+folder: ../config/staging
 module: {  }
 theme: {  }
-complete_list:
-  - 'backup_migrate.backup_migrate_schedule.*'
+complete_list: {  }
 partial_list:
   - google_tag.container.GTM-TWQDMJPN.66274c64318cc4.48970230
-  - robotstxt.settings
-  - simple_sitemap_engines.settings

@@ -2,7 +2,12 @@
 
 // phpcs:ignoreFile
 
-ini_set('memory_limit', '256M');
+ini_set('memory_limit', '64M');
+
+if (PHP_SAPI === 'cli') {
+  ini_set('memory_limit', '512M');
+}
+
 
 /**
  * @file
@@ -314,4 +319,16 @@ if (is_readable($local_settings)) {
 $local_settings = '../../private_html/settings.local.php';
 if (is_readable($local_settings)) {
   require $local_settings;
+}
+
+/**
+ * Load fast404 configuration, if available.
+ *
+ * Use settings.fast404.php to provide settings for Fast 404 module.
+ *
+ * Keep this code block at the end of this file to take full effect.
+ */
+
+if (file_exists($app_root . '/' . $site_path . '/settings.fast404.php')) {
+  include $app_root . '/' . $site_path . '/settings.fast404.php';
 }

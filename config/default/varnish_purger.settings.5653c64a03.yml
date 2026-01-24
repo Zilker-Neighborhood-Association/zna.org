@@ -1,0 +1,25 @@
+uuid: a8a50764-0b33-4943-93ed-2e2b87ae1e6a
+langcode: en
+status: true
+dependencies: {  }
+id: 5653c64a03
+name: 'Cloudways Varnish Everything Purger'
+invalidationtype: everything
+hostname: localhost
+port: 8080
+path: /
+request_method: PURGE
+scheme: http
+verify: '1'
+headers:
+  -
+    field: host
+    value: '[invalidation:expression]'
+body: null
+body_content_type: null
+runtime_measurement: true
+timeout: 1.0
+connect_timeout: 1.0
+cooldown_time: 0.0
+max_requests: 100
+http_errors: true

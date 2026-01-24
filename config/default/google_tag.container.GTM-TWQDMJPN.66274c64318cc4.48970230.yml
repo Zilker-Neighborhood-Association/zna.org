@@ -18,8 +18,8 @@ advanced_settings:
       allowlist_classes: ''
       blocklist_classes: ''
       include_environment: true
-      environment_id: env-1
-      environment_token: nYymKucUh-9PH_MgSNPS1g
+      environment_id: env-3
+      environment_token: RgSDuc70dGzTOCkACJTEgg
 dimensions_metrics:
   -
     type: dimension
@@ -46,9 +46,9 @@ conditions:
     roles:
       civictheme_site_administrator: civictheme_site_administrator
 events:
-  custom: {  }
-  login:
+  sign_up:
     method: CMS
   search: {  }
-  sign_up:
+  custom: {  }
+  login:
     method: CMS

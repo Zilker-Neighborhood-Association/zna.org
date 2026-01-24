@@ -15,6 +15,7 @@ module:
   content_moderation: 0
   contextual: 0
   crop: 0
+  ctools: 0
   datalayer: 0
   datetime: 0
   datetime_range: 0
@@ -26,6 +27,7 @@ module:
   editor: 0
   email_registration: 0
   entity_reference_revisions: 0
+  fast404: 0
   field: 0
   field_group: 0
   file: 0
@@ -62,9 +64,12 @@ module:
   navigation_extra_tools: 0
   node: 0
   options: 0
-  page_cache: 0
   path: 0
   path_alias: 0
+  purge: 0
+  purge_queuer_coretags: 0
+  purge_tokens: 0
+  purge_ui: 0
   quick_node_clone: 0
   rabbit_hole: 0
   realname: 0
@@ -74,6 +79,7 @@ module:
   responsive_favicons: 0
   responsive_image: 0
   rest: 0
+  robotstxt: 0
   search_api: 0
   search_api_db: 0
   serialization: 0
@@ -82,7 +88,6 @@ module:
   simple_sitemap_engines: 0
   svg_image_field: 0
   svg_image_field_media_bundle: 0
-  syslog: 0
   system: 0
   taxonomy: 0
   telephone: 0
@@ -91,12 +96,14 @@ module:
   ultimate_cron: 0
   update: 0
   user: 0
+  varnish_purger: 0
   views_bulk_operations: 0
   webform: 0
   webp: 0
   workflows: 0
   zna_custom: 0
   hide_revision_field: 1
+  http_cache_control: 1
   menu_admin_per_menu: 1
   pathauto: 1
   views: 10
