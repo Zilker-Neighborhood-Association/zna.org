@@ -1,0 +1,27 @@
+uuid: 9f40cc3a-7e11-4a66-b700-2e23ed95cf89
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+    - options
+id: crm_contact_method.address_type
+field_name: address_type
+entity_type: crm_contact_method
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: zilker
+      label: Zilker
+    -
+      value: non_zilker
+      label: Non-Zilker
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

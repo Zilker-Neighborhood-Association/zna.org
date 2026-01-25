@@ -1,0 +1,84 @@
+diff --git a/js/primary-selection.js b/js/primary-selection.js
+index 1df046e..da87a3b 100644
+--- a/js/primary-selection.js
++++ b/js/primary-selection.js
+@@ -3,7 +3,7 @@
+  * Primary selection JavaScript for the Primary Entity Reference module.
+  */
+ 
+-(function primarySelectionIIFE($, Drupal) {
++(function primarySelectionIIFE($, Drupal, once) {
+   /**
+    * Highlights the primary item in the inline form.
+    *
+@@ -76,10 +76,9 @@
+   Drupal.behaviors.primaryEntityReferenceSelection = {
+     attach(context) {
+       // Find all primary selection containers.
+-      $('.primary-selection-container', context)
+-        .once('primary-selection')
+-        .each(function primarySelectionEach() {
+-          const $container = $(this);
++      once('primary-selection', '.primary-selection-container', context)
++        .forEach(function primarySelectionEach(element) {
++          const $container = $(element);
+           const $radios = $container.find('input[type="radio"]');
+           const $inlineForm = $container.closest(
+             '.primary-entity-reference-inline-form',
+@@ -105,10 +104,9 @@
+    */
+   Drupal.behaviors.primaryEntityReferenceValidation = {
+     attach(context) {
+-      $('form', context)
+-        .once('primary-validation')
+-        .each(function primaryValidationEach() {
+-          const $form = $(this);
++      once('primary-validation', 'form', context)
++        .forEach(function primaryValidationEach(element) {
++          const $form = $(element);
+ 
+           $form.on('submit', function primaryFormSubmit(e) {
+             const $primaryRadios = $form.find(
+@@ -158,19 +156,20 @@
+   Drupal.behaviors.primaryEntityReferenceDynamicOptions = {
+     attach(context) {
+       // Watch for changes in the inline form that might affect primary options.
+-      $(context)
+-        .once('dynamic-options')
+-        .on('iefAdd', function primaryIefAdd(e, data) {
+-          // Trigger a refresh of primary options when new items are added.
+-          const $container = $(data.container).closest(
+-            '.primary-selection-container',
+-          );
+-          if ($container.length) {
+-            // This would typically trigger a form rebuild or AJAX refresh.
+-            // For now, we'll just update the available options.
+-            updatePrimaryOptions($container);
+-          }
++      once('dynamic-options', '[data-drupal-selector]', context)
++        .forEach(function primaryDynamicEach(element) {
++          $(element).on('iefAdd', function primaryIefAdd(e, data) {
++            // Trigger a refresh of primary options when new items are added.
++            const $container = $(data.container).closest(
++              '.primary-selection-container',
++            );
++            if ($container.length) {
++              // This would typically trigger a form rebuild or AJAX refresh.
++              // For now, we'll just update the available options.
++              updatePrimaryOptions($container);
++            }
++          });
+         });
+     },
+   };
+-})(jQuery, Drupal);
++})(jQuery, Drupal, once);
+diff --git a/primary_entity_reference.libraries.yml b/primary_entity_reference.libraries.yml
+index 49ed0e1..9398557 100644
+--- a/primary_entity_reference.libraries.yml
++++ b/primary_entity_reference.libraries.yml
+@@ -8,3 +8,4 @@ primary_selection:
+   dependencies:
+     - core/drupal
+     - core/jquery
++    - core/once

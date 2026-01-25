@@ -1,0 +1,21 @@
+uuid: 9a6e9b96-e129-47e9-894d-bc8ebb12a7c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_method_type.address
+    - field.storage.crm_contact_method.address_type
+  module:
+    - options
+id: crm_contact_method.address.address_type
+field_name: address_type
+entity_type: crm_contact_method
+bundle: address
+label: 'Address Type'
+description: 'Whether this is a Zilker neighborhood address or a general address.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ddev drush:*)",
+      "Bash(ls:*)",
+      "Bash(test:*)",
+      "Bash(ddev exec:*)",
+      "Bash(ddev restart:*)",
+      "Bash(ddev describe:*)",
+      "Bash(ddev composer require:*)",
+      "Bash(ddev composer:*)",
+      "Bash(echo:*)",
+      "Bash(ddev status:*)",
+      "Bash(ddev start:*)"
+    ]
+  }
+}

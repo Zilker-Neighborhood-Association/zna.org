@@ -1,0 +1,5 @@
+name: 'ZNA Address'
+type: module
+description: 'Custom ZNA address functionality'
+package: Custom
+core_version_requirement: ^10 || ^11
