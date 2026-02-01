@@ -1,0 +1,376 @@
+uuid: 45127718-5b97-422f-aa8d-a41eef8c7325
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: 2026_membership_dues
+title: '2026 Membership Dues'
+description: ''
+categories: {  }
+elements: |-
+  start:
+    '#type': webform_wizard_page
+    '#title': Start
+    intro:
+      '#type': processed_text
+      '#text': '<p>Thank you for supporting ZNA!</p><p>Membership expires on December 31, 2026 regardless of when you pay.</p><p>2026 dues payments began being accepted online on January 25, 2026. If you''re not sure whether you already paid, email our Treasurer via <a href="/node/11" data-entity-type="node" data-entity-uuid="4f683bf4-f796-4c2d-a223-315f36cc41db" data-entity-substitution="canonical">Contact ZNA</a>.</p>'
+      '#format': civictheme_rich_text
+    street_name:
+      '#type': webform_entity_select
+      '#title': 'Street name'
+      '#empty_option': '- Select street -'
+      '#sort_options': true
+      '#required': true
+      '#target_type': taxonomy_term
+      '#selection_handler': 'default:taxonomy_term'
+      '#selection_settings':
+        target_bundles:
+          zilker_street_names: zilker_street_names
+        sort:
+          field: name
+          direction: asc
+    street_name_info:
+      '#type': processed_text
+      '#text': '<p>The Zilker street on which you live.</p><p>Note that not all addresses on the listed streets are within <a href="/membership#boundaries">ZNA''s boundaries</a>. Examples of non-Zilker addresses:</p><ul><li data-list-item-id="e44dde4c2205a6e4698fc94d9cca0a339">S. Lamar south of Barton Skyway</li><li data-list-item-id="e1538a750c59dde331f3b6734caa9802d">Anything east of the train tracks</li><li data-list-item-id="ebff61dd6eb440a4997125e03edead344">Anything west of Rabb or Rae Dell</li></ul><p>Don''t see your street? Please check whether your street starts with W for West or S for South, check whether you live within <a href="/membership#boundaries">ZNA''s boundaries</a>, and <a href="/contact">contact</a> our Treasurer if still not sure.</p>'
+      '#format': civictheme_rich_text
+    street_number:
+      '#type': textfield
+      '#title': 'Street number'
+      '#description': '<p>e.g. 2109</p>'
+      '#maxlength': 6
+      '#size': 6
+      '#required': true
+      '#label_attributes':
+        class:
+          - ct-label--required
+    unit:
+      '#type': textfield
+      '#title': 'Apt / Unit #'
+      '#description': '<p>If you have a unit or apartment number, please include it plain e.g. "3B" (not "Apt 3B").</p>'
+      '#maxlength': 6
+      '#size': 6
+    number_of_members:
+      '#type': radios
+      '#title': 'Number of members'
+      '#description': '<p>How many residents at this address do you wish to pay dues for?</p>'
+      '#options':
+        1: '1 adult'
+        2: '2 adults'
+      '#required': true
+    membership_option:
+      '#type': radios
+      '#title': 'Membership option'
+      '#options':
+        member: 'Member ($12)'
+        supporter: 'Supporter ($25)'
+        advocate: 'Advocate ($50)'
+        champion: 'Champion ($100)'
+        hero: 'Hero ($500)'
+        waiver: 'Request dues waiver'
+      '#required': true
+    membership_option_info:
+      '#type': processed_text
+      '#text': "<p>Dues pricing is per person. Membership options priced in excess of $12 include a donation to ZNA's general fund. Membership benefits are the same for all membership options; we're simply providing an easy way to further support ZNA without doing math!</p>"
+      '#format': civictheme_rich_text
+  member_info:
+    '#type': webform_wizard_page
+    '#title': 'Member info'
+    member_info_intro_one_member:
+      '#type': processed_text
+      '#states':
+        visible:
+          ':input[name="number_of_members"]':
+            value: '1'
+      '#text': '<p>Please enter information for the member.</p>'
+      '#format': civictheme_rich_text
+    member_info_intro_first_of_two_intro:
+      '#type': processed_text
+      '#states':
+        visible:
+          ':input[name="number_of_members"]':
+            value: '2'
+      '#text': '<p>Please enter information for the first member.</p>'
+      '#format': civictheme_rich_text
+    name:
+      '#type': webform_name
+      '#title': Name
+      '#title_display': none
+      '#prepopulate': true
+      '#title__access': false
+      '#first__title': 'First name'
+      '#first__required': true
+      '#middle__access': false
+      '#last__title': 'Last name'
+      '#last__required': true
+      '#degree__access': false
+      '#flexbox': '1'
+      '#select2': true
+    email_address:
+      '#type': webform_email_confirm
+      '#title': 'Email address'
+      '#autocomplete': email
+      '#required': true
+    phone:
+      '#type': tel
+      '#title': 'Phone number'
+      '#autocomplete': 'off'
+    list_publicly:
+      '#type': radios
+      '#title': 'List publicly'
+      '#description': '<p>List my name on public lists of ZNA members.</p>'
+      '#options': yes_no
+      '#required': true
+    get_involved:
+      '#type': radios
+      '#title': 'Get involved'
+      '#description': '<p>Please contact me about opportunities to volunteer for ZNA committees and initiatives.</p>'
+      '#options': yes_no
+      '#required': true
+  member_2_info:
+    '#type': webform_wizard_page
+    '#title': 'Member 2 info'
+    '#states':
+      visible:
+        ':input[name="number_of_members"]':
+          value: '2'
+    member_info_intro_second_of_two_intro:
+      '#type': processed_text
+      '#states':
+        visible:
+          ':input[name="number_of_members"]':
+            value: '2'
+      '#text': '<p>Please enter information for the second member.</p>'
+      '#format': civictheme_rich_text
+    name2:
+      '#type': webform_name
+      '#title': Name
+      '#title_display': none
+      '#prepopulate': true
+      '#title__access': false
+      '#first__title': 'First name'
+      '#first__required': true
+      '#middle__access': false
+      '#last__title': 'Last name'
+      '#last__required': true
+      '#degree__access': false
+      '#flexbox': '1'
+      '#select2': true
+    email_address2:
+      '#type': webform_email_confirm
+      '#title': 'Email address'
+      '#autocomplete': email
+      '#required': true
+    phone_number2:
+      '#type': tel
+      '#title': 'Phone number'
+      '#autocomplete': 'off'
+    list_publicly2:
+      '#type': radios
+      '#title': 'List publicly'
+      '#description': '<p>List my name on public lists of ZNA members.</p>'
+      '#options': yes_no
+      '#required': true
+    get_involved2:
+      '#type': radios
+      '#title': 'Get involved'
+      '#description': '<p>Please contact me about opportunities to volunteer for ZNA committees and initiatives.</p>'
+      '#options': yes_no
+      '#required': true
+  payment:
+    '#type': webform_wizard_page
+    '#title': Payment
+    '#states':
+      visible:
+        ':input[name="membership_option"]':
+          '!value': waiver
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_file_limit_message: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }
