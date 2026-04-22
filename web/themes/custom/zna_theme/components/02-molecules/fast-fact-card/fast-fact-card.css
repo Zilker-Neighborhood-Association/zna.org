@@ -1,0 +1,27 @@
+/*
+ * Fast Fact Card override extras — same pattern as promo-card / event-card.
+ *
+ * Restore font-size inheritance, suppress hover underline, and make the
+ * whole card clickable when `--card-clickable` is set.
+ */
+.ct-fast-fact-card__title__link,
+.ct-fast-fact-card__title__link:hover,
+.ct-fast-fact-card__title__link:focus {
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+.ct-fast-fact-card__title__link:hover .ct-text-icon__text,
+.ct-fast-fact-card__title__link:focus-visible .ct-text-icon__text {
+  text-decoration: none;
+}
+
+.ct-fast-fact-card--card-clickable .ct-fast-fact-card__title__link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

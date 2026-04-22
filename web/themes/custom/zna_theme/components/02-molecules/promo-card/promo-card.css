@@ -1,0 +1,36 @@
+/*
+ * Promo Card override extras.
+ *
+ * The override twig uses the legacy `ct-promo-card__title__link` (double
+ * underscore) class so the 1.12 dark-color rule on `__title-link` (single
+ * hyphen) doesn't apply, leaving the link in its blue ct-link color.
+ * That dodge also misses two upstream rules tied to the new class name —
+ * restore them here so the link inherits its parent h4's font size and the
+ * whole card is clickable when `--card-clickable` is set.
+ */
+.ct-promo-card__title__link,
+.ct-promo-card__title__link:hover,
+.ct-promo-card__title__link:focus {
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+/*
+ * civictheme:link wraps text in a `<span class="ct-text-icon__text">` which
+ * gets `text-decoration: underline` on hover/focus via `.ct-link:hover
+ * .ct-text-icon__text`. Suppress that on title links.
+ */
+.ct-promo-card__title__link:hover .ct-text-icon__text,
+.ct-promo-card__title__link:focus-visible .ct-text-icon__text {
+  text-decoration: none;
+}
+
+.ct-promo-card--card-clickable .ct-promo-card__title__link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

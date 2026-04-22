@@ -1,0 +1,30 @@
+/*
+ * Event Card override extras — same pattern as promo-card / navigation-card.
+ *
+ * The override twig uses the legacy `ct-event-card__title__link` (double
+ * underscore) class so the 1.12 dark-color rule on `__title-link` (single
+ * hyphen) doesn't apply, leaving the link in its blue ct-link color.
+ * Restore font-size inheritance, suppress hover underline, and make the
+ * whole card clickable when `--card-clickable` is set.
+ */
+.ct-event-card__title__link,
+.ct-event-card__title__link:hover,
+.ct-event-card__title__link:focus {
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+.ct-event-card__title__link:hover .ct-text-icon__text,
+.ct-event-card__title__link:focus-visible .ct-text-icon__text {
+  text-decoration: none;
+}
+
+.ct-event-card--card-clickable .ct-event-card__title__link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

@@ -1,0 +1,63 @@
+/*
+ * Navigation Card override extras.
+ *
+ * Restore upstream rules tied to the new `__title-link` (single hyphen)
+ * class for our legacy `__title__link` (double underscore) override class:
+ * font size inheritance from the h4, and full-card clickable surface when
+ * `--card-clickable` is set.
+ */
+/*
+ * Show the full image without additional CSS cropping. The image file itself
+ * is still whatever Drupal's `civictheme_navigation_card` image style
+ * produces (currently 600×600 focal-point scale-and-crop), but within the
+ * card's image area it's letterboxed instead of further cropped to fit the
+ * 294×280 display dimensions.
+ */
+.ct-navigation-card .ct-navigation-card__image img {
+  object-fit: contain;
+}
+
+.ct-navigation-card__title__link,
+.ct-navigation-card__title__link:hover,
+.ct-navigation-card__title__link:focus {
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  /*
+   * `display: flex` matches the 1.10 layout: text takes available width and
+   * the right-arrow icon sits in the upper-right of the title block. `gap`
+   * matches prod's spacing between text and icon.
+   */
+  display: flex;
+  gap: 16px;
+}
+
+/*
+ * Lock the icon at its natural size (default flex `0 1 auto` lets it shrink
+ * to a few px when text fills available width) and push it to the right edge
+ * of the title block so the arrow sits the same distance from the card edge
+ * regardless of title length.
+ */
+.ct-navigation-card__title__link > svg {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+/*
+ * civictheme:link wraps text in a `<span class="ct-text-icon__text">` which
+ * gets `text-decoration: underline` on hover/focus via `.ct-link:hover
+ * .ct-text-icon__text`. Suppress that on title links.
+ */
+.ct-navigation-card__title__link:hover .ct-text-icon__text,
+.ct-navigation-card__title__link:focus-visible .ct-text-icon__text {
+  text-decoration: none;
+}
+
+.ct-navigation-card--card-clickable .ct-navigation-card__title__link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

@@ -1,76 +1,173 @@
 {#
 /**
  * @file
- * Navigation Card component (extension of CivicTheme's component).
+ * Navigation Card component (override of CivicTheme's component).
  *
- * Demonstration of adding an extension of the existing molecule-level
- * component.
+ * Adds a 'tags' property rendered in the bottom content area.
  *
- * This component is based on CivicTheme's Navigation Card component.
- *
- * It extends Navigation Card component by adding 'tags' property. This template
- * provides support to render this new property.
- *
- * Note the use of the @ct-<COMPONENT_TYPE> namespace: it gives access
- * to the unmodified CivicTheme component template enabling us to override
- * secions of a component while preserving the other parts of the component to
- * rely on the CivicTheme component implementation. This is useful when only a
- * small portion of the component should be overridden.
- *
- * There are CivicTheme namespaces for:
- *  - base
- *  - atoms
- *  - molecules
- *  - organisms
- *  - templates
- *  - pages
- *
- * Variables:
- * - theme: [string] Theme: light, dark.
- * - content_top: [string] Content slot.
- * - image_over: [string] Content slot for image over.
- * - content_middle: [string] Content slot.
- * - content_bottom: [string] Content slot.
- * - size: [string] Size: large, small.
- * - image: [object] Image object:
- *   - url: [string] Image URL.
+ * Props:
+ * - theme: [string] Theme variation (light or dark).
+ * - image_as_icon: [boolean] Whether to show the image as an icon.
+ * - attributes: [string] Additional HTML attributes.
+ * - modifier_class: [string] Additional CSS classes.
+ * - image: [object] Card image:
+ *   - url: [string] Link URL.
  *   - alt: [string] Image alt text.
- * - image_as_icon: [boolean] Show image as an icon.
- * - icon: [string] Icon name.
- * - title: [string] The text of card title.
- * - summary: [string] Summary of the card.
- * - url: [string] Link.
- * - is_external: [boolean] Link is external or not.
- * - tags: [array] Array of tags. THIS IS A NEW PROPERTY ADDED FOR THIS EXAMPLE.
- * - modifier_class: [string] Additional classes.
+ * - link: [object] Link object:
+ *   - text: [string] Link text.
+ *   - url: [string] Link URL.
+ *   - is_new_window: [boolean] Whether to open link in a new window.
+ *   - is_external: [boolean] Whether the link is external.
+ * - tags: [array] Array of tags. NEW PROPERTY ADDED FOR THIS OVERRIDE.
+ *
+ * Slots:
+ * - icon: Icon name.
+ * - title: Card title text.
+ * - summary: Card summary.
+ * - content_top: Card top content.
+ * - image_over: Image overlay content.
+ * - content_middle: Card middle content.
+ * - content_bottom: Card bottom content.
+ *
+ * Blocks:
+ * - image_block
+ * - image_over_block
+ * - content_top_block
+ * - icon_block
+ * - title_block
+ * - content_middle_block
+ * - summary_block
+ * - content_bottom_block
  */
 #}
 
-{% extends '@ct-molecules/navigation-card/navigation-card.twig' %}
+{% set with_image = image.url is not empty %}
+{% set with_image_class = with_image ? 'ct-navigation-card--with-image' : '' %}
+{% set with_link = link is not empty and link.url is defined and link.url is not empty %}
+{% set with_link_class = with_link ? 'ct-navigation-card--with-link' : '' %}
+{% set is_card_clickable = with_link and is_title_click is empty %}
+{% set card_clickable_class = is_card_clickable ? 'ct-navigation-card--card-clickable' : '' %}
+{% set image_as_icon_class = image_as_icon ? 'ct-navigation-card--image-as-icon' : '' %}
+{% set theme_class = 'ct-theme-%s'|format(theme|default('light')) %}
+{% set modifier_class = '%s %s %s %s %s %s'|format(theme_class, with_image_class, with_link_class, card_clickable_class, image_as_icon_class, modifier_class|default('')) %}
 
-{#
-  Twig {% block %} allows to extend a component by overriding only a part of it
-  (defined as a block).
+{% if title is not empty %}
+  <div class="ct-navigation-card {{ modifier_class -}}" {% if attributes is not empty %}{{- attributes|raw -}}{% endif %}>
+    {% block image_block %}
+      {% if not image_as_icon %}
+        {% if image.url is not empty %}
+          <div class="ct-navigation-card__image">
+            {% include 'civictheme:image' with {
+              theme: theme,
+              url: image.url,
+              alt: image.alt,
+            } only %}
 
-  Most of the CivicTheme components have {% block %} sections.
-#}
-{% block content_bottom %}
-  {#
-    Add rendering of a new preperty 'tags'.
-
-    Note how Tag component is used from the default '@atom' namespace: if Tag
-    component will be overridden in this theme - the override will be used; if
-    not - CivicTheme's Tag component implementation will be used (which is the
-    case in this example).
-  #}
-  {% if tags %}
-    <div class="ct-navigation-card__tags">
-      {% if tags %}
-        {% include '@molecules/tag-list/tag-list.twig' with {
-          theme: theme,
-          tags: tags,
-        } only %}
+            {% block image_over_block %}
+              {% if image_over %}
+                <div class="ct-navigation-card__image__over">
+                  {{ image_over }}
+                </div>
+              {% endif %}
+            {% endblock %}
+          </div>
+        {% endif %}
       {% endif %}
+    {% endblock %}
+
+    <div class="ct-navigation-card__content">
+      {% block content_top_block %}
+        {% if content_top is not empty %}
+          <div class="ct-navigation-card__content-top">
+            {{- content_top|raw -}}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+      {% block icon_block %}
+        {% if icon is not empty or (with_image and image_as_icon) %}
+          <div class="ct-navigation-card__icon">
+            {% if icon is not empty %}
+              {% include 'civictheme:icon' with {
+                symbol: icon,
+                size: 'extra-large',
+              } only %}
+            {% endif %}
+            {% if image_as_icon and with_image %}
+              <div class="ct-icon ct-icon--size-extra-large ct-navigation-card__icon__image">
+                {% include 'civictheme:image' with {
+                  theme: theme,
+                  url: image.url,
+                  alt: image.alt,
+                } only %}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+      {% block title_block %}
+        {% if title is not empty %}
+          {% set title_content %}
+            {% if with_link %}
+              {% include 'civictheme:link' with {
+                theme: theme,
+                text: title,
+                url: link.url,
+                is_new_window: link.is_new_window,
+                is_external: false,
+                modifier_class: 'ct-navigation-card__title__link',
+              } only %}
+            {% else %}
+              {{ title }}
+            {% endif %}
+          {% endset %}
+
+          {% include 'civictheme:heading' with {
+            content: title_content,
+            level: 4,
+            theme: theme,
+            modifier_class: 'ct-navigation-card__title',
+          } only %}
+        {% endif %}
+      {% endblock %}
+
+      {% block content_middle_block %}
+        {% if content_middle is not empty %}
+          <div class="ct-navigation-card__content-middle">
+            {{- content_middle|raw -}}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+      {% block summary_block %}
+        {% if summary is not empty %}
+          {% include 'civictheme:paragraph' with {
+            theme: theme,
+            content: summary,
+            allow_html: true,
+            modifier_class: 'ct-navigation-card__summary',
+          } only %}
+        {% endif %}
+      {% endblock %}
+
+      {% block content_bottom_block %}
+        {% if content_bottom is not empty %}
+          <div class="ct-navigation-card__content-bottom">
+            {{- content_bottom|raw -}}
+          </div>
+        {% endif %}
+
+        {# Render the custom 'tags' property added by this override. #}
+        {% if tags %}
+          <div class="ct-navigation-card__tags">
+            {% include 'civictheme:tag-list' with {
+              theme: theme,
+              tags: tags,
+            } only %}
+          </div>
+        {% endif %}
+      {% endblock %}
     </div>
-  {% endif %}
-{% endblock %}
+  </div>
+{% endif %}

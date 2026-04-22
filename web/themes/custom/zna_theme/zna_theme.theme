@@ -8,6 +8,37 @@
 declare(strict_types=1);
 
 /**
+ * Implements hook_theme_registry_alter().
+ *
+ * Appends a late preprocess to every paragraph theme hook so the "none"
+ * value of field_c_p_vertical_spacing is stripped after civictheme's
+ * bundle-specific preprocess sets it. civictheme 1.12 SDC schemas restrict
+ * the vertical_spacing prop to [top, bottom, both]; the field still allows
+ * "none" in the editor UI, so without this filter SDC validation throws
+ * for any paragraph saved with "None".
+ */
+function zna_theme_theme_registry_alter(array &$theme_registry): void {
+  foreach (array_keys($theme_registry) as $hook) {
+    if ($hook === 'paragraph' || str_starts_with($hook, 'paragraph__')) {
+      $theme_registry[$hook]['preprocess functions'][] = '_zna_theme_filter_vertical_spacing_none';
+    }
+  }
+}
+
+/**
+ * Late preprocess: strip vertical_spacing prop when "None" is selected.
+ *
+ * Registered via hook_theme_registry_alter() so it runs after civictheme's
+ * bundle-specific preprocess. Twig then treats the prop as absent and SDC
+ * skips the enum check.
+ */
+function _zna_theme_filter_vertical_spacing_none(array &$variables): void {
+  if (($variables['vertical_spacing'] ?? NULL) === 'none') {
+    unset($variables['vertical_spacing']);
+  }
+}
+
+/**
  * Implements hook_civictheme_automated_list_view_info_alter().
  */
 function zna_theme_civictheme_automated_list_view_info_alter(array &$info, array $settings): void {

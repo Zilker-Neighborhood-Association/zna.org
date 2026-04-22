@@ -8,3 +8,17 @@
 // @todo Refactor build to use direct import from the CivicTheme theme.
 @import 'page/page';
 @import 'block/local-tasks';
+
+//
+// Remove the hover/focus underline that civictheme 1.12 added to every
+// ct-link. The upstream rule
+//   `.ct-link:is(:hover, :focus-visible) .ct-text-icon__text { text-decoration: underline }`
+// didn't exist in 1.10 (ct-link text was a direct child of <a>, no wrapper
+// span, so no inner target to underline). 1.12 now wraps link text in
+// `<span class="ct-text-icon__text">` and underlines it on hover — visible
+// across the whole site (header menu, footer links, in-content links, etc).
+// Suppress globally to match the 1.10 design.
+//
+.ct-link:is(:hover, :focus-visible) .ct-text-icon__text {
+  text-decoration: none;
+}
