@@ -1,6 +1,7 @@
 # ZNA Theme Drupal theme
 
 Based on [CivicTheme](https://www.drupal.org/project/civictheme) Drupal theme.
+This is a sub-theme.
 
 ## Compiling front-end assets.
 
