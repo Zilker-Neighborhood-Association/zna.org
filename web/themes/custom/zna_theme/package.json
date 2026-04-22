@@ -27,7 +27,7 @@
  "lint": "eslint --no-error-on-unmatched-pattern ./components ./.storybook && stylelint 'components/**/*.scss'",
  "lint-fix": "eslint ./components ./.storybook --fix && stylelint 'components/**/*.scss' --fix",
  "storybook": "npm run dist && node build.js cli \"dist:watch\" \"storybook-dev\"",
- "storybook-dev": "storybook dev -p 6006"
+ "storybook-dev": "storybook dev -p 6006 --no-open"
  },
  "devDependencies": {
  "@civictheme/scss-variables-extractor": "^0.2.1",

@@ -1,3 +1,4 @@
+// phpcs:ignoreFile
 /**
  * JS library example for 'Demo Button' component.
  *

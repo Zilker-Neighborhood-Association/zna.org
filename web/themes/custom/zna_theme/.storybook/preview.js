@@ -1,3 +1,4 @@
+// phpcs:ignoreFile
 import '../dist/styles.stories.css?module'; // eslint-disable-line import/no-unresolved
 import '../dist/styles.base.css'; // eslint-disable-line import/no-unresolved
 import '../dist/styles.variables.css'; // eslint-disable-line import/no-unresolved
