@@ -1,0 +1,27 @@
+/*
+ * Subject Card override extras — same pattern as promo-card / event-card.
+ *
+ * Restore font-size inheritance, suppress hover underline, and make the
+ * whole card clickable when `--card-clickable` is set.
+ */
+.ct-subject-card__title__link,
+.ct-subject-card__title__link:hover,
+.ct-subject-card__title__link:focus {
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+.ct-subject-card__title__link:hover .ct-text-icon__text,
+.ct-subject-card__title__link:focus-visible .ct-text-icon__text {
+  text-decoration: none;
+}
+
+.ct-subject-card--card-clickable .ct-subject-card__title__link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

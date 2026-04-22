@@ -1,0 +1,19 @@
+/*
+ * Snippet override extras — same pattern as promo-card / navigation-card.
+ * The override twig uses the legacy `__title__link` (double underscore) class
+ * so the 1.12 dark-color rule on `__title-link` (single hyphen) doesn't apply,
+ * leaving the link in its blue ct-link color. Restore inheritance + suppress
+ * hover underline on the inner text-icon span.
+ */
+.ct-snippet__title__link,
+.ct-snippet__title__link:hover,
+.ct-snippet__title__link:focus {
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+.ct-snippet__title__link:hover .ct-text-icon__text,
+.ct-snippet__title__link:focus-visible .ct-text-icon__text {
+  text-decoration: none;
+}
