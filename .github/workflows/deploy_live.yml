@@ -6,7 +6,7 @@ on:
       - 'main'
 
 env:
-  php_version: '8.3'
+  php_version: '8.4'
   dist_dir: 'to_deploy_agf1234w'
 
 jobs:
