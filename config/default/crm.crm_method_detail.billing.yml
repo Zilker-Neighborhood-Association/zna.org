@@ -1,0 +1,12 @@
+uuid: 517e767f-eb46-4a77-886e-1bf4df63b910
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jI0iolORW48CM5KaiUXKE6diPd5dp_AWDzlXFTbKXIc
+id: billing
+label: Billing
+description: ''
+bundles:
+  - address
+negate: false

@@ -1,0 +1,23 @@
+uuid: db5a126c-6d72-4c88-bb5a-8b2427b5f0ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_method_type.telephone
+    - field.storage.crm_contact_method.telephone
+  module:
+    - telephone
+_core:
+  default_config_hash: LwvuvXGTl_7_4iPSNjfix8PoWuKW1jRS1BeaEzxuV_E
+id: crm_contact_method.telephone.telephone
+field_name: telephone
+entity_type: crm_contact_method
+bundle: telephone
+label: Telephone
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

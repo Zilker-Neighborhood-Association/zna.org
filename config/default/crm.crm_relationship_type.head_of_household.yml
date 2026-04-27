@@ -1,0 +1,28 @@
+uuid: 48f64611-7f1d-45e5-94bc-84ee1b32a7ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.household
+    - crm.crm_contact_type.person
+_core:
+  default_config_hash: PZtFOmLFPJf7akV1eUGwvaLkDqrY4TkIu_RcddNEW4k
+id: head_of_household
+label: 'Head of Household'
+description: 'Head of household.'
+asymmetric: true
+contact_type_a:
+  - person
+contact_type_b:
+  - household
+label_a: 'Head of Household'
+label_a_plural: 'Heads of Household'
+label_b: Household
+label_b_plural: Households
+limit_a: null
+limit_b: null
+limit_active_only: false
+valid_contacts_a: {  }
+valid_contacts_b: {  }
+readonly_contact_a: true
+readonly_contact_b: true

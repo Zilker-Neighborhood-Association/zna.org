@@ -1,0 +1,11 @@
+uuid: bf826846-5d53-4e62-95b0-0779e01cd601
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: BTninNEMKI76hAceo4cvtjwtZIKjloLRisDHAVkDOD4
+id: other
+label: Other
+description: ''
+bundles: {  }
+negate: false

@@ -1,0 +1,13 @@
+uuid: 971fe3a6-ed61-412c-a969-804cbbd46aad
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+_core:
+  default_config_hash: Crpzmkk39AlfxdrBnDyqJk8VVaI-gxcewWY7F0vhAtc
+id: crm_contact.comment
+label: Comment
+description: 'The comment view mode'
+targetEntityType: crm_contact
+cache: true

@@ -1,0 +1,28 @@
+uuid: bf61bd3d-f9b1-4c5e-bc30-49286c185adc
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.organization
+    - crm.crm_contact_type.person
+_core:
+  default_config_hash: fM3hKlf_cZKBD-wwVxy11UYKcrABQytMJs-JFsI9Zkg
+id: member
+label: Member
+description: 'A contact is a member of an organization.'
+asymmetric: true
+contact_type_a:
+  - person
+contact_type_b:
+  - organization
+label_a: Member
+label_a_plural: Members
+label_b: Organization
+label_b_plural: Organizations
+limit_a: null
+limit_b: null
+limit_active_only: false
+valid_contacts_a: {  }
+valid_contacts_b: {  }
+readonly_contact_a: true
+readonly_contact_b: true

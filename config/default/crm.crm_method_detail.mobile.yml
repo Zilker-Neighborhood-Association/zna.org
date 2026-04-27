@@ -1,0 +1,12 @@
+uuid: 8d950f82-c175-4b71-8fa4-de18b5a82ec6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lAoFJZJL5z73JCMW6uy3PbGPmAZf3e5tOFM2xR8YRBI
+id: mobile
+label: Mobile
+description: ''
+bundles:
+  - telephone
+negate: false

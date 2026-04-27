@@ -1,0 +1,27 @@
+uuid: a06ffbee-6acb-4de5-93b6-03fb3b50f02e
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.person
+_core:
+  default_config_hash: 63RI29PHplyEv2goWXnoN5WPTsbDSCXmOZJnoeVyfT4
+id: spouse
+label: Spouse
+description: 'Spousal relationship.'
+asymmetric: false
+contact_type_a:
+  - person
+contact_type_b:
+  - person
+label_a: Spouse
+label_a_plural: Spouses
+label_b: Spouse
+label_b_plural: Spouses
+limit_a: null
+limit_b: null
+limit_active_only: false
+valid_contacts_a: {  }
+valid_contacts_b: {  }
+readonly_contact_a: true
+readonly_contact_b: true

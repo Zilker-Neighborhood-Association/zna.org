@@ -1,0 +1,37 @@
+uuid: c4cbdb98-4793-4b29-bb90-2e3cb799f283
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_method_type.telephone
+    - field.field.crm_contact_method.telephone.telephone
+  module:
+    - telephone
+_core:
+  default_config_hash: mKo3VN6buAnGSEJSbr083ZBBaCuuJpQtqQZoGCWjLsQ
+id: crm_contact_method.telephone.default
+targetEntityType: crm_contact_method
+bundle: telephone
+mode: default
+content:
+  detail:
+    label: above
+    type: entity_reference_label
+    weight: 10
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+  telephone:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  search_api_excerpt: true
+  status: true
+  uid: true

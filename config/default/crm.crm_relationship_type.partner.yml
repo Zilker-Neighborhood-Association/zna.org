@@ -1,0 +1,27 @@
+uuid: 54b781c9-e317-44fd-8aca-35e77f87a4ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.person
+_core:
+  default_config_hash: aN2ciPFVCjE0jiV-msuaHFbTSuGyh9N9TRGnz87BcHk
+id: partner
+label: Partner
+description: 'Partner relationship.'
+asymmetric: false
+contact_type_a:
+  - person
+contact_type_b:
+  - person
+label_a: Partner
+label_a_plural: Partners
+label_b: Partner
+label_b_plural: Partners
+limit_a: null
+limit_b: null
+limit_active_only: false
+valid_contacts_a: {  }
+valid_contacts_b: {  }
+readonly_contact_a: true
+readonly_contact_b: true

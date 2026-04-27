@@ -1,0 +1,149 @@
+uuid: 74a9114b-fc07-43b2-9583-355baf265776
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.organization
+    - field.field.crm_contact.organization.aliases
+    - field.field.crm_contact.organization.image
+    - image.style.thumbnail
+  module:
+    - datetime
+    - hide_revision_field
+    - image
+    - primary_entity_reference
+_core:
+  default_config_hash: 2q1qnMK76mEUg_F3PkTtItKNjaw5R4KX0zzU-iYVKVQ
+id: crm_contact.organization.default
+targetEntityType: crm_contact
+bundle: organization
+mode: default
+content:
+  addresses:
+    type: primary_entity_reference_inline_form
+    weight: 4
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: address
+      label_plural: addresses
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: true
+      removed_reference: delete
+    third_party_settings: {  }
+  aliases:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  emails:
+    type: primary_entity_reference_inline_form
+    weight: 2
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: email
+      label_plural: emails
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: true
+      removed_reference: delete
+    third_party_settings: {  }
+  end_date:
+    type: datetime_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  revision_log:
+    type: hide_revision_field_log_widget
+    weight: 80
+    region: content
+    settings:
+      show: true
+      default: ''
+      permission_based: false
+      allow_user_settings: true
+      hide_revision: false
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+  start_date:
+    type: datetime_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  telephones:
+    type: primary_entity_reference_inline_form
+    weight: 3
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: telephone
+      label_plural: telephones
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: true
+      removed_reference: delete
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  comment: true

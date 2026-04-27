@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: OLF-pMJla-Apdglu5FV8kCPblcXEBlmlf5q5-7g-QVs
+langcode: en
+display_name: false
+fire_event_user_insert: false
+auto_create_user_contact_mapping: false
+lookup_contact: false
+enable_mapped_fields_on_form: true
+field_mappings: {  }

@@ -1,0 +1,27 @@
+uuid: 58064999-8d80-4450-aea1-0da86f42c321
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.person
+_core:
+  default_config_hash: LtZ9oTCLeB9qcg8iPotGu8HBiSj7IeRkREJgVsukHLQ
+id: supervised
+label: Supervisor
+description: 'Immediate workplace supervisor.'
+asymmetric: true
+contact_type_a:
+  - person
+contact_type_b:
+  - person
+label_a: Supervisor
+label_a_plural: Supervisors
+label_b: Subordinate
+label_b_plural: Subordinates
+limit_a: null
+limit_b: null
+limit_active_only: false
+valid_contacts_a: {  }
+valid_contacts_b: {  }
+readonly_contact_a: true
+readonly_contact_b: true

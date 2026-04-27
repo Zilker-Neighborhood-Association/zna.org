@@ -1,0 +1,27 @@
+uuid: 7d961ec1-bfc7-413e-a042-61495e3f33d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.person
+_core:
+  default_config_hash: fp2eXRcbSiopHigG5BESaq9iugSriP2YOkLuNi3u8hA
+id: parent
+label: Parent
+description: 'Parent/child relationship.'
+asymmetric: true
+contact_type_a:
+  - person
+contact_type_b:
+  - person
+label_a: Parent
+label_a_plural: Parents
+label_b: Child
+label_b_plural: Children
+limit_a: null
+limit_b: null
+limit_active_only: false
+valid_contacts_a: {  }
+valid_contacts_b: {  }
+readonly_contact_a: true
+readonly_contact_b: true

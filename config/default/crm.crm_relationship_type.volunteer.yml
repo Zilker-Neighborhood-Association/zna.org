@@ -1,0 +1,28 @@
+uuid: 72324753-2113-4b40-8f8f-3bd400b775b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.organization
+    - crm.crm_contact_type.person
+_core:
+  default_config_hash: ZFqUbsb87HXyqG11sZBKQ_T54f6vdTzA1aTtWnuyucA
+id: volunteer
+label: Volunteer
+description: 'Volunteer relationship.'
+asymmetric: true
+contact_type_a:
+  - person
+contact_type_b:
+  - organization
+label_a: Volunteer
+label_a_plural: Volunteers
+label_b: Charity
+label_b_plural: Charities
+limit_a: null
+limit_b: null
+limit_active_only: false
+valid_contacts_a: {  }
+valid_contacts_b: {  }
+readonly_contact_a: true
+readonly_contact_b: true

@@ -1,0 +1,28 @@
+uuid: 6a88f0f9-e646-41ae-b38c-571d30394a5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.organization
+    - crm.crm_contact_type.person
+_core:
+  default_config_hash: MB-U7RQyhXEcOvXAW-rncGG4tS2vDNlVI6Qmg6fzC8M
+id: employee
+label: Employment
+description: 'Employment relationship.'
+asymmetric: true
+contact_type_a:
+  - person
+contact_type_b:
+  - organization
+label_a: Employee
+label_a_plural: Employees
+label_b: Employer
+label_b_plural: Employers
+limit_a: null
+limit_b: null
+limit_active_only: false
+valid_contacts_a: {  }
+valid_contacts_b: {  }
+readonly_contact_a: true
+readonly_contact_b: true

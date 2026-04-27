@@ -1,0 +1,28 @@
+uuid: 1086ec37-c5ba-4d72-9fe3-85707bb050ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.household
+    - crm.crm_contact_type.person
+_core:
+  default_config_hash: sB2jqg2n1VDinYMg9hWIho8gJbz9DKL_L2WocQJGF5E
+id: household_member
+label: 'Household Member'
+description: 'Household membership.'
+asymmetric: true
+contact_type_a:
+  - person
+contact_type_b:
+  - household
+label_a: 'Household Member'
+label_a_plural: 'Household Members'
+label_b: Household
+label_b_plural: Households
+limit_a: null
+limit_b: null
+limit_active_only: false
+valid_contacts_a: {  }
+valid_contacts_b: {  }
+readonly_contact_a: true
+readonly_contact_b: true

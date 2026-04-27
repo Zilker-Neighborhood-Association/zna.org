@@ -1,0 +1,47 @@
+uuid: dcf8ea33-60d0-4c7b-95e2-fe700e96bcd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_method_type.address
+    - field.field.crm_contact_method.address.address
+  module:
+    - address
+    - hide_revision_field
+_core:
+  default_config_hash: Eo_J6NA_Nkp0z1bYHhHQ3Kn2fP9CdTXHvrJ02wnXVEs
+id: crm_contact_method.address.default
+targetEntityType: crm_contact_method
+bundle: address
+mode: default
+content:
+  address:
+    type: address_default
+    weight: 1
+    region: content
+    settings:
+      wrapper_type: container
+    third_party_settings: {  }
+  detail:
+    type: options_select
+    weight: -10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  revision_log:
+    type: hide_revision_field_log_widget
+    weight: 80
+    region: content
+    settings:
+      show: true
+      default: ''
+      permission_based: false
+      allow_user_settings: true
+      hide_revision: false
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true
