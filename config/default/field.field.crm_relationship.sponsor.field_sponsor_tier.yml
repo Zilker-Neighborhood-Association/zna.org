@@ -1,0 +1,29 @@
+uuid: 7007bd9b-28c8-4960-9a26-9411bcb64439
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_relationship_type.sponsor
+    - field.storage.crm_relationship.field_sponsor_tier
+    - taxonomy.vocabulary.sponsor_tiers
+id: crm_relationship.sponsor.field_sponsor_tier
+field_name: field_sponsor_tier
+entity_type: crm_relationship
+bundle: sponsor
+label: Tier
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sponsor_tiers: sponsor_tiers
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

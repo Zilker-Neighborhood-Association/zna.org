@@ -5,13 +5,17 @@ dependencies:
   config:
     - crm.crm_contact_type.organization
     - field.field.crm_contact.organization.aliases
+    - field.field.crm_contact.organization.field_business_description
+    - field.field.crm_contact.organization.field_business_website
     - field.field.crm_contact.organization.image
     - image.style.thumbnail
   module:
     - datetime
     - hide_revision_field
     - image
+    - link
     - primary_entity_reference
+    - text
 _core:
   default_config_hash: 2q1qnMK76mEUg_F3PkTtItKNjaw5R4KX0zzU-iYVKVQ
 id: crm_contact.organization.default
@@ -75,6 +79,22 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_business_description:
+    type: text_textarea
+    weight: 81
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_business_website:
+    type: link_default
+    weight: 82
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   image:
     type: image_image
     weight: 1
@@ -96,13 +116,13 @@ content:
     weight: 80
     region: content
     settings:
+      rows: 5
+      placeholder: ''
       show: true
       default: ''
       permission_based: false
       allow_user_settings: true
       hide_revision: false
-      rows: '5'
-      placeholder: ''
     third_party_settings: {  }
   start_date:
     type: datetime_default

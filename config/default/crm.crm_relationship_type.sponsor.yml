@@ -1,0 +1,26 @@
+uuid: 054fdb1f-2b06-403b-9a73-eac31a4d3fb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.organization
+id: sponsor
+label: Sponsor
+description: 'An organization sponsors ZNA.'
+asymmetric: true
+contact_type_a:
+  - organization
+contact_type_b:
+  - organization
+label_a: Sponsor
+label_a_plural: Sponsors
+label_b: ZNA
+label_b_plural: ''
+limit_a: null
+limit_b: null
+limit_active_only: false
+valid_contacts_a: {  }
+valid_contacts_b:
+  - 1
+readonly_contact_a: true
+readonly_contact_b: true

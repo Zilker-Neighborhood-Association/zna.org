@@ -1,0 +1,96 @@
+uuid: c59e7e6d-c236-4a5f-9308-3ef77ebd8d8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_relationship_type.sponsor
+    - field.field.crm_relationship.sponsor.field_sponsor_tier
+  module:
+    - crm
+    - datetime
+id: crm_relationship.sponsor.default
+targetEntityType: crm_relationship
+bundle: sponsor
+mode: default
+content:
+  age:
+    type: crm_age
+    label: above
+    settings:
+      granularity: years
+    third_party_settings: {  }
+    weight: -9
+    region: content
+  contact_a:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  contact_b:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  created:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  end_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: -9
+    region: content
+  field_sponsor_tier:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  start_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: -9
+    region: content
+  status:
+    type: boolean
+    label: above
+    settings:
+      format: custom
+      format_custom_false: Inactive
+      format_custom_true: Active
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

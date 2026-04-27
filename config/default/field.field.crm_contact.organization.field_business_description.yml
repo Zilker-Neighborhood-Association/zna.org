@@ -1,0 +1,24 @@
+uuid: 77cab10b-cb69-4843-aec6-a5f480c152c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.organization
+    - field.storage.crm_contact.field_business_description
+    - filter.format.civictheme_plain_text
+  module:
+    - text
+id: crm_contact.organization.field_business_description
+field_name: field_business_description
+entity_type: crm_contact
+bundle: organization
+label: Description
+description: 'Used for sponsor listings.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - civictheme_plain_text
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: 04329797-51a1-40a8-a24c-dddc15c1335f
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+    - text
+id: crm_contact.field_business_description
+field_name: field_business_description
+entity_type: crm_contact
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

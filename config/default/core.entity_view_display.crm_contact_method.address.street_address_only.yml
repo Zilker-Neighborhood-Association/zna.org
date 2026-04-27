@@ -1,0 +1,88 @@
+uuid: 5d0cfb54-1683-4851-8523-2477df031778
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.crm_contact_method.street_address_only
+    - crm.crm_contact_method_type.address
+    - field.field.crm_contact_method.address.address
+  module:
+    - address_display
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: iYW-ySU5AZdPzGDPILPwIklpoGce2kjf89dt6IG39TM
+id: crm_contact_method.address.street_address_only
+targetEntityType: crm_contact_method
+bundle: address
+mode: street_address_only
+content:
+  address:
+    type: address_display_formatter
+    label: hidden
+    settings:
+      address_display:
+        organization:
+          glue: ''
+          weight: -1
+          display: false
+        address_line1:
+          glue: ''
+          weight: 0
+          display: true
+        address_line2:
+          glue: ','
+          weight: 1
+          display: true
+        address_line3:
+          glue: ','
+          weight: 2
+          display: true
+        locality:
+          glue: ','
+          weight: 3
+          display: false
+        postal_code:
+          glue: ''
+          weight: 4
+          display: false
+        country_code:
+          glue: ''
+          weight: 5
+          display: false
+        langcode:
+          glue: ','
+          weight: 100
+          display: false
+        administrative_area:
+          glue: ','
+          weight: 100
+          display: false
+        dependent_locality:
+          glue: ','
+          weight: 100
+          display: false
+        sorting_code:
+          glue: ','
+          weight: 100
+          display: false
+        given_name:
+          glue: ''
+          weight: 100
+          display: false
+        family_name:
+          glue: ','
+          weight: 100
+          display: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  detail: true
+  search_api_excerpt: true
+  status: true
+  uid: true

@@ -1,0 +1,38 @@
+uuid: 945a859d-411c-4987-b55e-ad8df7be6b7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.crm_contact_method.formatted_telephone_number_only
+    - crm.crm_contact_method_type.telephone
+    - field.field.crm_contact_method.telephone.telephone
+  module:
+    - layout_builder
+    - telephone_formatter
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: mKo3VN6buAnGSEJSbr083ZBBaCuuJpQtqQZoGCWjLsQ
+id: crm_contact_method.telephone.formatted_telephone_number_only
+targetEntityType: crm_contact_method
+bundle: telephone
+mode: formatted_telephone_number_only
+content:
+  telephone:
+    type: telephone_formatter
+    label: hidden
+    settings:
+      format: 2
+      link: true
+      default_country: US
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  detail: true
+  search_api_excerpt: true
+  status: true
+  uid: true

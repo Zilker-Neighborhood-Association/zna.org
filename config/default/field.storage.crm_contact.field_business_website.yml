@@ -1,0 +1,19 @@
+uuid: 4b703568-f819-45ee-a21a-964087cd8179
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+    - link
+id: crm_contact.field_business_website
+field_name: field_business_website
+entity_type: crm_contact
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

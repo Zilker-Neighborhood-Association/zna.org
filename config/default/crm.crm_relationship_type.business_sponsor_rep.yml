@@ -1,0 +1,26 @@
+uuid: 0a7d9bd4-0643-4d8d-9885-77e1584f50cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - crm.crm_contact_type.organization
+    - crm.crm_contact_type.person
+id: business_sponsor_rep
+label: 'Business Sponsor Rep'
+description: 'A person represents an organization as a sponsor of ZNA.'
+asymmetric: true
+contact_type_a:
+  - person
+contact_type_b:
+  - organization
+label_a: Rep
+label_a_plural: Reps
+label_b: Business
+label_b_plural: Businesses
+limit_a: null
+limit_b: null
+limit_active_only: false
+valid_contacts_a: {  }
+valid_contacts_b: {  }
+readonly_contact_a: true
+readonly_contact_b: true

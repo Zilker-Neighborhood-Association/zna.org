@@ -1,0 +1,11 @@
+uuid: b55847ec-a516-4bd6-8903-61317e87d040
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+id: crm_contact_method.street_address_only
+label: 'Street address only'
+description: null
+targetEntityType: crm_contact_method
+cache: true

@@ -1,0 +1,20 @@
+uuid: b8b8d979-40fb-4739-93c3-7c994b73ae9e
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+    - taxonomy
+id: crm_relationship.field_sponsor_tier
+field_name: field_sponsor_tier
+entity_type: crm_relationship
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

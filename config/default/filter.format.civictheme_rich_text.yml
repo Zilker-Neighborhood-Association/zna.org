@@ -13,7 +13,7 @@ _core:
   default_config_hash: iZ3ki2gqNAiVHosDl1GbAAbqHv9zr8YhIxraF9_4ZC8
 name: 'Rich text'
 format: civictheme_rich_text
-weight: 0
+weight: -10
 filters:
   editor_file_reference:
     id: editor_file_reference
@@ -92,6 +92,7 @@ filters:
     weight: -44
     settings:
       title: true
+      media_substitution: metadata
   media_embed:
     id: media_embed
     provider: media

@@ -21,12 +21,12 @@ default_value: {  }
 default_value_callback: ''
 settings:
   components:
-    title: true
+    title: false
     given: true
     middle: true
     family: true
     generational: true
-    credentials: true
+    credentials: false
   minimum_components:
     title: false
     given: true
@@ -71,6 +71,7 @@ settings:
     - Mrs.
     - Miss
     - Ms.
+    - Mx.
     - Dr.
     - Prof.
   generational_options:
@@ -91,7 +92,7 @@ settings:
     title: false
     generational: false
   widget_layout: stacked
-  field_title_display: before
+  field_title_display: none
   component_layout: default
   show_component_required_marker: false
   flag_required_input: false

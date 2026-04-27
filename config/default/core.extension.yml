@@ -2,6 +2,7 @@ _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
   address: 0
+  address_display: 0
   backup_migrate: 0
   big_pipe: 0
   block: 0
@@ -105,6 +106,7 @@ module:
   system: 0
   taxonomy: 0
   telephone: 0
+  telephone_formatter: 0
   text: 0
   token: 0
   ultimate_cron: 0

@@ -1,0 +1,11 @@
+uuid: 46ff2d3c-4997-43b9-91f7-492a7fda8f70
+langcode: en
+status: true
+dependencies:
+  module:
+    - crm
+id: crm_contact_method.formatted_telephone_number_only
+label: 'Formatted telephone number only'
+description: null
+targetEntityType: crm_contact_method
+cache: true

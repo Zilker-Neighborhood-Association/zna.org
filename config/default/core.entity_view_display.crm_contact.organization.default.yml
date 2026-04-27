@@ -5,11 +5,15 @@ dependencies:
   config:
     - crm.crm_contact_type.organization
     - field.field.crm_contact.organization.aliases
+    - field.field.crm_contact.organization.field_business_description
+    - field.field.crm_contact.organization.field_business_website
     - field.field.crm_contact.organization.image
   module:
     - crm
     - datetime
     - image
+    - link
+    - text
 _core:
   default_config_hash: Qrwn-XJRWwCgW2CKKyD5qTDklT-2Pmnvp4kkfqOxydY
 id: crm_contact.organization.default
@@ -79,6 +83,25 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
+  field_business_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_business_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 17
+    region: content
   image:
     type: image
     label: hidden
@@ -99,16 +122,16 @@ content:
     weight: 0
     region: content
   relationship_statistics:
-    label: above
     type: crm_relationship_statistics_default
-    weight: 15
-    region: content
+    label: above
     settings:
       format: label_count
       label_position: opposite
       sort_by: none
       sort_order: asc
     third_party_settings: {  }
+    weight: 15
+    region: content
   start_date:
     type: datetime_default
     label: above

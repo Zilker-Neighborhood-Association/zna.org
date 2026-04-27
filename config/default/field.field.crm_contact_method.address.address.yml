@@ -17,10 +17,26 @@ label: Address
 description: ''
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    langcode: null
+    country_code: US
+    administrative_area: TX
+    locality: Austin
+    dependent_locality: null
+    postal_code: '78704'
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    address_line3: ''
+    organization: null
+    given_name: null
+    additional_name: null
+    family_name: null
 default_value_callback: ''
 settings:
-  available_countries: {  }
+  available_countries:
+    US: US
   langcode_override: ''
   field_overrides:
     givenName:

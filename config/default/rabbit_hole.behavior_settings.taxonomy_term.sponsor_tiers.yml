@@ -1,0 +1,13 @@
+uuid: 20c0b543-1e53-46cf-94ad-4e42f77db196
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sponsor_tiers
+id: taxonomy_term.sponsor_tiers
+targetEntityType: taxonomy_term
+bundle: sponsor_tiers
+action: page_not_found
+no_bypass: true
+bypass_message: false
+configuration: {  }

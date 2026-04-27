@@ -1,0 +1,9 @@
+uuid: d0ec6aa5-bce2-451e-8ff9-9cd0f5010169
+langcode: en
+status: true
+dependencies: {  }
+name: 'Sponsor Tiers'
+vid: sponsor_tiers
+description: null
+weight: 0
+new_revision: false
