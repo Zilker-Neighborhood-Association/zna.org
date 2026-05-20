@@ -144,6 +144,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/webp": {
+                "#3561953: PHP 8.4 implicit nullable & constructor parameter order issues in WebP FileDownloadController": "patches/3561953-12.patch"
+            }
         }
     },
     "require-dev": {
