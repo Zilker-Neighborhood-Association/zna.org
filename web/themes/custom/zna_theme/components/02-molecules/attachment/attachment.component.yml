@@ -62,11 +62,12 @@ props:
     vertical_spacing:
       type: string
       title: Vertical spacing
-      description: 'Vertical spacing position (top, bottom, both).'
+      description: 'Vertical spacing position (top, bottom, both, none).'
       enum:
         - top
         - bottom
         - both
+        - none
     with_background:
       type: boolean
       title: With background
