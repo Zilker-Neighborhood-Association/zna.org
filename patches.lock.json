@@ -1,4 +1,17 @@
 {
-    "_hash": "6142bfcb78f54dfbf5247ae5e463f25bdb8fff1890806e2e45aa81a59c211653",
-    "patches": []
+    "_hash": "2a23a309d17e9b4b9d9b3eb325a8ea1c6f2995c006cf75027aa31a6f1b9f3d5a",
+    "patches": {
+        "drupal/webp": [
+            {
+                "package": "drupal/webp",
+                "description": "#3561953: PHP 8.4 implicit nullable & constructor parameter order issues in WebP FileDownloadController",
+                "url": "patches/3561953-12.patch",
+                "sha256": "93e4f9290326c6be9f9cb8c345692f9935b7503b25034906f85cdb16e03f5314",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
 }
